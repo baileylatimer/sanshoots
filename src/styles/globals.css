@@ -4,8 +4,8 @@
 @tailwind utilities;
 
 :root {
-  --color-contrast-higher: #000;
-  --color-bg: #DFDFDF;
+  --color-contrast-higher: #232323;
+  --color-bg: #EDEAE4;
   --font-base: 20px;
   --text-lg: 64px;
   --text-md: 49px;
@@ -103,20 +103,35 @@ p {
   src: url("../fonts/NeueMontreal-Regular.otf");
 }
 
-:root {
-  --font-primary: "Neue Montreal", sans-serif;
+@font-face {
+  font-family: "Rayuela";
+  src: url("../fonts/OTRayuela-Regular.otf");
 }
 
-body, h1, h2, h3, h4, h5, h6, a, li, p, span {
+@font-face {
+  font-family: "Supply";
+  src: url("../fonts/PPSupplyMono-Regular.otf");
+}
+
+
+:root {
+  --font-primary: "Supply", sans-serif;
+}
+
+body, h3, h4, h5, h6, a, li, p, span {
   font-family: var(--font-primary);
   text-transform: uppercase;
   color: var(--color-contrast-higher)
 }
 
+h1, h2 {
+  font-family: 'Rayuela', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 /* BUTTONS
 =========== */
 .btn {
-  font-size: var(--text-md);
+ 
   border-radius: 2.625rem;
   padding: .25rem .8125rem .1875rem;
   background-color: var(--color-contrast-higher);
@@ -127,9 +142,19 @@ body, h1, h2, h3, h4, h5, h6, a, li, p, span {
   }
 }
 
+.btn-bg {
+  position: absolute;
+  top: -18px;
+}
+
 .btn a {
   color: var(--color-bg);
-  font-size: var(--text-md);
+  font-size: 20px;
+}
+
+nav .btn a {
+  padding: 2em;
+
 }
 
 .btn--ghost {
@@ -145,7 +170,6 @@ body, h1, h2, h3, h4, h5, h6, a, li, p, span {
 /* HEADER 
 =========== */
 nav {
-  border: 1px solid var(--color-contrast-higher);
   border-radius: 16px;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
@@ -155,7 +179,12 @@ nav {
   position: fixed;
   width: calc(100vw - 80px);
   z-index: 99;
-  top: 0
+  top: 0;
+  background-color: var(--color-contrast-higher)
+}
+
+nav a {
+  color: var(--color-bg);
 }
 
 @media(max-width:1023px) {
@@ -603,7 +632,7 @@ background-color: var(--color-contrast-higher);
 /* CURSOR 
 ========== */
 * {
-  cursor: none !important;
+  /* cursor: none !important; */
 }
 .svg-cursor {
   width: 29px;

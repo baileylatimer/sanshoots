@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
 
  
         <main>{children}</main>
-        <CustomCursor />
+        {/* <CustomCursor /> */}
       <Footer/>
       </div>
     </>

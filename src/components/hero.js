@@ -29,6 +29,6 @@ gsap.fromTo(".cio", {xPercent: -55, yPercent: -630},{ xPercent: 0, yPercent: 0, 
  
 
    
-gsap.fromTo("body", {scale: 0.9, opacity: 0},{ scale: 1, opacity: 1, duration: 2, });
+
  
 export default Hero        
