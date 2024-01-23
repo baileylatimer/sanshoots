@@ -6,7 +6,7 @@
 :root {
   --color-contrast-higher: #232323;
   --color-bg: #EDEAE4;
-  --font-base: 20px;
+  --font-base: 17px;
   --text-lg: 64px;
   --text-md: 49px;
 }
@@ -61,7 +61,7 @@ p {
   font-size: var(--font-base);
 }
 .text-xxl {
-  font-size: 282px;
+  font-size: 43vw;
 }
 @media(max-width:1023px) {
   .text-xxl {
@@ -149,7 +149,7 @@ h1, h2 {
 
 .btn a {
   color: var(--color-bg);
-  font-size: 20px;
+  font-size: 17px;
 }
 
 nav .btn a {
@@ -248,7 +248,6 @@ li {
 /* HERO 
 =========== */
 .hero {
-  background-color: #000;
   height: 100vh;
   display: block;
   position: relative;
