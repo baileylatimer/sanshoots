@@ -3,7 +3,9 @@ import BackgroundVideo from "./bg-video"
 import ReelBlock from "./reel-block"
 import Logo from "./logo"
 import Video from "../videos/hero-vid.mp4"
-
+import VideoSVGMask from "./video-svg-mask"
+import ProjectCardHome from "./project-card-home"
+import Hhs4 from "../videos/hhs-04.mp4"
 import { gsap } from "gsap";
     
 
@@ -27,12 +29,20 @@ const Hero = props => (
 </div>
 
 
-<div className=" ">
-<h1 className="text-xxl text-center">SANSHOOTS</h1>
+<div className=" flex">
+<h1 className="text-xxl text-center">SANSH</h1>
+<VideoSVGMask videoSrc={Hhs4} />
+<VideoSVGMask videoSrc={Hhs4} />
+<h1 className="text-xxl text-center">TS</h1>
 </div>
+
+<ProjectCardHome link='/showreel/hip-hop' cover={Hhs4}  title="Hip Hop" desc="02"/>
 
 <p className="hero-desc text-white ">Rocio Colomer Jorda has 15 years of dance experience. With influences from her home country of spain, she now teaches in San Diego, CA.</p>
 </div>
+
+
+ 
  
 
 );
