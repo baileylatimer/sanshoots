@@ -11,8 +11,15 @@ import HomeAbout from "../components/home-about"
 import Hhs4 from "../videos/hhs-04.mp4"
 import ThreeCarousel from '../components/ThreeCarousel';
 
+import ServiceComponent from '../components/services';
 
 
+
+const services = [
+  { name: 'PRE-PRODUCTION', video: {Hhs4} },
+  { name: 'PRODUCTION', video: {Hhs4} },
+  { name: 'POST-PRODUCTION', video: '{Hhs4}' },
+];
 
 
 const IndexPage = () => (
@@ -26,6 +33,8 @@ const IndexPage = () => (
   <ProjectCardHome link='/shortfilms' cover={Hhs4}  title="Short Films" desc="02"/>
   <ProjectCardHome link='/transitions' cover={Hhs4}  title="Transitions" desc="03"/>
 </div>
+
+<ServiceComponent services={services} />
 
 
 

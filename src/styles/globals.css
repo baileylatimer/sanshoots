@@ -699,7 +699,26 @@ background-color: var(--color-contrast-higher);
 
 
 
+/* Services
+============== */
+.service-text {
+  /* Your base style for text */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+.service-text.active {
+  /* Style for active state */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.service-video-element {
+  /* Styles for your video */
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust for your aspect ratio */
+}
 
 
 
