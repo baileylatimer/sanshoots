@@ -9,42 +9,41 @@ import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
 gsap.registerPlugin(ScrambleTextPlugin);
+
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
   useEffect(() => {
-    const links = document.querySelectorAll("nav a");
+    // Select all links within the header for the scramble text effect,
+    // excluding those with the classes .logo-wrapper and .btn
+    const links = document.querySelectorAll("nav a:not(.logo-wrapper, .btn)");
 
     links.forEach((link) => {
-      let chars = link.textContent; // Dynamically determine chars from link text
-      let originalText = link.textContent; // Store the original text
+      const originalText = link.textContent; // Store the original text
 
+      // Hover in
       link.addEventListener("mouseenter", () => {
-        // Ensure any ongoing animation is killed to avoid conflicts
-        gsap.killTweensOf(link);
-
-        // Start a new scramble animation
         gsap.to(link, {
           duration: 0.5,
           scrambleText: {
             text: originalText,
-            chars: chars,
+            chars: originalText + "!@#$%^&*", // Include original text and some special characters for effect
             ease: "none",
             revealDelay: 0.5,
           },
         });
       });
 
+      // Hover out
       link.addEventListener("mouseleave", () => {
-        // Immediately revert to the original text on mouse leave
+        // Immediately revert to the original text without waiting for the animation to complete
         gsap.to(link, {
-          duration: 0.5,
+          duration: 0.1, // Short duration for immediate effect
           scrambleText: {
             text: originalText,
-            chars: chars,
+            chars: originalText + "!@#$%^&*",
             ease: "none",
             revealDelay: 0,
-            newClass: "", // Ensure to remove any class that may have been added
           },
         });
       });
@@ -57,7 +56,7 @@ function Header({ siteTitle }) {
          <div className="flex items-center text-white px-d ">
       <Link
             to={`/`}
-            className=" mb-0"
+            className="logo-wrapper mb-0"
           >
 <svg className="nav-logo" width="114" height="44" viewBox="0 0 114 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M103.707 14.0878C102.964 11.8597 102.752 10.2682 102.752 7.98711V5.81206C102.752 1.99248 104.715 0.135742 107.951 0.135742C111.187 0.135742 113.15 1.99248 113.15 5.81206C113.15 10.2682 111.664 13.186 109.648 15.4671V5.44072C109.648 4.00837 109.012 3.21263 107.951 3.21263C106.89 3.21263 106.253 4.00837 106.253 5.44072V7.93406C106.253 10.2152 106.572 11.8067 107.314 14.0348L112.195 28.7826C112.938 31.0107 113.15 32.6022 113.15 34.8833V37.748C113.15 41.5676 111.187 43.4243 107.951 43.4243C104.715 43.4243 102.752 41.5676 102.752 37.748C102.752 33.2918 104.237 30.3741 106.253 28.093V38.1194C106.253 39.5517 106.89 40.3475 107.951 40.3475C109.012 40.3475 109.648 39.5517 109.648 38.1194V34.9364C109.648 32.6552 109.33 31.0637 108.587 28.8357L103.707 14.0878Z" fill="#EDEAE4"/>
