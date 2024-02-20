@@ -1,64 +1,8 @@
+import React from "react"
 
-
-
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
-import Btn from "./btn"
-import gsap from "gsap";
-import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
-
-gsap.registerPlugin(ScrambleTextPlugin);
-function Header({ siteTitle }) {
-  const [isExpanded, toggleExpansion] = useState(false);
-
-  useEffect(() => {
-    const links = document.querySelectorAll("nav a");
-
-    links.forEach((link) => {
-      let chars = link.textContent; // Dynamically determine chars from link text
-      let originalText = link.textContent; // Store the original text
-
-      link.addEventListener("mouseenter", () => {
-        // Ensure any ongoing animation is killed to avoid conflicts
-        gsap.killTweensOf(link);
-
-        // Start a new scramble animation
-        gsap.to(link, {
-          duration: 0.5,
-          scrambleText: {
-            text: originalText,
-            chars: chars,
-            ease: "none",
-            revealDelay: 0.5,
-          },
-        });
-      });
-
-      link.addEventListener("mouseleave", () => {
-        // Immediately revert to the original text on mouse leave
-        gsap.to(link, {
-          duration: 0.5,
-          scrambleText: {
-            text: originalText,
-            chars: chars,
-            ease: "none",
-            revealDelay: 0,
-            newClass: "", // Ensure to remove any class that may have been added
-          },
-        });
-      });
-    });
-  }, []);
-
-
+const NavLogo = () => {
   return (
-    <nav className="flex flex-wrap items-center justify-between py-3 lg:p-6 mx-d mb-6">
-         <div className="flex items-center text-white px-d ">
-      <Link
-            to={`/`}
-            className=" mb-0"
-          >
+
 <svg className="nav-logo" width="114" height="44" viewBox="0 0 114 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M103.707 14.0878C102.964 11.8597 102.752 10.2682 102.752 7.98711V5.81206C102.752 1.99248 104.715 0.135742 107.951 0.135742C111.187 0.135742 113.15 1.99248 113.15 5.81206C113.15 10.2682 111.664 13.186 109.648 15.4671V5.44072C109.648 4.00837 109.012 3.21263 107.951 3.21263C106.89 3.21263 106.253 4.00837 106.253 5.44072V7.93406C106.253 10.2152 106.572 11.8067 107.314 14.0348L112.195 28.7826C112.938 31.0107 113.15 32.6022 113.15 34.8833V37.748C113.15 41.5676 111.187 43.4243 107.951 43.4243C104.715 43.4243 102.752 41.5676 102.752 37.748C102.752 33.2918 104.237 30.3741 106.253 28.093V38.1194C106.253 39.5517 106.89 40.3475 107.951 40.3475C109.012 40.3475 109.648 39.5517 109.648 38.1194V34.9364C109.648 32.6552 109.33 31.0637 108.587 28.8357L103.707 14.0878Z" fill="#EDEAE4"/>
 <path d="M90.7192 3.74329V0.560303H101.647V3.74329H97.7749V3.84939C97.881 4.85733 97.934 5.70613 97.934 6.97932V39.7641C97.934 41.0373 97.9871 41.8861 98.0932 42.894V43.0001H94.2736V42.894C94.3797 41.8861 94.4327 41.0373 94.4327 39.7641V6.97932C94.4327 5.70613 94.4858 4.85733 94.5919 3.84939V3.74329H90.7192Z" fill="#EDEAE4"/>
@@ -72,74 +16,8 @@ function Header({ siteTitle }) {
 </svg>
 
 
-      </Link>
-
-      </div>
-      <div className="block lg:hidden px-d">
-        <button
-          onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center px-3 py-2 "
-        >
-<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1" y="9" width="25" height="2" fill="black"/>
-<rect x="1" y="17" width="25" height="2" fill="black"/>
-</svg>
-
-
-
-        </button>
-      </div>
-      <div
-        className={`${
-          isExpanded ? `block` : `hidden`
-        } w-full nav-open block lg:flex lg:items-center lg:w-auto mt-4 pt-4 lg:mt-0 lg:pt-0 px-d `}
-      >
-        <div className="text-sm">
-          <Link
-            to={`/showreel`}
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 "
-          >
-            Showreel
-          </Link>
-          <Link
-            to={`/shortfilms`}
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 "
-          >
-            Shortfilms
-          </Link>
-
-          <Link
-            to={`/contact`}
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 "
-          >
-            Transitions
-          </Link>
-
-          <Link
-            to={`/about`}
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 "
-          >
-            About
-          </Link>
-
-          
-        </div>
-        <div>
-        </div>
-      </div>
-      <div className="hidden lg:flex font-base">
-      <Btn link="/contact" text="Get in touch" type=" btn--ghost "/>
-      </div>
-    </nav>
   );
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
 };
 
-Header.defaultProps = {
-  siteTitle: ``,
-};
 
-export default Header;
+export default NavLogo;

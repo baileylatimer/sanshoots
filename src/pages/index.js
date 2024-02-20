@@ -3,12 +3,19 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Hero from "../components/hero"
+import Carousel from '../components/home-carousel';
 import ProjectCardHome from "../components/project-card-home"
 import HomeAbout from "../components/home-about"
 
 
 import Hhs4 from "../videos/hhs-04.mp4"
-import Heels from "../videos/heels.mp4"
+import ThreeCarousel from '../components/ThreeCarousel';
+
+const images = [
+  '../images/project-cover--01.jpg',
+  '../images/project-cover--01.jpg',
+  // more images
+];
 
 
 
@@ -16,11 +23,20 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    <HomeAbout />
-<div className="flex flex-col lg:flex-row  lg:mt-20">
-  <ProjectCardHome link='/showreel/heels' cover={Heels}  title="Heels" desc="01"/>
-  <ProjectCardHome link='/showreel/hip-hop' cover={Hhs4}  title="Hip Hop" desc="02"/>
-</div>
+
+
+<div>
+      <h1>My 3D Carousel</h1>
+      <ThreeCarousel images={images} />
+    </div>
+
+
+    <Carousel>
+      <div className="carousel-item">Item 1</div>
+      <div className="carousel-item">Item 2</div>
+      <div className="carousel-item">Item 3</div>
+      {/* More items */}
+    </Carousel>
 
 
   </Layout>
