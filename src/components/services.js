@@ -6,7 +6,9 @@ const ServiceComponent = ({ services }) => {
   const [activeService, setActiveService] = useState(services[0]);
 
   return (
-    <div className="service-component">
+    <div className="service-component flex dark-theme px-d py-d">
+      <div>
+      <h5 class="color-bg">Services</h5>
       <div className="service-texts">
         {services.map((service) => (
           <div
@@ -18,16 +20,19 @@ const ServiceComponent = ({ services }) => {
           </div>
         ))}
       </div>
-      <div className="service-video">
-        {activeService && (
-          <video
-            src={activeService.video}
-            autoPlay
-            muted
-            loop
-            className="service-video-element"
-          />
-        )}
+      </div>
+      <div className='service-video-wrapper'>
+        <div className="service-video">
+          {activeService && (
+            <video
+              src={activeService.video}
+              autoPlay
+              muted
+              loop
+              className="service-video-element"
+            />
+          )}
+        </div>
       </div>
     </div>
   );

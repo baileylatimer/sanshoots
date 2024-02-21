@@ -20,6 +20,33 @@
 }
 
 
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../fonts/NeueMontreal-Regular.otf");
+}
+
+@font-face {
+  font-family: "Rayuela";
+  src: url("../fonts/OTRayuela-Regular.otf");
+}
+
+@font-face {
+  font-family: "Supply";
+  src: url("../fonts/PPSupplyMono-Regular.otf");
+}
+
+@font-face {
+  font-family: "Shreck";
+  src: url("../fonts/Shreck Mono Trial Medium.otf");
+}
+
+
+
+:root {
+  --font-primary: "Supply", sans-serif;
+}
+
+
 html, body {
   background: url('../images/bg-texture.jpg') repeat;
 }
@@ -31,6 +58,11 @@ body {
 }
 
 .text-white {
+  color: var(--color-bg)
+}
+
+.dark-theme {
+  background-color: var(--color-contrast-higher);
   color: var(--color-bg)
 }
 
@@ -53,6 +85,12 @@ h2 {
 h3 {
   @apply text-lg;
 }
+
+h5 {
+  font-family: 'Shreck' !important;
+  font-size: 68px;
+font-style: normal;
+}
 a {
   @apply text-blue-600;
   font-size: var(--font-base);
@@ -60,6 +98,7 @@ a {
 p {
   font-size: var(--font-base);
 }
+
 
 .font-base {
   font-size: var(--font-base);
@@ -100,28 +139,21 @@ p {
   } 
 }
 
-
-
-
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("../fonts/NeueMontreal-Regular.otf");
+.py-d {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
 }
-
-@font-face {
-  font-family: "Rayuela";
-  src: url("../fonts/OTRayuela-Regular.otf");
-}
-
-@font-face {
-  font-family: "Supply";
-  src: url("../fonts/PPSupplyMono-Regular.otf");
+@media(max-width:1023px) {
+  .py-d {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  } 
 }
 
 
-:root {
-  --font-primary: "Supply", sans-serif;
-}
+
+
+
 
 body, h3, h4, h5, h6, a, li, p, span {
   font-family: var(--font-primary);
@@ -133,6 +165,12 @@ h1, h2 {
   font-family: 'Rayuela', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
+
+
+.color-bg {
+  color: var(--color-bg)
+}
 /* BUTTONS
 =========== */
 .btn {
@@ -757,3 +795,44 @@ background-color: var(--color-contrast-higher);
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 } */
+
+
+/* SERVICES 
+============== */
+
+.service-video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-video {
+  -webkit-clip-path:  polygon(88.00% 0.00%,100% 12%,99% 100%,18% 100%,18% 0%);
+  clip-path:  polygon(88.00% 0.00%,100% 12%,99% 100%,18% 100%,18% 0%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-video::after {
+  content: "";
+  border: 1px solid #fff; /* Adjust the color as needed */
+  position: absolute;
+  display: block;
+  left: 10px;
+  top: 10px;
+  right: 10px; /* You need to define right and bottom to create a box unless you specify width and height */
+  bottom: 10px;
+  -webkit-clip-path: polygon(88% 0, 100% 12%, 99% 100%, 18% 100%, 18% 0);
+  clip-path: polygon(88% 0, 100% 12%, 99% 100%, 18% 100%, 18% 0);
+  height: 100%;
+  width: 100%;
+  z-index: 10; /* Make sure it's above the video */
+}
+
+
+.service-text {
+  font-size: 184px;
+  font-family: "Rayuela" ;
+  white-space: nowrap;
+}
