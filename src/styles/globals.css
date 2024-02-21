@@ -71,9 +71,8 @@ h1 {
   font-size: var(--text-md)
 }
 h2 {
-  @apply text-xl;
-  font-size: 40px;
-  line-height: 40px;
+
+  font-size: 284px;
 }
 @media(max-width:1023px) {
 h2 {
@@ -204,6 +203,7 @@ h1, h2 {
  -moz-border-radius: 8px;
  -ms-border-radius: 8px;
  -o-border-radius: 8px;
+ max-width: 250px;
 }
 @media(min-width:1023px) {
   .btn {
@@ -230,8 +230,8 @@ h1, h2 {
 }
 
 nav .btn a {
-  padding: 2em;
-
+  padding: 1em;
+  white-space: nowrap;
 }
 
 
@@ -279,6 +279,12 @@ footer {
 }
 footer p {
   font-size: var(--font-base);
+}
+
+.footer-text {
+  font-size: 124px;
+  font-family: 'Rayuela';
+  height: 135px;
 }
 
 
