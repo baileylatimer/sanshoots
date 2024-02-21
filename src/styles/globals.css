@@ -287,6 +287,12 @@ footer p {
   height: 135px;
 }
 
+.header-title .scramble {
+
+  font-family: 'Rayuela' !important;
+
+}
+
 
 .logo {
   width: 100%;
@@ -759,6 +765,12 @@ background-color: var(--color-contrast-higher);
   /* Your base style for text */
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+@media(min-width:1023px) {
+  .service-text {
+    height: 220px
+  }
 }
 
 .service-text.active {

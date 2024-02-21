@@ -19,15 +19,26 @@ const PageHeader = props => {
   const footerRef = useRef(null);
 
   useEffect(() => {
-    // This selector targets all <p> and <a> tags but excludes those with the 'btn' class
-    gsap.utils.toArray("p:not(.btn), a:not(.btn)", footerRef.current).forEach(element => {
+    // Existing logic to scramble p and a tags
+    gsap.utils.toArray("p:not(.btn *), a:not(.btn *)", footerRef.current).forEach(element => {
       ScrollTrigger.create({
         trigger: element,
         start: "top bottom",
         onEnter: () => scrambleText(element),
-        onEnterBack: () => scrambleText(element) // If you want the animation when scrolling back up
+        onEnterBack: () => scrambleText(element),
       });
     });
+  
+    // Scramble text effect for the h2.header-title
+    const headerTitle = footerRef.current.querySelector('.header-title');
+    if (headerTitle) {
+      ScrollTrigger.create({
+        trigger: headerTitle,
+        start: "top bottom",
+        onEnter: () => scrambleText(headerTitle),
+        onEnterBack: () => scrambleText(headerTitle),
+      });
+    }
   
     function scrambleText(target) {
       gsap.to(target, {
@@ -42,12 +53,14 @@ const PageHeader = props => {
     }
   }, []);
   
+  
+  
 
   return (
     <footer ref={footerRef} className="flex flex-col px-d py-d relative">
       <div className="flex justify-between mb-16">
         <div className="flex flex-col">
-          <h2>Lets f#ck it up </h2>
+          <h2 className="header-title">Lets f#ck it up </h2>
           <Btn link="/contact" text="Get in touch"/>
         </div> 
         <div className="reel-vertical-wrapper"><ReelVertical /></div>
