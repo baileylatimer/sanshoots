@@ -34,8 +34,10 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Hero />
 
-
-    <div className="flex flex-col lg:flex-row  lg:mt-20">
+<div className="px-d">
+<h5>Selected Works</h5>
+</div>
+    <div className="flex flex-col lg:flex-row  ">
   <ProjectCardHome link='/showreel' cover={SanRun}  title="Showreel" desc="01"/>
   <ProjectCardHome link='/shortfilms' cover={SanSand}  title="Short Films" desc="02"/>
   <ProjectCardHome link='/transitions' cover={Hhs4}  title="Transitions" desc="03"/>

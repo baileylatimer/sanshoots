@@ -13,8 +13,8 @@ const ProjectCardHome  = ({ title, desc, link, cover }) => {
           <BackgroundVideo video={cover}/>
         </div>
         <div class="flex justify-between my-4 mx-4">
-            <h1 class="">{title}</h1>
-            <h1 className="lg:mt-0 color-contrast-medium"id="card-title-2">{desc}</h1>
+            <h4 class="">{title}</h4>
+            <h4 className="lg:mt-0 color-contrast-medium"id="card-title-2">{desc}</h4>
         </div>
         </Link>
         {/* <CustomCursor /> */}

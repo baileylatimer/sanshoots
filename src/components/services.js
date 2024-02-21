@@ -8,7 +8,7 @@ const ServiceComponent = ({ services }) => {
   return (
     <div className="service-component relative lg:flex dark-theme px-d py-d justify-between">
       <div>
-      <h5 class="color-bg mb-12 lg:mb-0">Services</h5>
+      <h5 class="color-bg mb-12 lg:mb-0 z-10 relative">Services</h5>
       <div className="service-texts">
         {services.map((service) => (
           <div

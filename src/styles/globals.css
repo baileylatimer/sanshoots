@@ -133,7 +133,7 @@ p {
 }
 @media(max-width:1023px) {
   .text-xxl {
-    font-size: 72px;
+    font-size: 152px;
   }
 }
 
@@ -377,7 +377,7 @@ li {
 
 @media(max-width:1023px) {
   .hero {
-    height: calc(100vh - 75px)
+    /* height: calc(100vh - 75px) */
   }
 }
 
@@ -413,25 +413,9 @@ li {
     margin-bottom: 30px
   }
 }
-
-.ro {
-  position: absolute;
-  top: 240px;
-  left:40px;
-}
 @media(max-width:1023px) {
-  .ro {
-    position: absolute;
-    top: 180px;
-    left:20px;
-  }
+.reel-block { transform: scale(.6); -webkit-transform: scale(.6); -moz-transform: scale(.6); -ms-transform: scale(.6); -o-transform: scale(.6);
 }
-
-
-.cio {
-  position: absolute;
-  bottom: 220px;
-  right:20px;
 }
 
 .hero-desc {
@@ -680,8 +664,19 @@ background-color: var(--color-contrast-higher);
   width: 100%;
   height: 100%;
 }
+@media(max-width:1023px) {
+.video-class {
+  clip-path: url(#clip-shape-mobile);
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+}
 
-.svg-class, #clip-shape {
+.svg-class, #clip-shape, #clip-shape-mobile {
   position: absolute;
   top: 0;
   left: 0;
@@ -696,7 +691,12 @@ background-color: var(--color-contrast-higher);
   padding-top: (473 / 193 * 100)%; /* Height as a percentage of width */
 }
 
-
+@media(max-width:1023px) {
+  .video-svg-wrapper {
+    margin-top: 10px;
+    width: 14vw;
+  }
+}
 
 
 
@@ -795,32 +795,7 @@ background-color: var(--color-contrast-higher);
 
 
 
-/* Services
-============== */
-.service-text {
-  /* Your base style for text */
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
 
-@media(min-width:1023px) {
-  .service-text {
-    height: 220px
-  }
-}
-
-.service-text.active {
-  /* Style for active state */
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
-}
-
-.service-video-element {
-  /* Styles for your video */
-  width: 100%; /* Adjust as needed */
-  height: auto; /* Adjust for your aspect ratio */
-}
 
 
 
@@ -864,6 +839,36 @@ background-color: var(--color-contrast-higher);
 /* SERVICES 
 ============== */
 
+
+.service-component {
+  overflow: hidden;
+  }
+.service-text {
+  /* Your base style for text */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@media(min-width:1023px) {
+  .service-text {
+    height: 220px
+  }
+}
+
+.service-text.active {
+  /* Style for active state */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.service-video-element {
+  /* Styles for your video */
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Adjust for your aspect ratio */
+}
+
+
 .service-video-wrapper {
   display: flex;
   justify-content: center;
@@ -887,7 +892,7 @@ background-color: var(--color-contrast-higher);
 @media(max-width:1023px) {
   .service-video-wrapper {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     left: 0;
     z-index: 0;
   }
@@ -904,11 +909,11 @@ background-color: var(--color-contrast-higher);
 /* Media query for mobile devices */
 @media (max-width: 767px) {
   .service-video video {
-    height: 448px; /* Fixed height on mobile */
+    /* height: 448px; */
     object-fit: cover; /* Ensures video covers the entire element's area */
-    width: 90%;
-    -webkit-clip-path:polygon(88% 0, 100% 12%, 99% 100%, 0% 100%, 0% 0);
-    clip-path: polygon(88% 0, 100% 12%, 99% 100%, 0% 100%, 0% 0);
+    /* width: 90%; */
+    /* -webkit-clip-path:polygon(88% 0, 100% 12%, 99% 100%, 0% 100%, 0% 0);
+    clip-path: polygon(88% 0, 100% 12%, 99% 100%, 0% 100%, 0% 0); */
   }
 }
 

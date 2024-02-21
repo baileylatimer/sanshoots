@@ -39,8 +39,9 @@ const Hero = props => {
   }, []);
 
   return (
-    <div className="hero">
-      <div className="flex justify-between hero-reel mx-24 mt-36">
+    <div className="hero mb-24">
+      <div className=" desktop">
+      <div className="flex justify-between hero-reel lg:mx-24 lg:mt-36">
         <ReelBlock />
         <ReelBlock />
         <ReelBlock />
@@ -54,7 +55,20 @@ const Hero = props => {
         <ReelBlock />
         <ReelBlock />
       </div>
-      <div className="flex" ref={videoMasksRef}>
+      </div>
+      <div className="mobile">
+      <div className="flex justify-between hero-reel mt-24 ">
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+      </div>
+      </div>
+      <div className="flex px-2" ref={videoMasksRef}>
         <h1 className="text-xxl text-center">SANSH</h1>
         <VideoSVGMask videoSrc={SanEye} />
        <VideoSVGMask videoSrc={SanThrow} />
