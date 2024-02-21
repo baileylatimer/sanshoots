@@ -63,28 +63,46 @@ const PageHeader = props => {
           <h2 className="header-title">Lets f#ck it up </h2>
           <Btn link="/contact" text="Get in touch"/>
         </div> 
-        <div className="reel-vertical-wrapper"><ReelVertical /></div>
+        <div className="reel-vertical-wrapper desktop"><ReelVertical /></div>
       </div>
 
-      <div className="footer-text flex justify-start items-center">
-        Los Angeles <CoordinatesLA /> Palestine <CoordinatesPalestine />
+      <div className="desktop">
+        <div className="footer-text flex justify-start items-center">
+          Los Angeles <CoordinatesLA /> Palestine <CoordinatesPalestine />
+        </div>
+        <div className="footer-text flex justify-start items-center">
+        <TextPalestine /> <FlagPalestine /> Hassan <EmailArrow />sanshoots.com
+        </div>
       </div>
-      <div className="footer-text flex justify-start items-center">
-       <TextPalestine /> <FlagPalestine /> Hassan <EmailArrow />sanshoots.com
+
+      <div className="mobile">
+        <div className="footer-text flex justify-start items-center">
+          Los Angeles <CoordinatesLA /> 
+        </div>
+        <div className="footer-text flex justify-start items-center">
+          <CoordinatesPalestine /> Palestine 
+        </div>
+
+        <div className="footer-text flex justify-between items-center mt-2 mb-4">
+        <TextPalestine /> <FlagPalestine />
+        </div>
+        <div className="footer-text flex justify-start items-center">
+       Hassan <EmailArrow />sanshoots.com
+        </div>
       </div>
       
-      <div className=" flex justify-between mx-d mt-16">
+      <div className=" flex flex-col lg:flex-row justify-between  mt-16">
         <p>© 2024 / Sanshoots</p>
     
 
-          <p>Load Address: 034526-01, IScxx compressed</p>
+          <p className="mt-4 lg:mt-0">Load Address: 034526-01, IScxx compressed</p>
       
-        <div className="flex footer-links flex">
+        <div className="flex footer-links flex mt-4 lg:mt-0">
           <a href="https://www.instagram.com/sanshoots/">Instagram</a>
-          <a className="ml-4" href="https://www.tiktok.com/@sanshootsx">TikTok</a>
-          <a className="ml-4" href="https://www.youtube.com/channel/UCR3Odsrgz2rVw_JoYkQnepA">YouTube</a>
-          <a className="ml-4" href="https://www.linkedin.com/in/hassan-musa-56bb14172/">LinkedIn</a>
-          <a className="ml-4" href="/contact">Contact</a>
+          <a className="ml-2 lg:ml-4" href="https://www.tiktok.com/@sanshootsx">TikTok</a>
+          <a className="ml-2 lg:ml-4" href="https://www.youtube.com/channel/UCR3Odsrgz2rVw_JoYkQnepA">YouTube</a>
+          <a className="ml-2 lg:ml-4" href="https://www.linkedin.com/in/hassan-musa-56bb14172/">LinkedIn</a>
+          <a className="ml-2 lg:ml-4" href="/contact">Contact</a>
         </div>
       </div>
     </footer>

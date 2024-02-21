@@ -19,6 +19,23 @@
   }
 }
 
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+@media(min-width:1023px) {
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+}
 
 @font-face {
   font-family: "Neue Montreal";
@@ -76,9 +93,7 @@ h2 {
 }
 @media(max-width:1023px) {
 h2 {
-  @apply text-xl;
-  font-size: 28px;
-  line-height: 28px;
+  font-size: 96px;
 }
 }
 h3 {
@@ -293,9 +308,18 @@ footer p {
 }
 
 .footer-text {
-  font-size: 124px;
+  font-size: 59px;
   font-family: 'Rayuela';
-  height: 135px;
+  height: 70px;
+  white-space: nowrap;
+}
+
+@media(min-width:1023px) {
+  .footer-text {
+    font-size: 124px;
+    height: 135px;
+  }
+  
 }
 
 .header-title .scramble {

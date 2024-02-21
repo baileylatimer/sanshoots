@@ -13,8 +13,10 @@ import HeroVid from "../videos/hero-vid.mp4"
 import PreProduction from "../videos/pre-production.mp4"
 import Production from "../videos/production.mp4"
 import PostProduction from "../videos/post-production.mp4"
-import Heels from "../videos/heels.mp4"
-import ThreeCarousel from '../components/ThreeCarousel';
+import SanRun from "../videos/san-run.mp4"
+import SanSand from "../videos/san-sand-1.mp4"
+
+
 import Camera from "../components/home-camera";
 import ServiceComponent from '../components/services';
 
@@ -34,8 +36,8 @@ const IndexPage = () => (
 
 
     <div className="flex flex-col lg:flex-row  lg:mt-20">
-  <ProjectCardHome link='/showreel' cover={Hhs4}  title="Showreel" desc="01"/>
-  <ProjectCardHome link='/shortfilms' cover={Hhs4}  title="Short Films" desc="02"/>
+  <ProjectCardHome link='/showreel' cover={SanRun}  title="Showreel" desc="01"/>
+  <ProjectCardHome link='/shortfilms' cover={SanSand}  title="Short Films" desc="02"/>
   <ProjectCardHome link='/transitions' cover={Hhs4}  title="Transitions" desc="03"/>
 </div>
 

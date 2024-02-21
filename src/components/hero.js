@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+
+import React, { useEffect, useRef } from "react";
 import BackgroundVideo from "./bg-video"
 import ReelBlock from "./reel-block"
 import Logo from "./logo"
@@ -6,52 +7,65 @@ import Video from "../videos/hero-vid.mp4"
 import VideoSVGMask from "./video-svg-mask"
 import ProjectCardHome from "./project-card-home"
 import Hhs4 from "../videos/hhs-04.mp4"
-import { gsap } from "gsap";
+import SanEye from "../videos/san-eye.mp4"
+import SanThrow from "../videos/san-throw.mp4"
 import { NavLogo } from "./nav-logo";
 
-const Hero = props => (
-  
-<div class="hero">
+import { gsap } from "gsap";
+import { Draggable } from "gsap/Draggable";
 
-<div className="flex justify-between hero-reel mx-24 mt-36">
-<ReelBlock />
-<ReelBlock />
-<ReelBlock />
-<ReelBlock />
-<ReelBlock />
-<ReelBlock />
-<ReelBlock />
-<ReelBlock />
-<ReelBlock />
-<ReelBlock />
-<ReelBlock />
-<ReelBlock />
+gsap.registerPlugin(Draggable);
 
-</div>
+// Import other dependencies
+
+const Hero = props => {
+  // Using a ref to target the container of the VideoSVGMask components
+  const videoMasksRef = useRef(null);
+
+  useEffect(() => {
+    // Ensure Draggable is registered
+    gsap.registerPlugin(Draggable);
+
+    // Apply Draggable to each VideoSVGMask component
+    if (videoMasksRef.current) {
+      const videoMasks = videoMasksRef.current.querySelectorAll('.video-svg-wrapper');
+      videoMasks.forEach(mask => {
+        Draggable.create(mask, {
+          type: "x,y", // Makes the element draggable in both x and y directions
+          bounds: videoMasksRef.current, // Optionally restricts dragging within the bounds of the parent container
+        });
+      });
+    }
+  }, []);
+
+  return (
+    <div className="hero">
+      <div className="flex justify-between hero-reel mx-24 mt-36">
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+      </div>
+      <div className="flex" ref={videoMasksRef}>
+        <h1 className="text-xxl text-center">SANSH</h1>
+        <VideoSVGMask videoSrc={SanEye} />
+       <VideoSVGMask videoSrc={SanThrow} />
+        <h1 className="text-xxl text-center">TS</h1>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;     
 
 
-<div className=" flex">
-<h1 className="text-xxl text-center">SANSH</h1>
-<VideoSVGMask videoSrc={Hhs4} />
-<VideoSVGMask videoSrc={Hhs4} />
-<h1 className="text-xxl text-center">TS</h1>
-</div>
 
-</div>
 
-);
-
-// gsap.fromTo(".ro", {x: 285, y: 400},{ x: 0, y: 0, duration: 3, delay:1}); 
-// gsap.fromTo(".cio", {x: -285, y: -400},{ x: 0, y: 0, duration: 3, delay:1});
-
-// gsap.fromTo(".ro", {x: "+=20vw", y: "+=20vh"},{ x: 0, y: 0, duration: 3, delay:5}); 
-// gsap.fromTo(".cio", {x: "-=20vw", y: "+=20vh"},{ x: 0, y: 0, duration: 3, delay:5});
-
-// gsap.fromTo(".ro", {xPercent: 55, yPercent: 650},{ xPercent: 0, yPercent: 0, duration: 3, delay:1}); 
-// gsap.fromTo(".cio", {xPercent: -55, yPercent: -630},{ xPercent: 0, yPercent: 0, duration: 3, delay:1});
- 
-
-   
-
- 
-export default Hero        
