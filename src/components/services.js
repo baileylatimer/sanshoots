@@ -6,9 +6,9 @@ const ServiceComponent = ({ services }) => {
   const [activeService, setActiveService] = useState(services[0]);
 
   return (
-    <div className="service-component flex dark-theme px-d py-d">
+    <div className="service-component relative lg:flex dark-theme px-d py-d">
       <div>
-      <h5 class="color-bg">Services</h5>
+      <h5 class="color-bg mb-12 lg:mb-0">Services</h5>
       <div className="service-texts">
         {services.map((service) => (
           <div

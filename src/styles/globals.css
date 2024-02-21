@@ -91,6 +91,16 @@ h5 {
   font-size: 68px;
 font-style: normal;
 }
+
+@media(max-width:1023px) {
+  h5 {
+    font-family: 'Shreck' !important;
+    font-size: 36px;
+  font-style: normal;
+  }
+}
+
+
 a {
   @apply text-blue-600;
   font-size: var(--font-base);
@@ -806,33 +816,79 @@ background-color: var(--color-contrast-higher);
   align-items: center;
 }
 .service-video {
-  -webkit-clip-path:  polygon(88.00% 0.00%,100% 12%,99% 100%,18% 100%,18% 0%);
-  clip-path:  polygon(88.00% 0.00%,100% 12%,99% 100%,18% 100%,18% 0%);
+
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@media(min-width:1023px) {
+.service-video {
+  -webkit-clip-path:  polygon(88.00% 0.00%,100% 12%,99% 100%,18% 100%,18% 0%);
+  clip-path:  polygon(88.00% 0.00%,100% 12%,99% 100%,18% 100%,18% 0%);
+}
+}
+
+@media(max-width:1023px) {
+  .service-video-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+/* Base styles for larger screens */
+.service-video video {
+  width: 100%; /* This will make the video full width on all devices */
+  height: auto; /* This maintains aspect ratio initially */
+  object-fit: cover; /* This will cover the area, potentially cropping the video */
+
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .service-video video {
+    height: 448px; /* Fixed height on mobile */
+    object-fit: cover; /* Ensures video covers the entire element's area */
+    width: 90%;
+    -webkit-clip-path:polygon(88% 0, 100% 12%, 99% 100%, 0% 100%, 0% 0);
+    clip-path: polygon(88% 0, 100% 12%, 99% 100%, 0% 100%, 0% 0);
+  }
+}
+
+/* 
 .service-video::after {
   content: "";
-  border: 1px solid #fff; /* Adjust the color as needed */
+  border: 1px solid #fff;
   position: absolute;
   display: block;
   left: 10px;
   top: 10px;
-  right: 10px; /* You need to define right and bottom to create a box unless you specify width and height */
+  right: 10px; 
   bottom: 10px;
   -webkit-clip-path: polygon(88% 0, 100% 12%, 99% 100%, 18% 100%, 18% 0);
   clip-path: polygon(88% 0, 100% 12%, 99% 100%, 18% 100%, 18% 0);
   height: 100%;
   width: 100%;
-  z-index: 10; /* Make sure it's above the video */
+  z-index: 10;
+} */
+
+
+.service-texts {
+  z-index: 10;
+  position: relative;
 }
 
-
 .service-text {
-  font-size: 184px;
+  font-size: 91px;
   font-family: "Rayuela" ;
   white-space: nowrap;
+}
+
+@media(min-width:1023px) {
+  .service-text {
+    font-size: 184px;
+  }
 }
