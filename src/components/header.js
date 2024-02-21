@@ -55,8 +55,8 @@ function Header({ siteTitle }) {
 
 
   return (
-    <nav className="flex flex-wrap items-center justify-between py-3 lg:p-6 mx-d mb-6">
-         <div className="flex items-center text-white px-d ">
+    <nav className="flex flex-wrap items-center justify-between py-3 lg:p-6 mx-d mb-6 px-d">
+         <div className="flex items-center text-white  px-d">
       <Link
             to={`/`}
             className="logo-wrapper mb-0"
@@ -77,14 +77,14 @@ function Header({ siteTitle }) {
       </Link>
 
       </div>
-      <div className="block lg:hidden px-d">
+      <div className="block lg:hidden ">
         <button
           onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center px-3 py-2 "
+          className="flex items-center py-2 "
         >
 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1" y="9" width="25" height="2" fill="black"/>
-<rect x="1" y="17" width="25" height="2" fill="black"/>
+<rect x="1" y="9" width="25" height="2" fill="var(--color-bg)"/>
+<rect x="1" y="17" width="25" height="2" fill="var(--color-bg)"/>
 </svg>
 
 
@@ -94,7 +94,7 @@ function Header({ siteTitle }) {
       <div
         className={`${
           isExpanded ? `block` : `hidden`
-        } w-full nav-open block lg:flex lg:items-center lg:w-auto mt-4 pt-4 lg:mt-0 lg:pt-0 px-d `}
+        } w-full nav-open block lg:flex lg:items-center lg:w-auto mt-4 pt-4 lg:mt-0 lg:pt-0  `}
       >
         <div className="text-sm">
           <Link
@@ -124,13 +124,20 @@ function Header({ siteTitle }) {
             About
           </Link>
 
-          
+       
         </div>
+
+        <div className="flex flex-col mobile pt-64">
+          <Btn link="/contact" text="Get in touch" type=" btn--ghost mobile"/>
+          <p className="color-bg my-8">SANSHOOTS® is an award-winning videography studio founded by Hassan Musa based in Los Angeles, CA.</p>
+          <p className="color-bg">©2024</p>
+        </div>
+        
         <div>
         </div>
       </div>
    
-      <Btn link="/contact" text="Get in touch" type=" btn--ghost "/>
+      <Btn link="/contact" text="Get in touch" type=" btn--ghost desktop "/>
       
     </nav>
   );
