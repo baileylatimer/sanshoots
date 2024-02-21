@@ -10,6 +10,9 @@ import HomeAbout from "../components/home-about"
 
 import Hhs4 from "../videos/hhs-04.mp4"
 import HeroVid from "../videos/hero-vid.mp4"
+import PreProduction from "../videos/pre-production.mp4"
+import Production from "../videos/production.mp4"
+import PostProduction from "../videos/post-production.mp4"
 import Heels from "../videos/heels.mp4"
 import ThreeCarousel from '../components/ThreeCarousel';
 import Camera from "../components/home-camera";
@@ -18,9 +21,9 @@ import ServiceComponent from '../components/services';
 
 
 const services = [
-  { name: 'PRE-PRODUCTION', video: Hhs4 },
-  { name: 'PRODUCTION', video: HeroVid },
-  { name: 'POST-PRODUCTION', video: Heels },
+  { name: 'PRE-PRODUCTION', video: PreProduction },
+  { name: 'PRODUCTION', video: Production },
+  { name: 'POST-PRODUCTION', video: PostProduction },
 ];
 
 

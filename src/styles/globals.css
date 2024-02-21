@@ -185,6 +185,7 @@ h1, h2 {
 .btn {
  border-radius: 8px;
  background: #2b2b2b;
+
  -webkit-clip-path: polygon(0 0,0 0,90% 0,100% 39%,100% 100%,100% 100%,0 100%,0 90%,0 10%);
  clip-path: polygon(0 0,0 0,90% 0,100% 39%,100% 100%,100% 100%,0 100%,0 90%,0 10%);
  color: #f1ede9;
@@ -194,7 +195,7 @@ h1, h2 {
  font-weight: 400;
  line-height: 28px;
  overflow: hidden;
- padding: 10px 54px 8px 13px !important;
+ padding: 20px 15px 8px 13px !important;
  position: relative;
  text-align: center;
  text-transform: uppercase;
@@ -203,7 +204,7 @@ h1, h2 {
  -moz-border-radius: 8px;
  -ms-border-radius: 8px;
  -o-border-radius: 8px;
- max-width: 250px;
+ width: 250px;
 }
 @media(min-width:1023px) {
   .btn {
@@ -227,19 +228,29 @@ h1, h2 {
   font-size: 17px;
   z-index: 1;
   position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav .btn a {
-  padding: 1em;
+
   white-space: nowrap;
 }
-
-
 
 .btn--ghost a {
   color: var(--color-contrast-higher);
 }
 
+
+@keyframes pulseAnimation {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.red-dot {
+  animation: pulseAnimation 1s infinite;
+}
 
 /* HEADER 
 =========== */
@@ -862,7 +873,7 @@ background-color: var(--color-contrast-higher);
   width: 100%; /* This will make the video full width on all devices */
   height: auto; /* This maintains aspect ratio initially */
   object-fit: cover; /* This will cover the area, potentially cropping the video */
-
+  max-height: 860px;
 }
 
 /* Media query for mobile devices */

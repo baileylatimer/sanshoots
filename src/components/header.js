@@ -14,26 +14,30 @@ function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
   useEffect(() => {
-    // Select all links within the header for the scramble text effect,
-    // excluding those with the classes .logo-wrapper and .btn
-    const links = document.querySelectorAll("nav a:not(.logo-wrapper, .btn)");
-
+    // Select all <a> tags within the <nav>
+    const links = document.querySelectorAll("nav a");
+  
     links.forEach((link) => {
+      // Check if the link or its parents have excluded classes
+      if (link.classList.contains('logo-wrapper') || link.closest('.btn')) {
+        // Skip this link if it matches the excluded criteria
+        return;
+      }
+  
       const originalText = link.textContent; // Store the original text
-
+  
       // Hover in
       link.addEventListener("mouseenter", () => {
         gsap.to(link, {
           duration: 0.5,
           scrambleText: {
             text: originalText,
-            chars: originalText + "!@#$%^&*", // Include original text and some special characters for effect
-            ease: "none",
+            chars: "upperCase",
             revealDelay: 0.5,
           },
         });
       });
-
+  
       // Hover out
       link.addEventListener("mouseleave", () => {
         // Immediately revert to the original text without waiting for the animation to complete
@@ -41,8 +45,7 @@ function Header({ siteTitle }) {
           duration: 0.1, // Short duration for immediate effect
           scrambleText: {
             text: originalText,
-            chars: originalText + "!@#$%^&*",
-            ease: "none",
+            chars: "upperCase",
             revealDelay: 0,
           },
         });
@@ -126,9 +129,9 @@ function Header({ siteTitle }) {
         <div>
         </div>
       </div>
-      <div className="hidden lg:flex font-base">
+   
       <Btn link="/contact" text="Get in touch" type=" btn--ghost "/>
-      </div>
+      
     </nav>
   );
 }

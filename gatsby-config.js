@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `STUDIO–RO®`,
-    description: `STUDIO–RO is an award-winning dance practice founded by Rocio Colomer Jorda working across a mix of disciplines that includes Heels & Hip Hop.`,
+    title: `SANSHOOTS®`,
+    description: `SANSHOOTS® is an award-winning videography studio founded by Hassan Musa based in Los Angeles, CA.`,
     author: `@latimer2k`,
   },
   flags: {
