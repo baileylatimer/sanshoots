@@ -1,8 +1,7 @@
 import React from "react"
 
 import { gsap } from "gsap";
-    
-import { Draggable } from "gsap/Draggable";
+
 
 
 
@@ -16,7 +15,5 @@ const HomeAbout = props => (
 </div>
 );
  
-gsap.registerPlugin(Draggable);
-Draggable.create(".content");
 
 export default HomeAbout

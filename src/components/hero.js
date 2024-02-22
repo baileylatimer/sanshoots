@@ -12,9 +12,7 @@ import SanThrow from "../videos/san-throw.mp4"
 import { NavLogo } from "./nav-logo";
 
 import { gsap } from "gsap";
-import { Draggable } from "gsap/Draggable";
 
-gsap.registerPlugin(Draggable);
 
 // Import other dependencies
 
@@ -22,21 +20,21 @@ const Hero = props => {
   // Using a ref to target the container of the VideoSVGMask components
   const videoMasksRef = useRef(null);
 
-  useEffect(() => {
-    // Ensure Draggable is registered
-    gsap.registerPlugin(Draggable);
+  // useEffect(() => {
+  //   // Ensure Draggable is registered
+  //   gsap.registerPlugin(Draggable);
 
-    // Apply Draggable to each VideoSVGMask component
-    if (videoMasksRef.current) {
-      const videoMasks = videoMasksRef.current.querySelectorAll('.video-svg-wrapper');
-      videoMasks.forEach(mask => {
-        Draggable.create(mask, {
-          type: "x,y", // Makes the element draggable in both x and y directions
-          bounds: videoMasksRef.current, // Optionally restricts dragging within the bounds of the parent container
-        });
-      });
-    }
-  }, []);
+  //   // Apply Draggable to each VideoSVGMask component
+  //   if (videoMasksRef.current) {
+  //     const videoMasks = videoMasksRef.current.querySelectorAll('.video-svg-wrapper');
+  //     videoMasks.forEach(mask => {
+  //       Draggable.create(mask, {
+  //         type: "x,y", // Makes the element draggable in both x and y directions
+  //         bounds: videoMasksRef.current, // Optionally restricts dragging within the bounds of the parent container
+  //       });
+  //     });
+  //   }
+  // }, []);
 
   return (
     <div className="hero mb-16">
