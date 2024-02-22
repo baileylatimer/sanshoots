@@ -62,7 +62,7 @@ const PageHeader = props => {
     <footer  className="flex flex-col px-d py-d relative">
       <div className="flex justify-between mb-16">
         <div className="flex flex-col">
-          <h2 className="header-title">Lets f#ck it up</h2>
+          <h2 className="header-title">Lets f#ck it up </h2>
           <Btn link="/contact" text="Get in touch"/>
         </div> 
         <div className="reel-vertical-wrapper desktop"><ReelVertical /></div>
