@@ -6,13 +6,15 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import Btn from "./btn"
 import gsap from "gsap";
-import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+// import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
-gsap.registerPlugin(ScrambleTextPlugin);
+// gsap.registerPlugin(ScrambleTextPlugin);
+
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
 
+  /*
   useEffect(() => {
     // Select all <a> tags within the <nav>
     const links = document.querySelectorAll("nav a");
@@ -52,7 +54,7 @@ function Header({ siteTitle }) {
       });
     });
   }, []);
-
+*/
 
   return (
     <nav className="flex flex-wrap items-center justify-between py-3 lg:p-6 mx-d mb-6 px-d z-50">

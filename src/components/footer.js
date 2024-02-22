@@ -11,11 +11,13 @@ import TextPalestine from "./text-palestine";
 import FlagPalestine from "./flag-palestine";
 import EmailArrow from "./email-arrow";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+// import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
-gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
+// gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
+
 
 const PageHeader = props => {
+  /*
   const footerRef = useRef(null);
 
   useEffect(() => {
@@ -53,11 +55,11 @@ const PageHeader = props => {
     }
   }, []);
   
-  
+  */
   
 
   return (
-    <footer ref={footerRef} className="flex flex-col px-d py-d relative">
+    <footer  className="flex flex-col px-d py-d relative">
       <div className="flex justify-between mb-16">
         <div className="flex flex-col">
           <h2 className="header-title">Lets f#ck it up</h2>
