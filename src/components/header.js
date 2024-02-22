@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import Btn from "./btn"
-import gsap from "gsap";
+// import gsap from "gsap";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
 // gsap.registerPlugin(ScrambleTextPlugin);

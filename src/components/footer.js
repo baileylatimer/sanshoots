@@ -2,7 +2,7 @@
 
 
 import React, { useRef, useEffect } from "react";
-import gsap from "gsap";
+// import gsap from "gsap";
 import Btn from "./btn";
 import ReelVertical from "./reel-vertical";
 import CoordinatesLA from "./coordinates-la";
@@ -10,7 +10,7 @@ import CoordinatesPalestine from "./coordinates-palestine";
 import TextPalestine from "./text-palestine";
 import FlagPalestine from "./flag-palestine";
 import EmailArrow from "./email-arrow";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
 // gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
