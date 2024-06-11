@@ -7,14 +7,14 @@
   --color-contrast-higher: #232323;
   --color-bg: #EDEAE4;
   --font-base: 17px;
-  --text-lg: 64px;
+  --text-lg: 284px;
   --text-md: 49px;
 }
 
 @media(max-width:1023px) {
   :root {
     --font-base: 13px;
-    --text-lg: 42px;
+    --text-lg: 94px;
     --text-md: 26px;
   }
 }
@@ -85,7 +85,7 @@ body {
 
 h1 {
   @apply text-2xl;
-  font-size: var(--text-md)
+  font-size: var(--text-lg)
 }
 h2 {
 
@@ -97,7 +97,9 @@ h2 {
 }
 }
 h3 {
-  @apply text-lg;
+  font-family: 'Rayuela' !important;
+  font-size: 172px;
+  line-height: 105%;
 }
 
 h5 {
@@ -502,6 +504,18 @@ li {
 }
 }
 
+.about-card {
+  max-height: 630px;
+  display: block;
+}
+.about-card video {
+  max-height: 630px;
+  display: block;
+}
+
+/* CURSOR 
+============ */
+
 :root {
   --cursor-top: -300px;
 }
@@ -549,6 +563,9 @@ li {
   overflow: hidden;
 }
 
+.video-content p {
+  font-family: 'Shreck';
+}
 
 .play-btn {
   position: absolute;
