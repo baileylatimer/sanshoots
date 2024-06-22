@@ -101,6 +101,12 @@ h3 {
   font-size: 172px;
   line-height: 105%;
 }
+@media(max-width:1023px) {
+  h3 {
+    font-size: 94px;
+    line-height: 90px;
+  }
+}
 
 h5 {
   font-family: 'Shreck' !important;
@@ -968,3 +974,46 @@ background-color: var(--color-contrast-higher);
     font-size: 184px;
   }
 }
+
+.content {
+  /* height: 1200px; */
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 120%
+}
+
+
+.target-copy-1{
+  position: absolute;
+  top: 1.5rem;
+
+}
+
+.target-copy-2 {
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+@media(min-width:1023px) {
+.content {
+  /* height: 1200px; */
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 53.63%
+}
+
+.target-copy-1{
+  position: absolute;
+  top: 1.5rem;
+  left: 40px;
+}
+
+.target-copy-2 {
+  position: absolute;
+  bottom: 3rem;
+  right: 40px;
+}
+}
+
