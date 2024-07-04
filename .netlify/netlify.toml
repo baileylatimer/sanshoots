@@ -1,0 +1,57 @@
+headers = []
+
+[functions]
+
+[functions.__api]
+included_files = ["/Users/baileylatimer/LocalSites/Clients/sanshoots-2/.cache/functions/**"]
+external_node_modules = ["msgpackr-extract"]
+
+[functions.__dsg]
+included_files = ["public/404.html", "public/500.html", "/Users/baileylatimer/LocalSites/Clients/sanshoots-2/.cache/query-engine/**", "/Users/baileylatimer/LocalSites/Clients/sanshoots-2/.cache/page-ssr/**", "!**/*.js.map", "/Users/baileylatimer/LocalSites/Clients/sanshoots-2/.cache/data/**"]
+external_node_modules = ["msgpackr-extract"]
+node_bundler = "esbuild"
+
+[functions.__ssr]
+included_files = ["public/404.html", "public/500.html", "/Users/baileylatimer/LocalSites/Clients/sanshoots-2/.cache/query-engine/**", "/Users/baileylatimer/LocalSites/Clients/sanshoots-2/.cache/page-ssr/**", "!**/*.js.map", "/Users/baileylatimer/LocalSites/Clients/sanshoots-2/.cache/data/**"]
+external_node_modules = ["msgpackr-extract"]
+node_bundler = "esbuild"
+
+[functions."*"]
+
+[[plugins]]
+package = "@netlify/plugin-gatsby"
+origin = "ui"
+
+[plugins.inputs]
+
+[build]
+publish = "/Users/baileylatimer/LocalSites/Clients/sanshoots-2/public"
+publishOrigin = "ui"
+command = "npm run build"
+commandOrigin = "ui"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/__api"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]

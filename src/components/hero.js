@@ -1,15 +1,9 @@
 
 import React, { useEffect, useRef } from "react";
-import BackgroundVideo from "./bg-video"
 import ReelBlock from "./reel-block"
-import Logo from "./logo"
-import Video from "../videos/hero-vid.mp4"
 import VideoSVGMask from "./video-svg-mask"
-import ProjectCardHome from "./project-card-home"
-import Hhs4 from "../videos/hhs-04.mp4"
 import SanEye from "../videos/san-eye.mp4"
 import SanThrow from "../videos/san-throw.mp4"
-import { NavLogo } from "./nav-logo";
 
 import { gsap } from "gsap";
 

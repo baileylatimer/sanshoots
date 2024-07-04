@@ -7,14 +7,14 @@
   --color-contrast-higher: #232323;
   --color-bg: #EDEAE4;
   --font-base: 17px;
-  --text-lg: 64px;
+  --text-lg: 284px;
   --text-md: 49px;
 }
 
 @media(max-width:1023px) {
   :root {
     --font-base: 13px;
-    --text-lg: 42px;
+    --text-lg: 94px;
     --text-md: 26px;
   }
 }
@@ -85,7 +85,7 @@ body {
 
 h1 {
   @apply text-2xl;
-  font-size: var(--text-md)
+  font-size: var(--text-lg)
 }
 h2 {
 
@@ -97,7 +97,15 @@ h2 {
 }
 }
 h3 {
-  @apply text-lg;
+  font-family: 'Rayuela' !important;
+  font-size: 172px;
+  line-height: 105%;
+}
+@media(max-width:1023px) {
+  h3 {
+    font-size: 94px;
+    line-height: 90px;
+  }
 }
 
 h5 {
@@ -502,6 +510,18 @@ li {
 }
 }
 
+.about-card {
+  max-height: 630px;
+  display: block;
+}
+.about-card video {
+  max-height: 630px;
+  display: block;
+}
+
+/* CURSOR 
+============ */
+
 :root {
   --cursor-top: -300px;
 }
@@ -549,6 +569,9 @@ li {
   overflow: hidden;
 }
 
+.video-content p {
+  font-family: 'Shreck';
+}
 
 .play-btn {
   position: absolute;
@@ -950,4 +973,167 @@ background-color: var(--color-contrast-higher);
   .service-text {
     font-size: 184px;
   }
+}
+
+.content {
+  /* height: 1200px; */
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 120%
+}
+
+
+.target-copy-1{
+  position: absolute;
+  top: 1.5rem;
+
+}
+
+.target-copy-2 {
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+
+
+
+@media(min-width:1023px) {
+.content {
+  /* height: 1200px; */
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 53.63%
+}
+
+.target-copy-1{
+  position: absolute;
+  top: 1.5rem;
+  left: 40px;
+}
+
+.target-copy-2 {
+  position: absolute;
+  bottom: 3rem;
+  right: 40px;
+}
+}
+
+/* SLIDER */
+
+.video-slide .video-container {
+  position: relative;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video-slide video {
+  height: 100%;
+  width: auto; /* Adjust width to maintain aspect ratio */
+  min-width: 100%;
+  object-fit: cover; /* Ensures the video covers the area */
+}
+
+.video-slide .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%; /* Adjust based on your preference */
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.video-slide .video-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  color: white; /* Ensures text is visible on top of the gradient */
+}
+
+/* Adjust the size of the title and paragraph if needed */
+.video-slide h3 {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-base);
+  font-family: var(--font-primary) !important;
+  text-transform: uppercase;
+}
+
+.video-slide p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  font-size: var(--font-base);
+}
+
+.tag {
+  padding: 0.1em .8em;
+  border: 1px solid var(--color-bg);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.video-container {
+  width: auto !important
+}
+
+.slick-slide {
+  /* margin-left: 1em */
+}
+
+
+/* START */
+/* Ensure the body doesn't scroll vertically during horizontal scroll phase */
+body.no-vertical-scroll {
+  overflow-y: hidden !important;
+}
+
+/* Slider container */
+.video-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider items */
+.video-slider-container .slick-slide {
+  outline: none; /* Remove outline to prevent visual glitches */
+}
+
+/* Prevent the horizontal scrollbar from showing */
+.video-slider-container .slick-track {
+  display: flex;
+}
+
+/* Additional styles for slides and video content */
+.video-slide {
+  position: relative;
+  overflow: hidden;
+  width: 800px;
+  height: 450px; /* 16:9 aspect ratio */
+}
+
+.video-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  color: white;
 }

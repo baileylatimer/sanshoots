@@ -33,23 +33,16 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-
-<div className="px-d">
-<h5>Selected Works</h5>
-</div>
+    <div className="px-d">
+      <h5>Selected Works</h5>
+    </div>
     <div className="flex flex-col lg:flex-row  ">
-  <ProjectCardHome link='/showreel' cover={SanRun}  title="Showreel" desc="01"/>
-  <ProjectCardHome link='/shortfilms' cover={SanSand}  title="Short Films" desc="02"/>
-
-</div>
-
-<Camera />
-
-<ServiceComponent services={services} />
-
-
-
-
+      <ProjectCardHome link='/showreel' cover={SanRun}  title="Showreel" desc="01" class="zz"/>
+      <ProjectCardHome link='/shortfilms' cover={SanSand}  title="Short Films" desc="02"/>
+      <ProjectCardHome link='/shortfilms' cover={SanSand}  title="Transitions" desc="03"/>
+    </div>
+    <Camera />
+    <ServiceComponent services={services} />
   </Layout>
 )
 

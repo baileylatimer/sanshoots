@@ -8,20 +8,28 @@ import SEO from "../components/seo"
 import PageHeader from "../components/page-header"
 import TextCard from "../components/text-card"
 import ContactBanner from "../components/contact-banner"
-
-import HeroVideo from "../videos/hero.mp4"
+import AboutCard from "../components/about-card"
+import PostProduction from "../videos/post-production.mp4"
+import Target from "../components/target"
+import TargetImg from "../images/target-desktop.png"
+import TargetMobileImg from "../images/target-mobile.png"
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
     <PageHeader title="About"/>
-    <div className="flex w-full justify-center">
-    <StaticImage placeholder="blurred" src="../images/ro-about.jpg" alt="Rocio Colomer Jorda • Dance" objectFit="cover" height="1200" width="2000" />
+    <div className="px-d ">
+      <AboutCard cover={PostProduction} video={PostProduction}/>
+    <h5 className="mt-12">About Sanshoots</h5>
+    <h3 className="text-justify">One part left brain, one part right brain. One whole creative video agency.</h3></div>
+
+
+    <Target cover={TargetImg} coverMobile={TargetMobileImg}/>
+
+    <div className="flex w-full justify-center mt-24">
+    <StaticImage placeholder="blurred" src="../images/san-about.jpg" alt="Target" objectFit="cover" height="1200" width="2000" />
     </div>
-    <div className="flex flex-col lg:flex-row">
-      <TextCard text="STUDIO–RO is an award-winning dance practice working across a mix of disciplines that includes Heels & Hip hop."/>
-      <TextCard text="Rocio Colomer Jorda has 15 years of dance experience. With influences from her home country of Spain, she now teaches in San Diego, CA."/>
-    </div>
+
     <ContactBanner link="/contact" title="Get in touch"/>
   </Layout>
 )

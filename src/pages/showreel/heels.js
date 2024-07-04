@@ -19,22 +19,6 @@ import Video4 from "../../videos/video-4.mp4"
 import Heels from "../../videos/heels.mp4"
 import HipHop from "../../videos/hip-hop.mp4"
 
-import Hh1 from "../../videos/hh-001.mp4"
-import Hh2 from "../../videos/video-2.mp4"
-import Hh3 from "../../videos/hh-003.mp4"
-import Hh4 from "../../videos/hh-004.mp4"
-import Hh5 from "../../videos/hh-005.mp4"
-import Hh6 from "../../videos/hh-006.mp4"
-import Hh7 from "../../videos/hh-007.mp4"
-
-import Hhs1 from "../../videos/hhs-01.mp4"
-import Hhs2 from "../../videos/hhs-02.mp4"
-import Hhs3 from "../../videos/hhs-03.mp4"
-import Hhs4 from "../../videos/hhs-04.mp4"
-import Hhs5 from "../../videos/hhs-05.mp4"
-import Hhs6 from "../../videos/hhs-06.mp4"
-import Hhs7 from "../../videos/hhs-07.mp4"
-
 const ShowreelPage = () => (
   <Layout>
     <SEO title="Heels | Showreel" />
