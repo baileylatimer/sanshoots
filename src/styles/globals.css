@@ -1017,3 +1017,62 @@ background-color: var(--color-contrast-higher);
 }
 }
 
+/* SLIDER */
+
+.video-slide .video-container {
+  position: relative;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video-slide video {
+  height: 100%;
+  width: auto; /* Adjust width to maintain aspect ratio */
+  min-width: 100%;
+  object-fit: cover; /* Ensures the video covers the area */
+}
+
+.video-slide .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%; /* Adjust based on your preference */
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.video-slide .video-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  color: white; /* Ensures text is visible on top of the gradient */
+}
+
+/* Adjust the size of the title and paragraph if needed */
+.video-slide h3 {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-base);
+  font-family: var(--font-primary) !important;
+  text-transform: uppercase;
+}
+
+.video-slide p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  font-size: var(--font-base);
+}
+
+.video-container {
+  width: auto !important
+}
+
+.slick-slide {
+  margin-left: 1em
+}

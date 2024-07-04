@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import BackgroundVideo from "./bg-video"
 import VideoModal from './video-modal';
-import CustomCursor from "./cursor";
 
 const AboutCard  = ({ title, desc, cover, video, videoTitle, tag  }) => {
   const [isOpen, setIsOpen] = useState(false);
