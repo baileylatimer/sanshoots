@@ -26,7 +26,9 @@ const VideoSlide = ({ videoSrc, title, tag, linkTo }) => {
         <div className="overlay"></div>
         <div className="video-info flex justify-between items-center w-full">
           <h3 className="color-bg">{title}</h3>
+          <div className="tag">
           <p className="color-bg">{tag}</p>
+          </div>
         </div>
       </div>
     </Link>

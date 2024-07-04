@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 const VideoSlider = ({ slides }) => {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -17,7 +17,7 @@ const VideoSlider = ({ slides }) => {
         settings: {
           slidesToShow: 1.5,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: true
         }
       }
