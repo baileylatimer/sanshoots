@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import ReactPlayer from 'react-player/vimeo';
 
-const ProjectPage = ({ videoUrl, projectDetails }) => {
+const ProjectPage = ({ videoUrl, projectDetails, projectTitle }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -21,6 +21,35 @@ const ProjectPage = ({ videoUrl, projectDetails }) => {
     };
   }, []);
 
+  const renderDetail = (detail, index) => {
+    switch (detail.type) {
+      case 'layout1':
+        return (
+          <div key={index} className="project-detail layout1 content-width">
+            <h3>{detail.content.heading}</h3>
+          </div>
+        );
+      case 'layout2':
+        return (
+          <div key={index} className="project-detail layout2">
+            <img src={detail.content.image} alt={`Detail ${index + 1}`} />
+          </div>
+        );
+      case 'layout3':
+        return (
+          <div key={index} className="project-detail layout3 flex gap-24 ml-24">
+            <div className='flex flex-col'>
+              <h3>{detail.content.heading}</h3>
+              <p>{detail.content.text}</p>
+            </div>
+            <img src={detail.content.image} alt={`Detail ${index + 1}`} />
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
     <Layout className="project-page">
       <SEO title="Project Page" />
@@ -34,14 +63,15 @@ const ProjectPage = ({ videoUrl, projectDetails }) => {
               playing
               loop
               muted
-              controls={false}
+              controls={true}
             />
+            <div className="project-title">{projectTitle}</div>
           </div>
         </div>
         <div className="horizontal-sections">
           {projectDetails.map((detail, index) => (
             <div key={index} className="project-detail">
-              {detail}
+              {renderDetail(detail, index)}
             </div>
           ))}
         </div>
