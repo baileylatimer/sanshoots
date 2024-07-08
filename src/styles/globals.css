@@ -1087,7 +1087,7 @@ background-color: var(--color-contrast-higher);
 }
 
 .slick-slide {
-  /* margin-left: 1em */
+  /* margin-left: .5em */
 }
 
 
@@ -1136,4 +1136,96 @@ body.no-vertical-scroll {
   padding: 10px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   color: white;
+}
+
+
+/* Progress bar */
+.progress-container {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  width: 30%;
+  height: 8px;
+  background-color: #D9D6CF;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--color-contrast-higher);
+  transition: width 0.2s ease-in-out;
+}
+
+.slide-count {
+  position: absolute;
+  right: 0;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #000;
+}
+
+/* END SLIDER 
+============= */
+
+/* START PROJECT PAGE
+============ */
+/* global.css or relevant CSS file */
+
+body.project-page {
+  overflow: hidden; /* Prevent vertical overflow on project page */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.project-page-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.video-section {
+  background: black;
+  height: 100vh;
+  min-width: 100vw; /* Full width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.horizontal-sections {
+  display: flex;
+  height: 100vh;
+}
+
+.project-detail {
+  min-width: 100vw;
+  height: 100vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f0f0f0;
+  scroll-snap-align: start;
 }

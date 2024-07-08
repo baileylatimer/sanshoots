@@ -5,9 +5,9 @@ import PageHeader from "../components/page-header"
 import VideoSlider from '../components/video-slider';  // Adjust the path as necessary
 
 // Import video files directly
-import Elyanna from "../videos/san-eye.mp4";
+import Elyanna from "../videos/elyanna-2.mp4";
 import NourArdakani from "../videos/production.mp4";
-import FrancisMercier from "../videos/san-sand-1.mp4";
+import FrancisMercier from "../videos/francis-mercier.mp4";
 import Paliroots from "../videos/production.mp4";
 import Bluemoon from "../videos/san-eye.mp4";
 import Axe from "../videos/san-sand-1.mp4";
@@ -27,13 +27,7 @@ const slidesData = [
     videoSrc: Elyanna,
     title: "Elyanna",
     tag: "Music",
-    linkTo: "/first-video"
-  },
-  {
-    videoSrc: NourArdakani,
-    title: "Nour Ardakani",
-    tag: "Music",
-    linkTo: "/second-video"
+    linkTo: "/work/elyanna"
   },
   {
     videoSrc: FrancisMercier,
@@ -41,6 +35,13 @@ const slidesData = [
     tag: "Music",
     linkTo: "/second-video"
   },
+  {
+    videoSrc: NourArdakani,
+    title: "Nour Ardakani",
+    tag: "Music",
+    linkTo: "/second-video"
+  },
+
   {
     videoSrc: Paliroots,
     title: "Paliroots",
@@ -56,7 +57,7 @@ const slidesData = [
   {
     videoSrc: Axe,
     title: "Axe",
-    tag: "Overview of the Second Video",
+    tag: "Beauty",
     linkTo: "/second-video"
   },
   {
