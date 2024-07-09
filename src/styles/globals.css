@@ -558,7 +558,7 @@ li {
 .video-wrapper {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   top: 0;
   pointer-events: none;
 }
@@ -1186,98 +1186,74 @@ body.project-page {
   padding: 0;
   height: 100vh;
 }
-
 .project-page-container {
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  flex-direction: row;
   overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
+  height: 100vh;
+  scroll-snap-type: x mandatory;
 }
 
 .video-section {
-  background: black;
-  height: 100vh;
-  min-width: 100vw; /* Full width */
+  flex: 0 0 100vw;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
+  position: relative;
+}
+
+.video-wrapper {
+  max-width: 1180px;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
 }
 
 .project-title {
   position: absolute;
-  bottom: 2em;
-  left: 0px;
+  bottom: 1em;
+  left: 1em;
   color: white;
-  font-size: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background for better visibility */
-}
-
-.video-wrapper {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-  position: relative;
+  font-size: 2em;
 }
 
 .horizontal-sections {
   display: flex;
-  height: 100vh;
+  flex-direction: row;
 }
 
 .project-detail {
-  min-width: 100vw;
-  height: 100vh;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  background: url('../images/bg-texture.jpg') repeat;
-  background-color: var(--color-bg);
-  scroll-snap-align: start;
-}
-
-
-.layout1 {
+  flex: 0 0 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  padding: 1em;
+  box-sizing: border-box;
 }
 
-.layout1 h3 {
-  white-space: wrap;
-}
-
-.layout2 img {
+.project-detail img {
   max-width: 100%;
   height: auto;
 }
 
+.layout1 {
+  background-color: white;
+}
+
+.layout2 {
+  background-color: lightgray;
+}
+
 .layout3 {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
+  background-color: white;
 }
 
-.layout3 h3 {
-  margin-bottom: 10px;
+.next-project {
+  background-color: black;
+  color: white;
 }
 
-.layout3 p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  white-space: wrap
-}
-
-.layout3 img {
-  max-width: 800px;
-  height: auto;
-}
 
 .content-width {
   max-width: 720px;

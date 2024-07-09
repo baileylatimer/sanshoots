@@ -33,7 +33,7 @@ const slidesData = [
     videoSrc: FrancisMercier,
     title: "Francis Mercier",
     tag: "Music",
-    linkTo: "/second-video"
+    linkTo: "/work/francis-mercier"
   },
   {
     videoSrc: NourArdakani,

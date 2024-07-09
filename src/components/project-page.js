@@ -1,59 +1,32 @@
-import React, { useEffect, useRef } from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import React, { useEffect } from 'react';
+import Layout from './layout';
+import SEO from './seo';
 import ReactPlayer from 'react-player/vimeo';
+import { navigate } from 'gatsby';
 
 const ProjectPage = ({ videoUrl, projectDetails, projectTitle }) => {
-  const containerRef = useRef(null);
-
   useEffect(() => {
-    const container = containerRef.current;
-    const handleScroll = (e) => {
-      if (container) {
-        container.scrollLeft += e.deltaY;
-        e.preventDefault();
+    const handleScroll = () => {
+      const nextProjectElement = document.getElementById('next-project');
+      if (nextProjectElement) {
+        const rect = nextProjectElement.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          console.log('Navigating to next project...'); // Debug log
+          navigate('/work/francis-mercier');
+        }
       }
     };
 
-    window.addEventListener('wheel', handleScroll, { passive: false });
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('wheel', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const renderDetail = (detail, index) => {
-    switch (detail.type) {
-      case 'layout1':
-        return (
-          <div key={index} className="project-detail layout1 content-width">
-            <h3>{detail.content.heading}</h3>
-          </div>
-        );
-      case 'layout2':
-        return (
-          <div key={index} className="project-detail layout2">
-            <img src={detail.content.image} alt={`Detail ${index + 1}`} />
-          </div>
-        );
-      case 'layout3':
-        return (
-          <div key={index} className="project-detail layout3 flex gap-24 ml-24">
-            <div className='flex flex-col'>
-              <h3>{detail.content.heading}</h3>
-              <p>{detail.content.text}</p>
-            </div>
-            <img src={detail.content.image} alt={`Detail ${index + 1}`} />
-          </div>
-        );
-      default:
-        return null;
-    }
-  };
-
   return (
     <Layout className="project-page">
-      <SEO title="Project Page" />
-      <div className="project-page-container" ref={containerRef}>
+      <SEO title={projectTitle} />
+      <div className="project-page-container">
         <div className="video-section">
           <div className="video-wrapper">
             <ReactPlayer
@@ -65,15 +38,32 @@ const ProjectPage = ({ videoUrl, projectDetails, projectTitle }) => {
               muted
               controls={true}
             />
-            <div className="project-title">{projectTitle}</div>
+            <h1 className="project-title">{projectTitle}</h1>
           </div>
         </div>
         <div className="horizontal-sections">
-          {projectDetails.map((detail, index) => (
-            <div key={index} className="project-detail">
-              {renderDetail(detail, index)}
-            </div>
-          ))}
+          {projectDetails.map((detail, index) => {
+            if (detail.type === 'nextProject') {
+              return (
+                <div key={index} id="next-project" className="project-detail">
+                  <h1>{detail.content.nextProjectTitle}</h1>
+                </div>
+              );
+            }
+            return (
+              <div key={index} className={`project-detail ${detail.type}`}>
+                {detail.type === 'layout1' && <h1>{detail.content.heading}</h1>}
+                {detail.type === 'layout2' && <img src={detail.content.image} alt="Project Detail" />}
+                {detail.type === 'layout3' && (
+                  <>
+                    <h3>{detail.content.heading}</h3>
+                    <p>{detail.content.text}</p>
+                    <img src={detail.content.image} alt="Project Detail" />
+                  </>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </Layout>

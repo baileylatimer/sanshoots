@@ -5,3 +5,8 @@
  */
 
 import './src/styles/globals.css'
+import React from 'react';
+
+export const wrapRootElement = ({ element }) => {
+  return <>{element}</>;
+};
