@@ -1282,3 +1282,61 @@ body.project-page {
 .content-width {
   max-width: 720px;
 }
+
+
+/* Project Slider */
+.video-slider-section {
+  background-color: black;
+  padding: 20px;
+  width: 100%;
+
+}
+.video-slider-section .slick-slider {
+  transform: translatey(50%);
+  -webkit-transform: translatey(50%);
+  -moz-transform: translatey(50%);
+  -ms-transform: translatey(50%);
+  -o-transform: translatey(50%);
+  margin-top: -15%;
+}
+@media(min-width:1023px) {
+.video-slider-section .slick-slider {
+  transform: translatey(50%);
+  -webkit-transform: translatey(50%);
+  -moz-transform: translatey(50%);
+  -ms-transform: translatey(50%);
+  -o-transform: translatey(50%);
+  margin-top: -15%;
+}
+}
+
+
+
+.horizontal-sections {
+  display: flex;
+}
+
+.project-detail {
+  flex: 0 0 auto;
+  width: 100vw;
+}
+
+.video-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.project-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+}

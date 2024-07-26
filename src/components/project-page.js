@@ -2,8 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import ReactPlayer from 'react-player/vimeo';
+import VideoSlider from './video-slider';  // Adjust the path as necessary
 
-const ProjectPage = ({ videoUrl, projectDetails, projectTitle }) => {
+const ProjectPage = ({ videoUrl, projectDetails, projectTitle, sliderData }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -38,7 +39,7 @@ const ProjectPage = ({ videoUrl, projectDetails, projectTitle }) => {
       case 'layout3':
         return (
           <div key={index} className="project-detail layout3 flex gap-24 ml-24">
-            <div className='flex flex-col'>
+            <div className='flex flex-col pl-96 px-36'>
               <h3>{detail.content.heading}</h3>
               <p>{detail.content.text}</p>
             </div>
@@ -74,6 +75,9 @@ const ProjectPage = ({ videoUrl, projectDetails, projectTitle }) => {
               {renderDetail(detail, index)}
             </div>
           ))}
+        </div>
+        <div className="video-slider-section">
+          <VideoSlider slides={sliderData} enableHorizontalScroll={false} />
         </div>
       </div>
     </Layout>

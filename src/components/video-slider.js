@@ -1,19 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
-import VideoSlide from './video-slide';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import VideoSlide from "./video-slide"; // Ensure this import is correct
 
-
-const VideoSlider = ({ slides }) => {
+const VideoSlider = ({ slides, enableHorizontalScroll = true }) => {
   const sliderRef = useRef(null);
   const [isHorizontalScroll, setIsHorizontalScroll] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [progress, setProgress] = useState(0);
-  const [currentSlide, setCurrentSlide] = useState(1);
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 3,
@@ -32,6 +29,8 @@ const VideoSlider = ({ slides }) => {
   };
 
   useEffect(() => {
+    if (!enableHorizontalScroll) return;
+
     const handleScroll = (e) => {
       if (!sliderRef.current) return;
 
@@ -47,15 +46,6 @@ const VideoSlider = ({ slides }) => {
         if (slider.scrollLeft > 0 && slider.scrollLeft < slider.scrollWidth - slider.clientWidth) {
           e.preventDefault();
         }
-
-        // Calculate progress and current slide
-        const totalScroll = slider.scrollWidth - slider.clientWidth;
-        const scrollFraction = slider.scrollLeft / totalScroll;
-        const newProgress = Math.min(scrollFraction * 100, 100);
-        const newCurrentSlide = Math.floor((scrollFraction * slides.length) + 1);
-
-        setProgress(newProgress);
-        setCurrentSlide(newCurrentSlide);
 
         // Check if horizontal scroll reached the end
         if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
@@ -107,7 +97,7 @@ const VideoSlider = ({ slides }) => {
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("scroll", handleScrollBar);
     };
-  }, [isHorizontalScroll, scrollPosition, slides.length]);
+  }, [isHorizontalScroll, scrollPosition, enableHorizontalScroll]);
 
   return (
     <div>
@@ -118,16 +108,6 @@ const VideoSlider = ({ slides }) => {
           </div>
         ))}
       </Slider>
-      <div className="flex gap-4">
-      <div className="progress-container ">
-        <div className="progress-bar">
-          <div className="progress" style={{ width: `${progress}%` }}></div>
-        </div>
-
-      </div>
-      <div className="slide-count">{currentSlide}/{slides.length}</div>
-      </div>
-
     </div>
   );
 };
