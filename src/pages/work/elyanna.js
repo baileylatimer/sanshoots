@@ -2,6 +2,12 @@ import React, { useEffect } from 'react';
 import ProjectPage from '../../components/project-page';
 import ElyannaFull from '../../images/elyanna-full.jpg';
 import ElyannaClipped from '../../images/elyanna-clipped.jpg';
+import Image1 from '../../images/elyanna/elyanna-sanshoots--19.jpg';
+import Image2 from '../../images/elyanna/elyanna-sanshoots--10.jpg';
+import Image3 from '../../images/elyanna/elyanna-sanshoots--18.jpg';
+import Image4 from '../../images/elyanna/elyanna-sanshoots--11.jpg';
+import Image5 from '../../images/elyanna/elyanna-sanshoots--4.jpg';
+import Image6 from '../../images/elyanna/elyanna-sanshoots--15.jpg';
 
 import Elyanna from "../../videos/elyanna-2.mp4";
 import NourArdakani from "../../videos/production.mp4";
@@ -29,7 +35,7 @@ const projectDetails = [
   {
     type: 'Image',
     content: {
-      image: ElyannaFull,
+      image: Image1,
     },
   },
   {
@@ -44,10 +50,10 @@ const projectDetails = [
     type: 'Gallery',
     content: {
       images: [
-        ElyannaClipped,
-        ElyannaFull,
-        ElyannaClipped,
-        ElyannaFull,
+        Image2,
+        Image3,
+        Image4,
+        Image5,
       ],
     },
   },
@@ -56,6 +62,19 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Putting it together',
+      text: 'Editing this project involved meticulous color grading to manage concert lighting, achieving a beautiful, cohesive look. Working with Elyanna and her team, especially her talented brother Feras, was an incredible experience. This recap showcases Sanshoots’ dedication to sharp imagery and engaging storytelling. Relive the magic of Elyanna’s LA tour—this is a visual experience you won’t want to miss.',
+    },
+  },
+  {
+    type: 'Image',
+    content: {
+      image: Image6,
+    },
+  },
+  {
+    type: 'Paragraph',
+    content: {
+      heading: 'In conclusion',
       text: 'Sanshoots was honored to capture the highlight moments and energy of her show. Using the Sony A7Siii with a 24-70mm f/2.8 G Master lens and a Ronin stabilizer, we shot in 4K 4:2:2 10-bit at 120 FPS and 60 FPS, creating dynamic visuals. The brilliantly directed lighting and stage design by Elyanna’s team provided the perfect backdrop.',
     },
   },
@@ -64,7 +83,7 @@ const projectDetails = [
   // Add more details as needed
 ];
 
-const videoUrl = 'https://vimeo.com/506282451';
+const videoUrl = 'https://vimeo.com/988666899';
 const projectTitle = 'Elyanna'; // Add your project title here
 const pageTitle = 'Elyanna';
 

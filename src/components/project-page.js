@@ -22,51 +22,87 @@ const ProjectPage = ({ videoUrl, projectDetails, projectTitle, sliderData, pageT
   }, []);
 
   const renderDetail = (detail, index) => {
+    const isSmallWidth = detail.type === 'Image' || detail.type === 'Paragraph';
+    const detailClass = `project-detail ${isSmallWidth ? 'project-detail--sm' : ''}`;
+
     switch (detail.type) {
       case 'Title':
         return (
-          <div key={index} className="layout-title page-width">
-            <h3 className='text-center'>{detail.content.heading}</h3>
+          <div key={index} className={`${detailClass}`}>
+            <div className=' layout-title page-width'>
+              <h3 className='text-center'>{detail.content.heading}</h3>
+            </div>
           </div>
         );
       case 'Image':
         return (
-          <div key={index} className=" layout-image content-width">
-            <img src={detail.content.image} alt={`Detail ${index + 1}`} />
+          <div key={index} className={`${detailClass}`}>
+            <div className='layout-image '>
+              <img src={detail.content.image} alt={`Detail ${index + 1}`} />
+            </div>
           </div>
         );
       case 'ImageText':
         return (
-          <div key={index} className=" layout-image-text flex gap-24 ml-24">
+          <div key={index} className={`${detailClass} `}>
+            <div className='layout-image-text flex gap-24 ml-24'>
             <div className='flex flex-col pl-96 px-36'>
               <h3>{detail.content.heading}</h3>
               <p>{detail.content.text}</p>
             </div>
             <img src={detail.content.image} alt={`Detail ${index + 1}`} />
+            </div>
           </div>
         );
         case 'Gallery':
           return (
-            <div key={index} className="layout-gallery flex gap-4 ">
-              <div className="w-1/2">
-                <img src={detail.content.images[0]} alt={`Detail ${index + 1} - Image 1`} className="w-full h-full object-cover" />
-              </div>
-              <div className="w-1/2 flex flex-col gap-4">
-                {detail.content.images.slice(1).map((image, imgIndex) => (
-                  <img key={imgIndex} src={image} alt={`Detail ${index + 1} - Image ${imgIndex + 2}`} className="w-full h-1/3 object-cover" />
-                ))}
+            <div key={index} className={`${detailClass}`}>
+              <div className='layout-gallery flex flex-col md:flex-row gap-4 h-full'>
+                <div className="w-full md:w-1/2 h-1/2 md:h-full">
+                  <img 
+                    src={detail.content.images[0]} 
+                    alt={`Detail ${index + 1} - Image 1`} 
+                    className="w-full h-full object-cover" 
+                  />
+                </div>
+                <div className="w-full md:w-1/2 flex flex-col gap-4 h-1/2 md:h-full">
+                  <div className="h-1/2">
+                    <img 
+                      src={detail.content.images[1]} 
+                      alt={`Detail ${index + 1} - Image 2`} 
+                      className="w-full h-full object-cover" 
+                    />
+                  </div>
+                  <div className="h-1/2 lg:h-1/2 flex gap-4">
+                    <div className="w-1/2 h-full">
+                      <img 
+                        src={detail.content.images[2]} 
+                        alt={`Detail ${index + 1} - Image 3`} 
+                        className="w-full h-full object-cover" 
+                      />
+                    </div>
+                    <div className="w-1/2 h-full">
+                      <img 
+                        src={detail.content.images[3]} 
+                        alt={`Detail ${index + 1} - Image 4`} 
+                        className="w-full h-full object-cover" 
+                      />
+                    </div>
+                  </div>
+                 
+                </div>
               </div>
             </div>
           );
-          case 'Paragraph':
-            return (
-              <div key={index} className="ml-24 layout-paragraph flex flex-col content-width">
-       
-                  <h3 className='whitespace-normal'>{detail.content.heading}</h3>
-                  <p className='whitespace-normal'>{detail.content.text}</p>
-            
-              </div>
-            );
+      case 'Paragraph':
+        return (
+          <div key={index} className={`${detailClass}`}>
+            <div className=' layout-paragraph flex flex-col content-width'>
+              <h3 className='whitespace-normal'>{detail.content.heading}</h3>
+              <p className='whitespace-normal'>{detail.content.text}</p>
+            </div>
+          </div>
+        );
       default:
         return null;
     }
@@ -101,11 +137,7 @@ const ProjectPage = ({ videoUrl, projectDetails, projectTitle, sliderData, pageT
           </div>
         </div>
         <div className="horizontal-sections">
-          {projectDetails.map((detail, index) => (
-            <div key={index} className="project-detail">
-              {renderDetail(detail, index)}
-            </div>
-          ))}
+          {projectDetails.map((detail, index) => renderDetail(detail, index))}
         </div>
         <div className="video-slider-section">
           <VideoSlider slides={sliderData} enableHorizontalScroll={false} />
