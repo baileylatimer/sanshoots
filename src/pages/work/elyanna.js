@@ -29,7 +29,10 @@ const projectDetails = [
   {
     type: 'Title',
     content: {
-      heading: 'Elyanna’s 2024 Los Angeles Tour: A Cinematic Recap by Sanshoots',
+      heading: [
+        'Meet Elyanna',
+        'a revolutionary Palestinian artist'
+      ],
     },
   },
   {
