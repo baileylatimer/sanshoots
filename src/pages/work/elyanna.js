@@ -86,6 +86,11 @@ const projectDetails = [
 const videoUrl = 'https://vimeo.com/988666899';
 const projectTitle = 'Elyanna'; // Add your project title here
 const pageTitle = 'Elyanna';
+const projectInfo = [
+  'Sony a7sIII',
+  '24-70mm f/2.8 G Master lens',
+  'Ronin stabilizer'
+];
 
 
 const sliderData = [
@@ -106,13 +111,7 @@ const sliderData = [
     title: "Nour Ardakani",
     tag: "Music",
     linkTo: "/work/nour-ardakani"
-  },
-  {
-    videoSrc: Paliroots,
-    title: "Paliroots",
-    tag: "Fashion",
-    linkTo: "/work/paliroots"
-  },
+  }
   // Add more video data as needed
 ];
 
@@ -124,7 +123,7 @@ const ProjectPageContainer = () => {
     };
   }, []);
 
-  return <ProjectPage videoUrl={videoUrl} projectDetails={projectDetails} projectTitle={projectTitle} sliderData={sliderData} pageTitle={pageTitle} />;
+  return <ProjectPage videoUrl={videoUrl} projectDetails={projectDetails} projectTitle={projectTitle} projectInfo={projectInfo} sliderData={sliderData} pageTitle={pageTitle} />;
 };
 
 export default ProjectPageContainer;

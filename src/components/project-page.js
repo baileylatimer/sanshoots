@@ -4,7 +4,7 @@ import SEO from '../components/seo';
 import ReactPlayer from 'react-player/vimeo';
 import VideoSlider from './video-slider'; // Adjust the path as necessary
 
-const ProjectPage = ({ videoUrl, projectDetails, projectTitle, sliderData, pageTitle }) => {
+const ProjectPage = ({ videoUrl, projectDetails, projectTitle, projectInfo, sliderData, pageTitle }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -133,7 +133,17 @@ const ProjectPage = ({ videoUrl, projectDetails, projectTitle, sliderData, pageT
                 }
               }}
             />
-            <div className="project-title">{projectTitle}</div>
+            <div className='project-overview flex justify-between w-full'>
+              <div className="project-title">{projectTitle}</div>
+              <div className="project-info">
+                {projectInfo.map((info, index) => (
+                  <React.Fragment key={index}>
+                    {info}
+                    {index < projectInfo.length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
         <div className="horizontal-sections">
