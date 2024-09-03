@@ -1240,6 +1240,13 @@ body.project-page {
   scroll-snap-align: start;
 }
 
+.project-detail {
+  white-space: normal;
+}
+
+.layout-paragraph {
+}
+
 
 .layout1 {
   display: flex;
@@ -1267,6 +1274,7 @@ body.project-page {
   margin-bottom: 10px;
 }
 
+
 .layout3 p {
   font-size: 1rem;
   line-height: 1.5;
@@ -1283,6 +1291,16 @@ body.project-page {
   max-width: 720px;
 }
 
+.page-width {
+  max-width: 968px;
+}
+
+.layout-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
 
 /* Project Slider */
 .video-slider-section {
@@ -1308,6 +1326,10 @@ body.project-page {
   -o-transform: translatey(50%);
   margin-top: -15%;
 }
+}
+
+.project-page-container {
+  
 }
 
 

@@ -21,30 +21,53 @@ import WaheebNasan from "../../videos/san-sand-1.mp4";
 
 const projectDetails = [
   {
-    type: 'layout1',
+    type: 'Title',
     content: {
-      heading: 'Meet Elyanna, A Revolutionary Palestinian Artist.',
+      heading: 'Elyanna’s 2024 Los Angeles Tour: A Cinematic Recap by Sanshoots',
     },
   },
   {
-    type: 'layout2',
+    type: 'Image',
     content: {
       image: ElyannaFull,
     },
   },
   {
-    type: 'layout3',
+    type: 'Paragraph',
     content: {
       heading: 'Telling Her Story',
-      text: 'Elian Marjieh, known professionally as Elyanna, is a Palestinian-Chilean singer-songwriter, merging Arabic music with Latin rhythms to create an experimental Arab-pop sound that has captured a global audience. Born in Nazareth, her musical talents were nurtured by her family, with early influences including iconic figures like Julio Iglesias and Sabah Fakhri, Elyannas career took a significant turn when she was discovered at age 15 by Grammy-winner Nasri Atweh.',
-      image: ElyannaClipped,
+      text: 'Elyanna, a Palestinian artist, blends traditional Arabic music with contemporary pop in her dynamic performances. Her 2024 Los Angeles tour was a visual and auditory feast, with stunning stage sets capturing the essence of her music.',
     },
   },
+
+  {
+    type: 'Gallery',
+    content: {
+      images: [
+        ElyannaClipped,
+        ElyannaFull,
+        ElyannaClipped,
+        ElyannaFull,
+      ],
+    },
+  },
+
+  {
+    type: 'Paragraph',
+    content: {
+      heading: 'Putting it together',
+      text: 'Sanshoots was honored to capture the highlight moments and energy of her show. Using the Sony A7Siii with a 24-70mm f/2.8 G Master lens and a Ronin stabilizer, we shot in 4K 4:2:2 10-bit at 120 FPS and 60 FPS, creating dynamic visuals. The brilliantly directed lighting and stage design by Elyanna’s team provided the perfect backdrop.',
+    },
+  },
+
+  
   // Add more details as needed
 ];
 
-const videoUrl = 'https://vimeo.com/988666899';
+const videoUrl = 'https://vimeo.com/506282451';
 const projectTitle = 'Elyanna'; // Add your project title here
+const pageTitle = 'Elyanna';
+
 
 const sliderData = [
   {
@@ -82,7 +105,7 @@ const ProjectPageContainer = () => {
     };
   }, []);
 
-  return <ProjectPage videoUrl={videoUrl} projectDetails={projectDetails} projectTitle={projectTitle} sliderData={sliderData} />;
+  return <ProjectPage videoUrl={videoUrl} projectDetails={projectDetails} projectTitle={projectTitle} sliderData={sliderData} pageTitle={pageTitle} />;
 };
 
 export default ProjectPageContainer;
