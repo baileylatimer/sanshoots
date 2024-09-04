@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
-import ProjectCardHome from "../components/project-card-home"
 import Camera from "../components/home-camera"
 import ServiceComponent from '../components/services'
 import VideoSlider from '../components/video-slider';  // Adjust the path as necessary
@@ -10,8 +9,7 @@ import VideoSlider from '../components/video-slider';  // Adjust the path as nec
 import PreProduction from "../videos/pre-production.mp4"
 import Production from "../videos/production.mp4"
 import PostProduction from "../videos/post-production.mp4"
-import SanRun from "../videos/san-run.mp4"
-import SanSand from "../videos/san-sand-1.mp4"
+
 
 // Import video files directly
 import Elyanna from "../videos/elyanna-2.mp4";

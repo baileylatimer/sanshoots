@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 import PageHeader from "../components/page-header"
 
-import HeroVideo from "../videos/hero.mp4"
+
 
 const ContactPage = () => (
   <Layout>

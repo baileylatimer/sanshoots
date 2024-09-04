@@ -46,8 +46,8 @@ const slidesData = [
   {
     videoSrc: NourArdakani,
     title: "Nour Ardakani",
-    tag: "Music",
-    linkTo: "/nour-ardakani"
+    tag: "Music Video",
+    linkTo: "/work/nour-ardakani"
   },
   {
     videoSrc: Paliroots,
