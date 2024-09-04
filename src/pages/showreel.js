@@ -43,7 +43,12 @@ const slidesData = [
     linkTo: "/work/francis-mercier"
   },
 
-
+  {
+    videoSrc: NourArdakani,
+    title: "Nour Ardakani",
+    tag: "Music",
+    linkTo: "/nour-ardakani"
+  },
   {
     videoSrc: Paliroots,
     title: "Paliroots",

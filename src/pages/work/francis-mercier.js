@@ -7,8 +7,6 @@ import Image4 from '../../images/francis-mercier/francis-mercier-sanshoots--10.j
 import Image5 from '../../images/francis-mercier/francis-mercier-sanshoots--4.jpg';
 import Image6 from '../../images/francis-mercier/francis-mercier-sanshoots--5.jpg';
 
-import NourArdakani from "../../videos/production.mp4";
-import Paliroots from "../../videos/production.mp4";
 
 const projectDetails = [
   {
@@ -76,8 +74,9 @@ const projectInfo = [
 const projectTag = 'Event';
 
 
-const nextProjectTitle = "Yung Bans";
-const nextProjectUrl = "/work/yung-bans";
+
+const nextProjectTitle = "Nour Ardakani";
+const nextProjectUrl = "/work/nour-ardakani";
 
 const ProjectPageContainer = () => {
   useEffect(() => {

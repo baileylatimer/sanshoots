@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import ProjectPage from '../../components/project-page';
-import ElyannaFull from '../../images/elyanna-full.jpg';
-import ElyannaClipped from '../../images/elyanna-clipped.jpg';
+
 import Image1 from '../../images/elyanna/elyanna-sanshoots--19.jpg';
 import Image2 from '../../images/elyanna/elyanna-sanshoots--10.jpg';
 import Image3 from '../../images/elyanna/elyanna-sanshoots--18.jpg';
@@ -12,7 +11,6 @@ import Image6 from '../../images/elyanna/elyanna-sanshoots--15.jpg';
 import Elyanna from "../../videos/elyanna-2.mp4";
 import NourArdakani from "../../videos/production.mp4";
 import FrancisMercier from "../../videos/francis-mercier.mp4";
-import Paliroots from "../../videos/production.mp4";
 
 const projectDetails = [
   {
@@ -100,8 +98,10 @@ const sliderData = [
   }
 ];
 
-const nextProjectTitle = "Francis Mercier";
-const nextProjectUrl = "/work/francis-mercier";
+
+
+const nextProjectTitle = "Yung Bans";
+const nextProjectUrl = "/work/yung-bans";
 
 const ProjectPageContainer = () => {
   useEffect(() => {

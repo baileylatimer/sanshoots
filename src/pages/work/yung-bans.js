@@ -1,22 +1,21 @@
 import React, { useEffect } from 'react';
 import ProjectPage from '../../components/project-page';
-import Image1 from '../../images/francis-mercier/francis-mercier-sanshoots--23.jpg';
-import Image2 from '../../images/francis-mercier/francis-mercier-sanshoots--17.jpg';
-import Image3 from '../../images/francis-mercier/francis-mercier-sanshoots--13.jpg';
-import Image4 from '../../images/francis-mercier/francis-mercier-sanshoots--10.jpg';
-import Image5 from '../../images/francis-mercier/francis-mercier-sanshoots--4.jpg';
-import Image6 from '../../images/francis-mercier/francis-mercier-sanshoots--5.jpg';
+import Image1 from '../../images/yung-bans/yung-bans-sanshoots--14.jpg';
+import Image2 from '../../images/yung-bans/yung-bans-sanshoots--32.jpg';
+import Image3 from '../../images/yung-bans/yung-bans-sanshoots--30.jpg';
+import Image4 from '../../images/yung-bans/yung-bans-sanshoots--21.jpg';
+import Image5 from '../../images/yung-bans/yung-bans-sanshoots--2.jpg';
+import Image6 from '../../images/yung-bans/yung-bans-sanshoots--24.jpg';
 
-import NourArdakani from "../../videos/production.mp4";
-import Paliroots from "../../videos/production.mp4";
+
 
 const projectDetails = [
   {
     type: 'Title',
     content: {
       heading: [
-        'Francis Mercier\'s',
-        'Afro set breaks the dance floor in Chinatown'
+        'Yung Bans',
+        'sets the desert on fire with new record ‘YSL’'
       ],
     },
   },
@@ -48,7 +47,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Putting it together',
-      text: 'For this shoot, I used the Sony A7Siii at 60 FPS, incorporating a mix of handheld movements and gimbal shots for smooth motion. One unique element of this project was integrating 360 camera moments, adding a dynamic layer to the final edit. Navigating through the packed venue was challenging, but finding the perfect spots to set up allowed for exceptional footage of the performance. The editing process involved creative techniques to manage the intense lighting, using camera transitions to enhance the visual flow.',
+      text: 'For this shoot, we faced the challenge of 110° heat, which we managed with plenty of water and the right snacks to keep the team energized. Using my Sony A7Siii, I captured both handheld and gimbal shots to ensure fluid and dynamic visuals. The desert setting and Yung Bans\' performance required a warm-toned color grade, enhancing the raw and intense vibe of the video. His performance style, which combines minimal lip-syncing with high-energy dancing, brought an electrifying presence to the shoot.',
     },
   },
   {
@@ -61,7 +60,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'In conclusion',
-      text: 'The result is a high-energy recap that truly captures the essence of Francis Mercier\'s LA show. Working with his team, including his tour manager Oscar, was a fantastic experience, and we\'re excited for future collaborations. The beats, relive the magic of this unforgettable night.',
+      text: 'Working with Yung Bans\' manager, Mo Sway, was a highlight of the project. His creative ideas and meticulous planning ensured that we stayed on schedule and captured the essence of Yung Bans\' performance. This recap showcases Sanshoots\' ability to adapt and deliver high-quality visuals in challenging conditions, creating a memorable and impactful music video.',
     },
   },
 ];
@@ -76,8 +75,9 @@ const projectInfo = [
 const projectTag = 'Music Video';
 
 
-const nextProjectTitle = "Yung Bans";
-const nextProjectUrl = "/work/yung-bans";
+const nextProjectTitle = "Francis Mercier";
+const nextProjectUrl = "/work/francis-mercier";
+
 
 const ProjectPageContainer = () => {
   useEffect(() => {
