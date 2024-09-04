@@ -242,7 +242,7 @@ h1, h2 {
   align-items: center;
   background-color: var(--color-contrast-higher);
   color: var(--color-bg);
-  font-size: 16px;
+  font-size: 14px;
   padding: 1px 18px;
   border: 1px solid var(--color-contrast-higher);
   width: fit-content;
@@ -1262,6 +1262,10 @@ body.project-page {
   max-width: 1180px;
   margin: 0 auto;
   position: relative;
+}
+
+.video-wrapper-sm {
+  max-width: 720px; /* Adjust this value as needed */
 }
 
 .horizontal-sections {

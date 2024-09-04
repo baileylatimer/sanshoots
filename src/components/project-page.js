@@ -137,15 +137,16 @@ const ProjectPage = ({
               height="100%"
               playing={true}
               loop={true}
-              muted={true}
+              muted={false}
               controls={true}
               config={{
                 vimeo: {
                   playerOptions: {
                     background: true,
                     autoplay: true,
-                    muted: true,
+                    muted: false,
                     loop: true,
+                    controls: true,
                   }
                 }
               }}
