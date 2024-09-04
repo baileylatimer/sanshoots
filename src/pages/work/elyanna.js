@@ -74,7 +74,7 @@ const videoUrl = 'https://vimeo.com/988666899';
 const projectTitle = 'Elyanna';
 const pageTitle = 'Elyanna';
 const projectInfo = [
-  'Santa Ana, California, USA',
+  'Santa Ana, CA, USA',
   '33.7455° N, 117.8677° W'
 ];
 const projectTag = 'Event';
