@@ -634,8 +634,8 @@ li {
   overflow: hidden;
 }
 .video-player-container {
-  width: 85%; /* Adjust as needed */
-  height: 100%;
+  width: 100%; /* Adjust as needed */
+  height: 60%;
 }
 
 .video-content p {

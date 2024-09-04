@@ -7,9 +7,9 @@ import VideoSlider from '../components/video-slider';  // Adjust the path as nec
 // Import video files directly
 import Elyanna from "../videos/elyanna-2.mp4";
 import YungBans from "../videos/yung-bans.mp4";
-import NourArdakani from "../videos/production.mp4";
+import NourArdakani from "../videos/nour-ardakani.mp4";
 import FrancisMercier from "../videos/francis-mercier.mp4";
-import Paliroots from "../videos/production.mp4";
+import Paliroots from "../videos/paliroots.mp4";
 import Bluemoon from "../videos/san-eye.mp4";
 import Axe from "../videos/san-sand-1.mp4";
 import Gillette from "../videos/san-sand-1.mp4";
@@ -52,74 +52,74 @@ const slidesData = [
   {
     videoSrc: Paliroots,
     title: "Paliroots",
-    tag: "Fashion",
-    linkTo: "/second-video"
+    tag: "Apparel",
+    linkTo: "/work/paliroots"
   },
   {
     videoSrc: Bluemoon,
     title: "Bluemoon",
     tag: "Jewelry",
-    linkTo: "/second-video"
+    linkTo: "/work/bluemoon"
   },
   {
     videoSrc: Axe,
     title: "Axe",
     tag: "Beauty",
-    linkTo: "/second-video"
+    linkTo: "/work/axe"
   },
   {
     videoSrc: Gillette,
     title: "Gillette",
     tag: "Beauty",
-    linkTo: "/second-video"
+    linkTo: "/work/gillette"
   },
   {
     videoSrc: Celsius,
     title: "Celsius",
     tag: "Food/Beverage",
-    linkTo: "/second-video"
+    linkTo: "/work/celsius"
   },
   {
     videoSrc: HighEndExotics,
     title: "High-End Exotics",
     tag: "Auto",
-    linkTo: "/second-video"
+    linkTo: "/work/high-end-exotics"
   },
   {
     videoSrc: Thg,
     title: "THG (The Hartford Group)",
     tag: "Hospitality",
-    linkTo: "/second-video"
+    linkTo: "/work/the-hartford-group"
   },
   {
     videoSrc: Umr,
     title: "UMR Relief",
     tag: "NGO",
-    linkTo: "/second-video"
+    linkTo: "/work/umr-relief"
   },
   {
     videoSrc: IntuitiveFoundation,
     title: "Intuitive Foundation",
     tag: "Retreat",
-    linkTo: "/second-video"
+    linkTo: "/work/intuitive-foundation"
   },
   {
     videoSrc: EminentCollaborations,
     title: "Eminent Collaborations",
     tag: "NGO",
-    linkTo: "/second-video"
+    linkTo: "/work/eminent-collaborations"
   },
   {
     videoSrc: ColombiaAirbnb,
     title: "Colombia Airbnb",
     tag: "Hospitality",
-    linkTo: "/second-video"
+    linkTo: "/work/columbia-airbnb"
   },
   {
     videoSrc: WaheebNasan,
     title: "Waheeb Nasan",
     tag: "Music",
-    linkTo: "/second-video"
+    linkTo: "/work/waheeb-nasan"
   },
 ];
 
