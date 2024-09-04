@@ -127,7 +127,7 @@ a {
   @apply text-blue-600;
   font-size: var(--font-base);
 }
-p {
+p, .project-info {
   font-size: var(--font-base);
 }
 
@@ -1196,6 +1196,18 @@ body.project-page {
   white-space: nowrap;
 }
 
+.next-project-section {
+  width: 100vw;
+  padding: 0 100px
+}
+@media(min-width:1023px) {
+.next-project-section {
+  width: 100vw;
+  padding: 0 500px
+}
+}
+
+
 .video-section {
   background: black;
   height: 100vh;
@@ -1252,6 +1264,10 @@ max-width: 60vw !important;
   max-width: 968px;
 }
 
+.layout-image {
+  aspect-ratio: 1/1;
+}
+
 .layout-image img {
   width: 100%;
   height: auto;
@@ -1272,9 +1288,6 @@ max-width: 60vw !important;
 }
 
 
-width: 120vw;
-  padding-left: 300px;
-  padding-right: 300px;
 
 .video-slider-section .slick-slider {
   transform: translatey(50%);
@@ -1332,6 +1345,3 @@ width: 120vw;
   font-size: 72px;
 }
 
-.project-info {
-  font-size: 16px;
-}

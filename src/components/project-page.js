@@ -2,9 +2,19 @@ import React, { useEffect, useRef } from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import ReactPlayer from 'react-player/vimeo';
-import VideoSlider from './video-slider'; // Adjust the path as necessary
+import VideoSlider from './video-slider';
+import Btn from "./btn";
 
-const ProjectPage = ({ videoUrl, projectDetails, projectTitle, projectInfo, sliderData, pageTitle }) => {
+const ProjectPage = ({ 
+  videoUrl, 
+  projectDetails, 
+  projectTitle, 
+  projectInfo, 
+  sliderData, 
+  pageTitle,
+  nextProjectTitle,
+  nextProjectUrl
+}) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -29,8 +39,15 @@ const ProjectPage = ({ videoUrl, projectDetails, projectTitle, projectInfo, slid
       case 'Title':
         return (
           <div key={index} className={`${detailClass}`}>
-            <div className=' layout-title page-width'>
-              <h3 className='text-center'>{detail.content.heading}</h3>
+            <div className='layout-title page-width'>
+              <h3 className='text-center'>
+                {detail.content.heading.map((line, lineIndex) => (
+                  <React.Fragment key={lineIndex}>
+                    {line}
+                    {lineIndex < detail.content.heading.length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </h3>
             </div>
           </div>
         );
@@ -46,58 +63,57 @@ const ProjectPage = ({ videoUrl, projectDetails, projectTitle, projectInfo, slid
         return (
           <div key={index} className={`${detailClass} `}>
             <div className='layout-image-text flex gap-24 ml-24'>
-            <div className='flex flex-col pl-96 px-36'>
-              <h3>{detail.content.heading}</h3>
-              <p>{detail.content.text}</p>
-            </div>
-            <img src={detail.content.image} alt={`Detail ${index + 1}`} />
+              <div className='flex flex-col pl-96 px-36'>
+                <h3>{detail.content.heading}</h3>
+                <p>{detail.content.text}</p>
+              </div>
+              <img src={detail.content.image} alt={`Detail ${index + 1}`} />
             </div>
           </div>
         );
-        case 'Gallery':
-          return (
-            <div key={index} className={`${detailClass}`}>
-              <div className='layout-gallery flex flex-col md:flex-row gap-4 h-full'>
-                <div className="w-full md:w-1/2 h-1/2 md:h-full">
+      case 'Gallery':
+        return (
+          <div key={index} className={`${detailClass}`}>
+            <div className='layout-gallery flex flex-col md:flex-row gap-4 h-full'>
+              <div className="w-full md:w-1/2 h-1/2 md:h-full">
+                <img 
+                  src={detail.content.images[0]} 
+                  alt={`Detail ${index + 1} - Image 1`} 
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+              <div className="w-full md:w-1/2 flex flex-col gap-4 h-1/2 md:h-full">
+                <div className="h-1/2">
                   <img 
-                    src={detail.content.images[0]} 
-                    alt={`Detail ${index + 1} - Image 1`} 
+                    src={detail.content.images[1]} 
+                    alt={`Detail ${index + 1} - Image 2`} 
                     className="w-full h-full object-cover" 
                   />
                 </div>
-                <div className="w-full md:w-1/2 flex flex-col gap-4 h-1/2 md:h-full">
-                  <div className="h-1/2">
+                <div className="h-1/2 lg:h-1/2 flex gap-4">
+                  <div className="w-1/2 h-full">
                     <img 
-                      src={detail.content.images[1]} 
-                      alt={`Detail ${index + 1} - Image 2`} 
+                      src={detail.content.images[2]} 
+                      alt={`Detail ${index + 1} - Image 3`} 
                       className="w-full h-full object-cover" 
                     />
                   </div>
-                  <div className="h-1/2 lg:h-1/2 flex gap-4">
-                    <div className="w-1/2 h-full">
-                      <img 
-                        src={detail.content.images[2]} 
-                        alt={`Detail ${index + 1} - Image 3`} 
-                        className="w-full h-full object-cover" 
-                      />
-                    </div>
-                    <div className="w-1/2 h-full">
-                      <img 
-                        src={detail.content.images[3]} 
-                        alt={`Detail ${index + 1} - Image 4`} 
-                        className="w-full h-full object-cover" 
-                      />
-                    </div>
+                  <div className="w-1/2 h-full">
+                    <img 
+                      src={detail.content.images[3]} 
+                      alt={`Detail ${index + 1} - Image 4`} 
+                      className="w-full h-full object-cover" 
+                    />
                   </div>
-                 
                 </div>
               </div>
             </div>
-          );
+          </div>
+        );
       case 'Paragraph':
         return (
           <div key={index} className={`${detailClass}`}>
-            <div className=' layout-paragraph flex flex-col content-width'>
+            <div className='layout-paragraph flex flex-col content-width'>
               <h3 className='whitespace-normal'>{detail.content.heading}</h3>
               <p className='whitespace-normal'>{detail.content.text}</p>
             </div>
@@ -133,7 +149,7 @@ const ProjectPage = ({ videoUrl, projectDetails, projectTitle, projectInfo, slid
                 }
               }}
             />
-            <div className='project-overview flex justify-between w-full'>
+            <div className='project-overview flex flex-col lg:flex-row justify-between w-full pl-6 lg:pl-0'>
               <div className="project-title">{projectTitle}</div>
               <div className="project-info">
                 {projectInfo.map((info, index) => (
@@ -149,8 +165,11 @@ const ProjectPage = ({ videoUrl, projectDetails, projectTitle, projectInfo, slid
         <div className="horizontal-sections">
           {projectDetails.map((detail, index) => renderDetail(detail, index))}
         </div>
-        <div className="video-slider-section">
-          <VideoSlider slides={sliderData} enableHorizontalScroll={false} />
+
+        <div className="next-project-section bg-black w-screen h-screen flex flex-col items-center justify-center">
+          <p className=" color-bg uppercase ">Next Project</p>
+          <h2 className=" color-bg">{nextProjectTitle}</h2>
+          <Btn link={nextProjectUrl} text="View Now" type="btn--ghost" />
         </div>
       </div>
     </Layout>
