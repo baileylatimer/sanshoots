@@ -6,6 +6,7 @@ import VideoSlider from '../components/video-slider';  // Adjust the path as nec
 
 // Import video files directly
 import Elyanna from "../videos/elyanna-2.mp4";
+import YungBans from "../videos/yung-bans.mp4";
 import NourArdakani from "../videos/production.mp4";
 import FrancisMercier from "../videos/francis-mercier.mp4";
 import Paliroots from "../videos/production.mp4";
@@ -26,21 +27,22 @@ const slidesData = [
   {
     videoSrc: Elyanna,
     title: "Elyanna",
-    tag: "Music",
+    tag: "Event",
     linkTo: "/work/elyanna"
+  },
+  {
+    videoSrc: YungBans,
+    title: "Yung Bans",
+    tag: "Music Video",
+    linkTo: "/work/yung-bans"
   },
   {
     videoSrc: FrancisMercier,
     title: "Francis Mercier",
-    tag: "Music",
-    linkTo: "/second-video"
+    tag: "Event",
+    linkTo: "/work/francis-mercier"
   },
-  {
-    videoSrc: NourArdakani,
-    title: "Nour Ardakani",
-    tag: "Music",
-    linkTo: "/second-video"
-  },
+
 
   {
     videoSrc: Paliroots,
