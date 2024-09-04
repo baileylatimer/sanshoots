@@ -228,6 +228,7 @@ h1, h2 {
  -ms-border-radius: 8px;
  -o-border-radius: 8px;
  width: 250px;
+ transition: transform 0.3s ease;
 }
 @media(min-width:1023px) {
   .btn {
@@ -238,6 +239,16 @@ h1, h2 {
 .btn--ghost {
   background-color: var(--color-bg);
 }
+
+.btn:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+ transition: transform 0.3s ease;
+}
+
 
 .btn-bg {
   position: absolute;
