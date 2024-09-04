@@ -74,10 +74,10 @@ const videoUrl = 'https://vimeo.com/988666899';
 const projectTitle = 'Elyanna';
 const pageTitle = 'Elyanna';
 const projectInfo = [
-  'Sony a7sIII',
-  '24-70mm f/2.8 G Master lens',
-  'Ronin stabilizer'
+  'Santa Ana, California, USA',
+  '33.7455° N, 117.8677° W'
 ];
+const projectTag = 'Event';
 
 const sliderData = [
   {
@@ -117,6 +117,7 @@ const ProjectPageContainer = () => {
       projectDetails={projectDetails} 
       projectTitle={projectTitle} 
       projectInfo={projectInfo}
+      projectTag={projectTag}
       sliderData={sliderData}
       pageTitle={pageTitle}
       nextProjectTitle={nextProjectTitle}

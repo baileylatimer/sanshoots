@@ -10,6 +10,7 @@ const ProjectPage = ({
   projectDetails, 
   projectTitle, 
   projectInfo, 
+  projectTag,
   sliderData, 
   pageTitle,
   nextProjectTitle,
@@ -128,7 +129,7 @@ const ProjectPage = ({
     <Layout className="project-page">
       <SEO title={pageTitle || "Project Page"} />
       <div className="project-page-container" ref={containerRef}>
-        <div className="video-section">
+        <div className="video-section bg-inverse">
           <div className="video-wrapper">
             <ReactPlayer
               url={videoUrl}
@@ -152,12 +153,14 @@ const ProjectPage = ({
             <div className='project-overview flex flex-col lg:flex-row justify-between w-full pl-6 lg:pl-0'>
               <div className="project-title">{projectTitle}</div>
               <div className="project-info">
+      
                 {projectInfo.map((info, index) => (
                   <React.Fragment key={index}>
                     {info}
                     {index < projectInfo.length - 1 && <br />}
                   </React.Fragment>
                 ))}
+                          <div className='pill pill--ghost mt-4'>{projectTag}</div>
               </div>
             </div>
           </div>
@@ -166,9 +169,9 @@ const ProjectPage = ({
           {projectDetails.map((detail, index) => renderDetail(detail, index))}
         </div>
 
-        <div className="next-project-section bg-black w-screen h-screen flex flex-col items-center justify-center">
+        <div className="next-project-section bg-inverse w-screen h-screen flex flex-col items-center justify-center">
           <p className=" color-bg uppercase ">Next Project</p>
-          <h2 className=" color-bg">{nextProjectTitle}</h2>
+          <h2 data-text={nextProjectTitle} className=" color-bg glitch">{nextProjectTitle}</h2>
           <Btn link={nextProjectUrl} text="View Now" type="btn--ghost" />
         </div>
       </div>

@@ -57,8 +57,8 @@ function Header({ siteTitle }) {
 */
 
   return (
-    <nav className="flex flex-wrap items-center justify-between py-3 lg:p-6 mx-d mb-6 px-d z-50">
-         <div className="flex items-center text-white  px-d">
+    <nav className="nav flex flex-wrap items-center justify-between py-3 lg:p-6 mx-d mb-6 px-d z-50">
+         <div className="flex items-center color-bg  px-d">
       <Link
             to={`/`}
             className="logo-wrapper mb-0"

@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --color-contrast-higher: #232323;
+  --color-contrast-higher: #080504;
   --color-bg: #EDEAE4;
   --font-base: 17px;
   --text-lg: 284px;
@@ -236,6 +236,30 @@ h1, h2 {
   }
 }
 
+.pill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-contrast-higher);
+  color: var(--color-bg);
+  font-size: 16px;
+  padding: 1px 18px;
+  border: 1px solid var(--color-contrast-higher);
+  width: fit-content;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+.pill--ghost {
+  background-color: transparent;
+  color: var(--color-bg);
+  border-color: var(--color-bg);
+
+}
+
 .btn--ghost {
   background-color: var(--color-bg);
 }
@@ -264,6 +288,10 @@ h1, h2 {
   position: relative;
   display: flex;
   justify-content: space-between;
+}
+
+.nav {
+  border: 1px solid var(--color-bg)
 }
 
 nav .btn a {
@@ -1220,7 +1248,7 @@ body.project-page {
 
 
 .video-section {
-  background: black;
+
   height: 100vh;
   min-width: 100vw; /* Full width */
   display: flex;
@@ -1335,7 +1363,6 @@ max-width: 60vw !important;
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: black;
 }
 
 .video-wrapper {
@@ -1355,4 +1382,170 @@ max-width: 60vw !important;
   font-family: 'Rayuela' !important;
   font-size: 72px;
 }
+
+.glitch {
+  position: relative;
+  text-decoration: none;
+  display: block;
+  padding: 2px;
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(80px, 9999px, 40px, 0);
+  }
+  5% {
+    clip: rect(10px, 9999px, 85px, 0);
+  }
+  10% {
+    clip: rect(110px, 9999px, 10px, 0);
+  }
+  15% {
+    clip: rect(20px, 9999px, 100px, 0);
+  }
+  20% {
+    clip: rect(90px, 9999px, 5px, 0);
+  }
+  25% {
+    clip: rect(50px, 9999px, 120px, 0);
+  }
+  30% {
+    clip: rect(120px, 9999px, 60px, 0);
+  }
+  35% {
+    clip: rect(10px, 9999px, 110px, 0);
+  }
+  40% {
+    clip: rect(100px, 9999px, 20px, 0);
+  }
+  45% {
+    clip: rect(80px, 9999px, 30px, 0);
+  }
+  50% {
+    clip: rect(40px, 9999px, 100px, 0);
+  }
+  55% {
+    clip: rect(120px, 9999px, 40px, 0);
+  }
+  60% {
+    clip: rect(30px, 9999px, 120px, 0);
+  }
+  65% {
+    clip: rect(70px, 9999px, 60px, 0);
+  }
+  70% {
+    clip: rect(90px, 9999px, 20px, 0);
+  }
+  75% {
+    clip: rect(20px, 9999px, 110px, 0);
+  }
+  80% {
+    clip: rect(60px, 9999px, 90px, 0);
+  }
+  85% {
+    clip: rect(50px, 9999px, 100px, 0);
+  }
+  90% {
+    clip: rect(100px, 9999px, 20px, 0);
+  }
+  95% {
+    clip: rect(110px, 9999px, 30px, 0);
+  }
+  to {
+    clip: rect(20px, 9999px, 120px, 0);
+  }
+}
+
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 5px;
+  text-shadow: -2px 0 red;
+  top: 0;
+  color: #fff;
+  background: var(--color-contrast-higher);
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 1.5s linear infinite alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(90px, 9999px, 30px, 0);
+  }
+  5% {
+    clip: rect(10px, 9999px, 60px, 0);
+  }
+  10% {
+    clip: rect(50px, 9999px, 20px, 0);
+  }
+  15% {
+    clip: rect(70px, 9999px, 40px, 0);
+  }
+  20% {
+    clip: rect(30px, 9999px, 80px, 0);
+  }
+  25% {
+    clip: rect(80px, 9999px, 50px, 0);
+  }
+  30% {
+    clip: rect(110px, 9999px, 20px, 0);
+  }
+  35% {
+    clip: rect(20px, 9999px, 110px, 0);
+  }
+  40% {
+    clip: rect(100px, 9999px, 60px, 0);
+  }
+  45% {
+    clip: rect(120px, 9999px, 40px, 0);
+  }
+  50% {
+    clip: rect(90px, 9999px, 30px, 0);
+  }
+  55% {
+    clip: rect(10px, 9999px, 100px, 0);
+  }
+  60% {
+    clip: rect(60px, 9999px, 20px, 0);
+  }
+  65% {
+    clip: rect(110px, 9999px, 90px, 0);
+  }
+  70% {
+    clip: rect(20px, 9999px, 70px, 0);
+  }
+  75% {
+    clip: rect(50px, 9999px, 10px, 0);
+  }
+  80% {
+    clip: rect(100px, 9999px, 30px, 0);
+  }
+  85% {
+    clip: rect(120px, 9999px, 50px, 0);
+  }
+  90% {
+    clip: rect(40px, 9999px, 70px, 0);
+  }
+  95% {
+    clip: rect(30px, 9999px, 110px, 0);
+  }
+  to {
+    clip: rect(60px, 9999px, 90px, 0);
+  }
+}
+
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -5px;
+  text-shadow: 2px 0 blue;
+  top: 0;
+  color: #fff;
+  background: var(--color-contrast-higher);
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 2s linear infinite alternate-reverse;
+}
+
 
