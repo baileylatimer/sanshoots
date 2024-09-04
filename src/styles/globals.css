@@ -1226,6 +1226,7 @@ body.no-vertical-scroll {
   border-radius: 4px;
   overflow: hidden;
   position: relative;
+  margin-right: 60px;
 }
 
 .progress {
