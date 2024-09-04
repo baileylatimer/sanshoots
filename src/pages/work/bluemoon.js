@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import ProjectPage from '../../components/project-page';
-import Image1 from '../../images/paliroots/paliroots-sanshoots--20.jpg';
-import Image2 from '../../images/paliroots/paliroots-sanshoots--7.jpg';
-import Image3 from '../../images/paliroots/paliroots-sanshoots--16.jpg';
-import Image4 from '../../images/paliroots/paliroots-sanshoots--17.jpg';
-import Image5 from '../../images/paliroots/paliroots-sanshoots--14.jpg';
-import Image6 from '../../images/paliroots/paliroots-sanshoots--11.jpg';
+
+import Image2 from '../../images/bluemoon/bluemoon-sanshoots--9.jpg';
+import Image3 from '../../images/bluemoon/bluemoon-sanshoots--12.jpg';
+import Image4 from '../../images/bluemoon/bluemoon-sanshoots--31.jpg';
+import Image5 from '../../images/bluemoon/bluemoon-sanshoots--39.jpg';
+
 
 
 
@@ -20,9 +20,21 @@ const projectDetails = [
     },
   },
   {
-    type: 'Image',
+    type: 'Reel',
     content: {
-      image: Image1,
+      reelUrl: 'https://vimeo.com/1006402982',
+    },
+  },
+  {
+    type: 'Reel',
+    content: {
+      reelUrl: 'https://vimeo.com/988706187',
+    },
+  },
+  {
+    type: 'Reel',
+    content: {
+      reelUrl: 'https://vimeo.com/988705619',
     },
   },
   {
@@ -51,16 +63,35 @@ const projectDetails = [
     },
   },
   {
-    type: 'Image',
+    type: 'Reel',
     content: {
-      image: Image6,
+      reelUrl: 'https://vimeo.com/988706391',
     },
   },
+  {
+    type: 'Reel',
+    content: {
+      reelUrl: 'https://vimeo.com/988705971',
+    },
+  },
+
   {
     type: 'Paragraph',
     content: {
       heading: 'Trust the process',
       text: 'The shoot included three main concepts: models putting on the jewelry, showcasing the pieces, and capturing behind-the-scenes moments. Working with Omar and Ramsey was seamless, thanks to their meticulous planning and resources. The top-notch models perfectly matched our locations, and our shots focused on highlighting the jewelry with trendy edits for Instagram and TikTok.',
+    },
+  },
+  {
+    type: 'Reel',
+    content: {
+      reelUrl: 'https://vimeo.com/988706580',
+    },
+  },
+  {
+    type: 'Reel',
+    content: {
+      reelUrl: 'https://vimeo.com/988704627',
     },
   },
   {
@@ -72,7 +103,7 @@ const projectDetails = [
   },
 ];
 
-const videoUrl = 'https://vimeo.com/manage/videos/988704627';
+const videoUrl = 'https://vimeo.com/988705130';
 const projectTitle = 'Bluemoon';
 const pageTitle = 'Bluemoon';
 const projectInfo = [

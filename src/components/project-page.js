@@ -7,11 +7,12 @@ import Btn from "./btn";
 
 const ProjectPage = ({ 
   videoUrl, 
+  reelUrl, 
   projectDetails, 
   projectTitle, 
   projectInfo, 
   projectTag,
-  sliderData, 
+
   pageTitle,
   nextProjectTitle,
   nextProjectUrl
@@ -34,7 +35,14 @@ const ProjectPage = ({
 
   const renderDetail = (detail, index) => {
     const isSmallWidth = detail.type === 'Image' || detail.type === 'Paragraph';
-    const detailClass = `project-detail ${isSmallWidth ? 'project-detail--sm' : ''}`;
+    const isExtraSmallWidth = detail.type === 'Reel';
+    let detailClass = 'project-detail';
+    
+    if (isExtraSmallWidth) {
+      detailClass += ' project-detail--xs';
+    } else if (isSmallWidth) {
+      detailClass += ' project-detail--sm';
+    }
 
     switch (detail.type) {
       case 'Title':
@@ -120,6 +128,31 @@ const ProjectPage = ({
             </div>
           </div>
         );
+        case 'Reel':
+          return (
+            <div key={index} className={detailClass}>
+              <div className='layout-reel content-width'>
+                <ReactPlayer
+                  url={detail.content.reelUrl}
+                  width="100%"
+                  height="100%"
+                  playing={false}
+                  controls={true}
+                  config={{
+                    vimeo: {
+                      playerOptions: {
+                        background: false,
+                        autoplay: true,
+                        muted: true,
+                        loop: true,
+                        controls: true,
+                      }
+                    }
+                  }}
+                />
+              </div>
+            </div>
+          );
       default:
         return null;
     }
