@@ -14,7 +14,7 @@ import Bluemoon from "../videos/bluemoon.mp4";
 import Axe from "../videos/axe.mp4";
 import Gillette from "../videos/gillette.mp4";
 import Celsius from "../videos/celsius.mp4";
-import HighEndExotics from "../videos/san-sand-1.mp4";
+import HighEndExotics from "../videos/highendexotics.mp4";
 import Thg from "../videos/san-sand-1.mp4";
 import Umr from "../videos/san-sand-1.mp4";
 import IntuitiveFoundation from "../videos/san-sand-1.mp4";
