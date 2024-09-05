@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ProjectPage from '../../components/project-page';
 
 import Image1 from '../../images/el-silencio-glamping/el-silencio-glamping-sanshoots--1.jpg';
-import Image2 from '../../images/el-silencio-glamping/el-silencio-glamping-sanshoots--7.jpg';
+import Image2 from '../../images/el-silencio-glamping/el-silencio-glamping-sanshoots--11.jpg';
 import Image3 from '../../images/el-silencio-glamping/el-silencio-glamping-sanshoots--3.jpg';
 import Image4 from '../../images/el-silencio-glamping/el-silencio-glamping-sanshoots--4.jpg';
 import Image5 from '../../images/el-silencio-glamping/el-silencio-glamping-sanshoots--5.jpg';
