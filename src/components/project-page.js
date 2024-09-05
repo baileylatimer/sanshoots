@@ -35,7 +35,9 @@ const ProjectPage = ({
 
   const renderDetail = (detail, index) => {
     const isSmallWidth = detail.type === 'Image' || detail.type === 'Paragraph';
-    const isExtraSmallWidth = detail.type === 'Reel';
+    const isExtraSmallWidth = detail.type === 'Reel' && detail.content.useExtraSmall !== false;
+    const useContentWidth = detail.content.useContentWidth !== false;
+
     let detailClass = 'project-detail';
     
     if (isExtraSmallWidth) {
@@ -44,11 +46,13 @@ const ProjectPage = ({
       detailClass += ' project-detail--sm';
     }
 
+    let contentClass = useContentWidth ? 'content-width' : '';
+
     switch (detail.type) {
       case 'Title':
         return (
           <div key={index} className={`${detailClass}`}>
-            <div className='layout-title page-width'>
+            <div  className={` ${contentClass}`}>
               <h3 className='text-center'>
                 {detail.content.heading.map((line, lineIndex) => (
                   <React.Fragment key={lineIndex}>
@@ -131,7 +135,7 @@ const ProjectPage = ({
         case 'Reel':
           return (
             <div key={index} className={detailClass}>
-              <div className='layout-reel content-width'>
+              <div className={`layout-reel ${contentClass}`}>
                 <ReactPlayer
                   url={detail.content.reelUrl}
                   width="100%"

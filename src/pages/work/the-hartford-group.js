@@ -24,6 +24,8 @@ const projectDetails = [
     type: 'Reel',
     content: {
       reelUrl: 'https://vimeo.com/988709851',
+      useExtraSmall: false,
+      useContentWidth: false
     },
   },
   {
