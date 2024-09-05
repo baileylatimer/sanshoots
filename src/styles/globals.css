@@ -1332,6 +1332,7 @@ max-width: 60vw !important;
 .layout-gallery, .layout-image {
   max-height: 70vh;
   width: 100%;
+  overflow: hidden;
 }
 
 
@@ -1425,6 +1426,9 @@ max-width: 60vw !important;
   text-decoration: none;
   display: block;
   padding: 2px;
+}
+.project-end {
+  line-height: 100%;
 }
 
 @keyframes noise-anim {

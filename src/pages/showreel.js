@@ -16,11 +16,10 @@ import Gillette from "../videos/gillette.mp4";
 import Celsius from "../videos/celsius.mp4";
 import HighEndExotics from "../videos/highendexotics.mp4";
 import Thg from "../videos/thehartfordgroup.mp4";
-import Umr from "../videos/san-sand-1.mp4";
-import IntuitiveFoundation from "../videos/san-sand-1.mp4";
-import EminentCollaborations from "../videos/san-sand-1.mp4";
-import ColombiaAirbnb from "../videos/san-sand-1.mp4";
-import WaheebNasan from "../videos/san-sand-1.mp4";
+import Umr from "../videos/umr-relief.mp4";
+import IntuitiveFoundation from "../videos/intuitive-foundation.mp4";
+import EminentCollaborations from "../videos/eminent-collaborations.mp4";
+import ColombiaAirbnb from "../videos/el-silencio-glamping.mp4";
 
 // Sample data for the slider
 const slidesData = [
@@ -93,9 +92,9 @@ const slidesData = [
   },
   {
     videoSrc: Umr,
-    title: "UMR Relief",
+    title: "United Mission Relief",
     tag: "NGO",
-    linkTo: "/work/umr-relief"
+    linkTo: "/work/united-mission-relief"
   },
   {
     videoSrc: IntuitiveFoundation,
@@ -111,16 +110,10 @@ const slidesData = [
   },
   {
     videoSrc: ColombiaAirbnb,
-    title: "Colombia Airbnb",
+    title: "El Silencio Glamping",
     tag: "Hospitality",
-    linkTo: "/work/columbia-airbnb"
-  },
-  {
-    videoSrc: WaheebNasan,
-    title: "Waheeb Nasan",
-    tag: "Music",
-    linkTo: "/work/waheeb-nasan"
-  },
+    linkTo: "/work/el-silencio-glamping"
+  }
 ];
 
 const VideosPage = () => {
