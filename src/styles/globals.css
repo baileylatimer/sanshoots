@@ -1149,11 +1149,16 @@ background-color: var(--color-contrast-higher);
 }
 .video-slide .video-container {
   position: relative;
-  height: 800px;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+.video-slide .video-container {
+  height: 800px;
+}
 }
 
 .video-slide video {
