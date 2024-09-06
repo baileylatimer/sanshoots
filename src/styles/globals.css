@@ -1012,8 +1012,7 @@ background-color: var(--color-contrast-higher);
 
 @media(min-width:1023px) {
 .service-video {
-  -webkit-clip-path:  polygon(88.00% 0.00%,100% 12%,99% 100%,18% 100%,18% 0%);
-  clip-path:  polygon(88.00% 0.00%,100% 12%,99% 100%,18% 100%,18% 0%);
+  clip-path:  polygon(88.00% 0.00%,100% 6%,99% 100%,0% 100%,0% 0%);
 }
 }
 
@@ -1161,6 +1160,10 @@ background-color: var(--color-contrast-higher);
 }
 }
 
+.video-slide {
+  padding: 0;
+}
+
 .video-slide video {
   height: 100%;
   width: auto; /* Adjust width to maintain aspect ratio */
@@ -1264,6 +1267,18 @@ body.no-vertical-scroll {
 }
 
 
+.video-slider-wrapper > div:nth-child(1) > h5:nth-child(1) {
+
+height: 35px;
+margin-top: 35px;
+  }
+  @media(min-width:1023px) {
+.video-slider-wrapper > div:nth-child(1) > h5:nth-child(1) {
+  margin: 0;
+  line-height: 70px;
+  height: auto;
+  }
+  }
 /* Progress bar */
 .progress-container {
   position: relative;
@@ -1272,7 +1287,6 @@ body.no-vertical-scroll {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 10px;
 }
 
 .progress-bar {

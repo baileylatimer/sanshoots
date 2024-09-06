@@ -59,6 +59,9 @@ const VideoSlider = ({ slides }) => {
 
   return (
     <div className="video-slider-wrapper" ref={wrapperRef}>
+          <div className="px-d">
+      <h5>Selected Works</h5>
+    </div>
       <div className="progress-container  px-d">
         <div className="progress-bar mr-16">
           <div className="progress" style={{ width: `${progress}%` }}></div>

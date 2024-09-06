@@ -7,20 +7,19 @@ import VideoSlider from '../components/video-slider';  // Adjust the path as nec
 // Import video files directly
 import Elyanna from "../videos/elyanna-2.mp4";
 import YungBans from "../videos/yung-bans.mp4";
-import NourArdakani from "../videos/production.mp4";
+import NourArdakani from "../videos/nour-ardakani.mp4";
 import FrancisMercier from "../videos/francis-mercier.mp4";
-import Paliroots from "../videos/production.mp4";
-import Bluemoon from "../videos/san-eye.mp4";
-import Axe from "../videos/san-sand-1.mp4";
-import Gillette from "../videos/san-sand-1.mp4";
-import Celsius from "../videos/san-sand-1.mp4";
-import HighEndExotics from "../videos/san-sand-1.mp4";
+import Paliroots from "../videos/paliroots.mp4";
+import Bluemoon from "../videos/bluemoon.mp4";
+import Axe from "../videos/axe.mp4";
+import Gillette from "../videos/gillette.mp4";
+import Celsius from "../videos/celsius.mp4";
+import HighEndExotics from "../videos/highendexotics.mp4";
 import Thg from "../videos/thehartfordgroup.mp4";
-import Umr from "../videos/san-sand-1.mp4";
-import IntuitiveFoundation from "../videos/san-sand-1.mp4";
-import EminentCollaborations from "../videos/san-sand-1.mp4";
-import ColombiaAirbnb from "../videos/san-sand-1.mp4";
-import WaheebNasan from "../videos/san-sand-1.mp4";
+import Umr from "../videos/umr-relief.mp4";
+import IntuitiveFoundation from "../videos/intuitive-foundation.mp4";
+import EminentCollaborations from "../videos/eminent-collaborations.mp4";
+import ColombiaAirbnb from "../videos/el-silencio-glamping.mp4";
 
 // Sample data for the slider
 const slidesData = [
@@ -46,91 +45,85 @@ const slidesData = [
   {
     videoSrc: NourArdakani,
     title: "Nour Ardakani",
-    tag: "Music",
-    linkTo: "/second-video"
+    tag: "Music Video",
+    linkTo: "/work/nour-ardakani"
   },
   {
     videoSrc: Paliroots,
     title: "Paliroots",
-    tag: "Fashion",
-    linkTo: "/second-video"
+    tag: "Apparel",
+    linkTo: "/work/paliroots"
   },
   {
     videoSrc: Bluemoon,
     title: "Bluemoon",
     tag: "Jewelry",
-    linkTo: "/second-video"
+    linkTo: "/work/bluemoon"
   },
   {
     videoSrc: Axe,
     title: "Axe",
     tag: "Beauty",
-    linkTo: "/second-video"
+    linkTo: "/work/axe"
   },
   {
     videoSrc: Gillette,
     title: "Gillette",
     tag: "Beauty",
-    linkTo: "/second-video"
+    linkTo: "/work/gillette"
   },
   {
     videoSrc: Celsius,
     title: "Celsius",
     tag: "Food/Beverage",
-    linkTo: "/second-video"
+    linkTo: "/work/celsius"
   },
   {
     videoSrc: HighEndExotics,
     title: "High-End Exotics",
     tag: "Auto",
-    linkTo: "/second-video"
+    linkTo: "/work/high-end-exotics"
   },
   {
     videoSrc: Thg,
     title: "The Hartford Group",
     tag: "Hospitality",
-    linkTo: "/second-video"
+    linkTo: "/work/the-hartford-group"
   },
   {
     videoSrc: Umr,
-    title: "UMR Relief",
+    title: "United Mission Relief",
     tag: "NGO",
-    linkTo: "/second-video"
+    linkTo: "/work/united-mission-relief"
   },
   {
     videoSrc: IntuitiveFoundation,
     title: "Intuitive Foundation",
     tag: "Retreat",
-    linkTo: "/second-video"
+    linkTo: "/work/intuitive-foundation"
   },
   {
     videoSrc: EminentCollaborations,
     title: "Eminent Collaborations",
     tag: "NGO",
-    linkTo: "/second-video"
+    linkTo: "/work/eminent-collaborations"
   },
   {
     videoSrc: ColombiaAirbnb,
-    title: "Colombia Airbnb",
+    title: "El Silencio Glamping",
     tag: "Hospitality",
-    linkTo: "/second-video"
-  },
-  {
-    videoSrc: WaheebNasan,
-    title: "Waheeb Nasan",
-    tag: "Music",
-    linkTo: "/second-video"
-  },
+    linkTo: "/work/el-silencio-glamping"
+  }
 ];
 
-const ShortfilmsPage = () => {
+const VideosPage = () => {
   return (
     <Layout>
-      <SEO title="Shortfimls" />
+      <SEO title="Shortfilms" />
       <PageHeader title="Shortfilms"/>
       <VideoSlider slides={slidesData} />
     </Layout>
   );
 };
 
-export default ShortfilmsPage;
+export default VideosPage;

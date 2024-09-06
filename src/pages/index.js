@@ -6,7 +6,7 @@ import Camera from "../components/home-camera"
 import ServiceComponent from '../components/services'
 import VideoSlider from '../components/video-slider';  // Adjust the path as necessary
 
-import PreProduction from "../videos/pre-production.mp4"
+import PreProduction from "../videos/yung-bans.mp4"
 import Production from "../videos/production.mp4"
 import PostProduction from "../videos/post-production.mp4"
 
@@ -71,9 +71,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    <div className="px-d">
-      <h5>Selected Works</h5>
-    </div>
+
 
     <VideoSlider slides={slidesData} />
     <Camera />
