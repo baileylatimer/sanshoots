@@ -9,12 +9,13 @@ const VideoSlider = ({ slides }) => {
   const wrapperRef = useRef(null);
   const containerRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [progress, setProgress] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(1);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -31,13 +32,23 @@ const VideoSlider = ({ slides }) => {
       ease: "none",
       scrollTrigger: {
         trigger: wrapper,
-        start: "bottom bottom", // Start when bottom of wrapper hits bottom of viewport
+        start: "bottom bottom",
         end: () => `+=${(totalSlidesToScroll - 1) * wrapper.offsetWidth}`,
         pin: true,
         pinSpacing: true,
         anticipatePin: 1,
         scrub: 1,
-        invalidateOnRefresh: true
+        invalidateOnRefresh: true,
+        onUpdate: (self) => {
+          const progress = self.progress * 100;
+          setProgress(progress);
+          
+          const currentSlideIndex = Math.min(
+            Math.floor(self.progress * totalSlidesToScroll) + 1,
+            totalSlides
+          );
+          setCurrentSlide(currentSlideIndex);
+        }
       }
     });
 
@@ -48,6 +59,12 @@ const VideoSlider = ({ slides }) => {
 
   return (
     <div className="video-slider-wrapper" ref={wrapperRef}>
+      <div className="progress-container  px-d">
+        <div className="progress-bar mr-16">
+          <div className="progress" style={{ width: `${progress}%` }}></div>
+        </div>
+        <div className="slide-count mr-d">{currentSlide}/{slides.length}</div>
+      </div>
       <div className="video-slider-container" ref={containerRef}>
         {slides.map((slide, index) => (
           <div key={index} className="slide-item">

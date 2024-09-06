@@ -182,6 +182,25 @@ p, .project-info {
   } 
 }
 
+.mr-d {
+  margin-right: 40px;
+}
+@media(max-width:1023px) {
+  .mr-d {
+    margin-right: 20px;
+  } 
+}
+
+.pr-d {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+@media(max-width:1023px) {
+  .pr-d {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  } 
+}
 
 
 
@@ -1252,13 +1271,13 @@ body.no-vertical-scroll {
 }
 
 .progress-bar {
-  width: 30%;
+  width: 100%;
   height: 8px;
   background-color: #D9D6CF;
   border-radius: 4px;
   overflow: hidden;
   position: relative;
-  margin-right: 60px;
+
 }
 
 .progress {
