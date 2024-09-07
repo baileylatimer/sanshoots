@@ -137,8 +137,11 @@ p, .project-info {
 }
 .text-xxl {
   font-size: 43vw;
-  line-height: 43vw;
+  line-height: 1;
+  display: flex;
+  align-items: center;
 }
+
 @media(max-width:1023px) {
   .text-xxl {
     font-size: 152px;
@@ -783,51 +786,61 @@ background-color: var(--color-contrast-higher);
 /* VIDEO SVG
 ================== */
 
-.video-class {
-  clip-path: url(#clip-shape);
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.hero-text { 
+font-family: 'Rayuela';
 }
-@media(max-width:1023px) {
-.video-class {
-  clip-path: url(#clip-shape-mobile);
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
+.hero-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
-  height: 100%;
-}
+  overflow: hidden;
+  padding: 20px 0;
 }
 
-.svg-class, #clip-shape, #clip-shape-mobile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.hero-text {
+  font-size: 43vw;
+  line-height: 1;
 }
 
 .video-svg-wrapper {
   position: relative;
-  width: 43vw; /* Assuming this should match the font size */
-  margin-top: 30px;
-  padding-top: (473 / 193 * 100)%; /* Height as a percentage of width */
+  width: 17.5vw; /* Adjust if needed to match the width of the text "O" */
+  height: 35vw; /* This now matches the font size of the text */
+  display: inline-block;
+  margin: 0 0.5vw; /* Add a small gap between the Os */
+  margin-top: 1.8vw;
 }
 
-@media(max-width:1023px) {
+.svg-class {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-class {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: url(#clip-shape);
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 30vw;
+  }
+  
   .video-svg-wrapper {
-    margin-top: 10px;
-    width: 14vw;
+    width: 12.2vw; /* Adjust if needed to match the width of the text "O" on mobile */
+    height: 30vw; /* This now matches the font size of the text on mobile */
+    margin: 0 0.35vw; /* Adjust the gap for mobile */
   }
 }
-
-
-
 /* VIDEO MODAL
 ================== */
 
@@ -1156,7 +1169,7 @@ background-color: var(--color-contrast-higher);
 }
 @media (min-width: 768px) {
 .video-slide .video-container {
-  height: 800px;
+  /* height: 800px; */
 }
 }
 
@@ -1274,7 +1287,7 @@ margin-top: 35px;
   }
   @media(min-width:1023px) {
 .video-slider-wrapper > div:nth-child(1) > h5:nth-child(1) {
-  margin: 0;
+  margin-top: 40px;
   line-height: 70px;
   height: auto;
   }

@@ -14,21 +14,6 @@ const Hero = props => {
   // Using a ref to target the container of the VideoSVGMask components
   const videoMasksRef = useRef(null);
 
-  // useEffect(() => {
-  //   // Ensure Draggable is registered
-  //   gsap.registerPlugin(Draggable);
-
-  //   // Apply Draggable to each VideoSVGMask component
-  //   if (videoMasksRef.current) {
-  //     const videoMasks = videoMasksRef.current.querySelectorAll('.video-svg-wrapper');
-  //     videoMasks.forEach(mask => {
-  //       Draggable.create(mask, {
-  //         type: "x,y", // Makes the element draggable in both x and y directions
-  //         bounds: videoMasksRef.current, // Optionally restricts dragging within the bounds of the parent container
-  //       });
-  //     });
-  //   }
-  // }, []);
 
   return (
     <div className="hero mb-16">
@@ -60,11 +45,11 @@ const Hero = props => {
         <ReelBlock />
       </div>
       </div>
-      <div className="flex px-2" ref={videoMasksRef}>
-        <h1 className="text-xxl text-center">SANSH</h1>
+      <div className="hero-text-container">
+        <span className="hero-text">SANSH</span>
         <VideoSVGMask videoSrc={SanEye} />
-       <VideoSVGMask videoSrc={SanThrow} />
-        <h1 className="text-xxl text-center">TS</h1>
+        <VideoSVGMask videoSrc={SanThrow} />
+        <span className="hero-text">TS</span>
       </div>
     </div>
   );
