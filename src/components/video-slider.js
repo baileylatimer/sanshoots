@@ -51,7 +51,7 @@ const VideoSlider = ({ slides }) => {
           const currentSlideIndex = Math.min(
             Math.floor(self.progress * totalSlidesToScroll) + 1,
             totalSlides
-          );
+          ); 
           setCurrentSlide(currentSlideIndex);
         }
       }
