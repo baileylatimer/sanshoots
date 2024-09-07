@@ -855,6 +855,12 @@ font-family: 'Rayuela';
   }
 }
 
+iframe {
+  width: 100%;
+  height: 60vh;
+  max-height: 800;
+}
+
 .bars {
   padding-top: 2vw;
 }
