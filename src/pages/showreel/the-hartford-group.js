@@ -80,7 +80,7 @@ const projectTag = 'Auto';
 
 
 const nextProjectTitle = "UMR Relief";
-const nextProjectUrl = "/work/umr-relief";
+const nextProjectUrl = "/showreel/umr-relief";
 
 
 const ProjectPageContainer = () => {

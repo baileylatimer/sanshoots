@@ -76,7 +76,7 @@ const projectTag = 'Music Video';
 
 
 const nextProjectTitle = "Paliroots";
-const nextProjectUrl = "/work/paliroots";
+const nextProjectUrl = "/showreel/paliroots";
 
 
 const ProjectPageContainer = () => {

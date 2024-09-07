@@ -75,7 +75,7 @@ const projectTag = 'Retreat';
 
 
 const nextProjectTitle = "Eminent Collaborations";
-const nextProjectUrl = "/work/eminent-collaborations";
+const nextProjectUrl = "/showreel/eminent-collaborations";
 
 
 const ProjectPageContainer = () => {

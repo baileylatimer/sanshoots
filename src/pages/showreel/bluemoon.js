@@ -114,7 +114,7 @@ const projectTag = 'Jewelry';
 
 
 const nextProjectTitle = "Axe";
-const nextProjectUrl = "/work/axe";
+const nextProjectUrl = "/showreel/axe";
 
 
 const ProjectPageContainer = () => {

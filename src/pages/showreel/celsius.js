@@ -75,7 +75,7 @@ const projectTag = 'Food/Beverage';
 
 
 const nextProjectTitle = "High-End Exotics";
-const nextProjectUrl = "/work/high-end-exotics";
+const nextProjectUrl = "/showreel/high-end-exotics";
 
 
 const ProjectPageContainer = () => {

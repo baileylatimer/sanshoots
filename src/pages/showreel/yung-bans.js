@@ -76,7 +76,7 @@ const projectTag = 'Music Video';
 
 
 const nextProjectTitle = "Francis Mercier";
-const nextProjectUrl = "/work/francis-mercier";
+const nextProjectUrl = "/showreel/francis-mercier";
 
 
 const ProjectPageContainer = () => {

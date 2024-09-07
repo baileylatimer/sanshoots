@@ -82,26 +82,26 @@ const sliderData = [
     videoSrc: Elyanna,
     title: "Elyanna",
     tag: "Music",
-    linkTo: "/work/elyanna"
+    linkTo: "/showreel/elyanna"
   },
   {
     videoSrc: FrancisMercier,
     title: "Francis Mercier",
     tag: "Music",
-    linkTo: "/work/francis-mercier"
+    linkTo: "/showreel/francis-mercier"
   },
   {
     videoSrc: NourArdakani,
     title: "Nour Ardakani",
     tag: "Music",
-    linkTo: "/work/nour-ardakani"
+    linkTo: "/showreel/nour-ardakani"
   }
 ];
 
 
 
 const nextProjectTitle = "Yung Bans";
-const nextProjectUrl = "/work/yung-bans";
+const nextProjectUrl = "/showreel/yung-bans";
 
 const ProjectPageContainer = () => {
   useEffect(() => {

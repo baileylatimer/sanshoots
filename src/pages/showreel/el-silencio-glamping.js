@@ -79,7 +79,7 @@ const projectTag = 'Hospitality';
 
 
 const nextProjectTitle = "Elyanna";
-const nextProjectUrl = "/work/elyanna";
+const nextProjectUrl = "/showreel/elyanna";
 
 const ProjectPageContainer = () => {
   useEffect(() => {

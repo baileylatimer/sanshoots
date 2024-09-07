@@ -35,38 +35,38 @@ const slidesData = [
     videoSrc: Elyanna,
     title: "Elyanna",
     tag: "Event",
-    linkTo: "/work/elyanna"
+    linkTo: "/showreel/elyanna"
   },
   {
     videoSrc: YungBans,
     title: "Yung Bans",
     tag: "Music Video",
-    linkTo: "/work/yung-bans"
+    linkTo: "/showreel/yung-bans"
   },
   {
     videoSrc: FrancisMercier,
     title: "Francis Mercier",
     tag: "Event",
-    linkTo: "/work/francis-mercier"
+    linkTo: "/showreel/francis-mercier"
   },
 
   {
     videoSrc: NourArdakani,
     title: "Nour Ardakani",
     tag: "Music Video",
-    linkTo: "/work/nour-ardakani"
+    linkTo: "/showreel/nour-ardakani"
   },
   {
     videoSrc: Paliroots,
     title: "Paliroots",
     tag: "Apparel",
-    linkTo: "/work/paliroots"
+    linkTo: "/showreel/paliroots"
   },
   {
     videoSrc: Bluemoon,
     title: "Bluemoon",
     tag: "Jewelry",
-    linkTo: "/work/bluemoon"
+    linkTo: "/showreel/bluemoon"
   }
 ];
 

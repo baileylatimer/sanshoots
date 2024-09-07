@@ -76,7 +76,7 @@ const projectTag = 'Apparel';
 
 
 const nextProjectTitle = "Bluemoon";
-const nextProjectUrl = "/work/bluemoon";
+const nextProjectUrl = "/showreel/bluemoon";
 
 
 const ProjectPageContainer = () => {

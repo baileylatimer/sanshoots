@@ -83,7 +83,7 @@ const projectTag = 'Auto';
 
 
 const nextProjectTitle = "The Hartford Group";
-const nextProjectUrl = "/work/the-hartford-group";
+const nextProjectUrl = "/showreel/the-hartford-group";
 
 
 const ProjectPageContainer = () => {

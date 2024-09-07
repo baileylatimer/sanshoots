@@ -76,7 +76,7 @@ const projectTag = 'Event';
 
 
 const nextProjectTitle = "Nour Ardakani";
-const nextProjectUrl = "/work/nour-ardakani";
+const nextProjectUrl = "/showreel/nour-ardakani";
 
 const ProjectPageContainer = () => {
   useEffect(() => {

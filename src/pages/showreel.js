@@ -27,92 +27,92 @@ const slidesData = [
     videoSrc: Elyanna,
     title: "Elyanna",
     tag: "Event",
-    linkTo: "/work/elyanna"
+    linkTo: "/showreel/elyanna"
   },
   {
     videoSrc: YungBans,
     title: "Yung Bans",
     tag: "Music Video",
-    linkTo: "/work/yung-bans"
+    linkTo: "/showreel/yung-bans"
   },
   {
     videoSrc: FrancisMercier,
     title: "Francis Mercier",
     tag: "Event",
-    linkTo: "/work/francis-mercier"
+    linkTo: "/showreel/francis-mercier"
   },
 
   {
     videoSrc: NourArdakani,
     title: "Nour Ardakani",
     tag: "Music Video",
-    linkTo: "/work/nour-ardakani"
+    linkTo: "/showreel/nour-ardakani"
   },
   {
     videoSrc: Paliroots,
     title: "Paliroots",
     tag: "Apparel",
-    linkTo: "/work/paliroots"
+    linkTo: "/showreel/paliroots"
   },
   {
     videoSrc: Bluemoon,
     title: "Bluemoon",
     tag: "Jewelry",
-    linkTo: "/work/bluemoon"
+    linkTo: "/showreel/bluemoon"
   },
   {
     videoSrc: Axe,
     title: "Axe",
     tag: "Beauty",
-    linkTo: "/work/axe"
+    linkTo: "/showreel/axe"
   },
   {
     videoSrc: Gillette,
     title: "Gillette",
     tag: "Beauty",
-    linkTo: "/work/gillette"
+    linkTo: "/showreel/gillette"
   },
   {
     videoSrc: Celsius,
     title: "Celsius",
     tag: "Food/Beverage",
-    linkTo: "/work/celsius"
+    linkTo: "/showreel/celsius"
   },
   {
     videoSrc: HighEndExotics,
     title: "High-End Exotics",
     tag: "Auto",
-    linkTo: "/work/high-end-exotics"
+    linkTo: "/showreel/high-end-exotics"
   },
   {
     videoSrc: Thg,
     title: "The Hartford Group",
     tag: "Hospitality",
-    linkTo: "/work/the-hartford-group"
+    linkTo: "/showreel/the-hartford-group"
   },
   {
     videoSrc: Umr,
     title: "United Mission Relief",
     tag: "NGO",
-    linkTo: "/work/united-mission-relief"
+    linkTo: "/showreel/united-mission-relief"
   },
   {
     videoSrc: IntuitiveFoundation,
     title: "Intuitive Foundation",
     tag: "Retreat",
-    linkTo: "/work/intuitive-foundation"
+    linkTo: "/showreel/intuitive-foundation"
   },
   {
     videoSrc: EminentCollaborations,
     title: "Eminent Collaborations",
     tag: "NGO",
-    linkTo: "/work/eminent-collaborations"
+    linkTo: "/showreel/eminent-collaborations"
   },
   {
     videoSrc: ColombiaAirbnb,
     title: "El Silencio Glamping",
     tag: "Hospitality",
-    linkTo: "/work/el-silencio-glamping"
+    linkTo: "/showreel/el-silencio-glamping"
   }
 ];
 

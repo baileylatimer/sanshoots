@@ -75,7 +75,7 @@ const projectTag = 'NGO';
 
 
 const nextProjectTitle = "El Silencio Glamping";
-const nextProjectUrl = "/work/el-silencio-glamping";
+const nextProjectUrl = "/showreel/el-silencio-glamping";
 
 
 const ProjectPageContainer = () => {
