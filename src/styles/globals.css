@@ -370,6 +370,8 @@ nav {
   margin-left: -40px;
 }
 }
+
+/* FOOTER */
 footer {
   position: relative;
 }
@@ -393,9 +395,31 @@ footer p {
 }
 
 .header-title .scramble {
-
   font-family: 'Rayuela' !important;
+}
 
+.palestine-text, .email-arrow, .coordinates {
+  transform: scale(.8);
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -ms-transform: scale(.8);
+  -o-transform: scale(.8);
+}
+@media(min-width:1023px) {
+.palestine-text, .email-arrow  {
+  transform: scale(.9);
+  -webkit-transform: scale(.9);
+  -moz-transform: scale(.9);
+  -ms-transform: scale(.9);
+  -o-transform: scale(.9);
+}
+.coordinates {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
 }
 
 
@@ -868,6 +892,7 @@ iframe {
   padding-top: 0;
   margin-top: -4vw;
 }
+
 /* VIDEO MODAL
 ================== */
 
