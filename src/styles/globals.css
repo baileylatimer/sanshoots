@@ -836,9 +836,11 @@ font-family: 'Rayuela';
   }
   
   .video-svg-wrapper {
-    width: 12.2vw; /* Adjust if needed to match the width of the text "O" on mobile */
-    height: 30vw; /* This now matches the font size of the text on mobile */
-    margin: 0 0.35vw; /* Adjust the gap for mobile */
+    width: 9.2vw;
+    height: 25vw;
+    margin: 0 0.35vw;
+    margin-top: 0px;
+    margin-top: .8vw;
   }
 }
 /* VIDEO MODAL
