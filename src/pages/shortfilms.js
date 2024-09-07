@@ -5,114 +5,115 @@ import PageHeader from "../components/page-header"
 import VideoSlider from '../components/video-slider';  // Adjust the path as necessary
 
 // Import video files directly
-import Elyanna from "../videos/elyanna-2.mp4";
-import YungBans from "../videos/yung-bans.mp4";
-import NourArdakani from "../videos/nour-ardakani.mp4";
-import FrancisMercier from "../videos/francis-mercier.mp4";
-import Paliroots from "../videos/paliroots.mp4";
-import Bluemoon from "../videos/bluemoon.mp4";
-import Axe from "../videos/axe.mp4";
-import Gillette from "../videos/gillette.mp4";
-import Celsius from "../videos/celsius.mp4";
-import HighEndExotics from "../videos/highendexotics.mp4";
-import Thg from "../videos/thehartfordgroup.mp4";
-import Umr from "../videos/umr-relief.mp4";
-import IntuitiveFoundation from "../videos/intuitive-foundation.mp4";
-import EminentCollaborations from "../videos/eminent-collaborations.mp4";
-import ColombiaAirbnb from "../videos/el-silencio-glamping.mp4";
+import Elyanna from "../videos/palestine-activated.mp4";
+import YungBans from "../videos/palestine-will-be.mp4";
+import FrancisMercier from "../videos/chaos-to-calm.mp4";
+import NourArdakani from "../videos/tesla-cybertruck.mp4";
+
+import Paliroots from "../videos/life-is-good.mp4";
+import Bluemoon from "../videos/raceexotics-oc-meet.mp4";
+import Axe from "../videos/forever-on-my-mind.mp4";
+import Gillette from "../videos/breathe.mp4";
+import Celsius from "../videos/ob-vibes.mp4";
+import HighEndExotics from "../videos/glimpse-of-home.mp4";
+import Thg from "../videos/die-one-day.mp4";
+import Umr from "../videos/lost-in-mexico.mp4";
+import IntuitiveFoundation from "../videos/each-moment-is-a-memory.mp4";
+import EminentCollaborations from "../videos/embrace-your-jouney.mp4";
+import ColombiaAirbnb from "../videos/never-let-you-fall.mp4";
 
 // Sample data for the slider
 const slidesData = [
   {
     videoSrc: Elyanna,
-    title: "Elyanna",
-    tag: "Event",
-    linkTo: "/work/elyanna"
+    title: "Palestine Activated",
+    tag: "Cinematic",
+    linkTo: "/shortfilms/palestine-activated"
   },
   {
     videoSrc: YungBans,
-    title: "Yung Bans",
-    tag: "Music Video",
-    linkTo: "/work/yung-bans"
+    title: "Palestine Will Be",
+    tag: "Cinematic",
+    linkTo: "/shortfilms/palestine-will-be"
   },
   {
     videoSrc: FrancisMercier,
-    title: "Francis Mercier",
-    tag: "Event",
-    linkTo: "/work/francis-mercier"
+    title: "Chaos to Calm",
+    tag: "Shortfilm",
+    linkTo: "/shortfilms/chaos-to-calm"
   },
 
   {
     videoSrc: NourArdakani,
-    title: "Nour Ardakani",
-    tag: "Music Video",
-    linkTo: "/work/nour-ardakani"
+    title: "Tesla Cybertruck",
+    tag: "Auto",
+    linkTo: "/shortfilms/tesla-cybertruck"
   },
   {
     videoSrc: Paliroots,
-    title: "Paliroots",
-    tag: "Apparel",
-    linkTo: "/work/paliroots"
+    title: "Life is Good",
+    tag: "Cinematic",
+    linkTo: "/shortfilms/life-is-good"
   },
   {
     videoSrc: Bluemoon,
-    title: "Bluemoon",
-    tag: "Jewelry",
-    linkTo: "/work/bluemoon"
+    title: "Race Exotics OC Meet",
+    tag: "Auto",
+    linkTo: "/shortfilms/raceexotics-oc-meet"
   },
   {
     videoSrc: Axe,
-    title: "Axe",
-    tag: "Beauty",
-    linkTo: "/work/axe"
+    title: "Forever on my mind",
+    tag: "Travel",
+    linkTo: "/shortfilms/forever-on-my-mind"
   },
   {
     videoSrc: Gillette,
-    title: "Gillette",
-    tag: "Beauty",
-    linkTo: "/work/gillette"
+    title: "Breathe",
+    tag: "Cinematic",
+    linkTo: "/shortfilms/breathe"
   },
   {
     videoSrc: Celsius,
-    title: "Celsius",
-    tag: "Food/Beverage",
-    linkTo: "/work/celsius"
+    title: "OB Vibes",
+    tag: "Storytelling",
+    linkTo: "/shortfilms/ob-vibes"
   },
   {
     videoSrc: HighEndExotics,
-    title: "High-End Exotics",
-    tag: "Auto",
-    linkTo: "/work/high-end-exotics"
+    title: "Glimpse of Home",
+    tag: "Travel",
+    linkTo: "/shortfilms/glimpse-of-home"
   },
   {
     videoSrc: Thg,
-    title: "The Hartford Group",
-    tag: "Hospitality",
-    linkTo: "/work/the-hartford-group"
+    title: "Die One Day",
+    tag: "Storytelling",
+    linkTo: "/shortfilms/die-one-day"
   },
   {
     videoSrc: Umr,
-    title: "United Mission Relief",
-    tag: "NGO",
-    linkTo: "/work/united-mission-relief"
+    title: "Lost in Mexico",
+    tag: "Travel",
+    linkTo: "/shortfilms/lost-in-mexico"
   },
   {
     videoSrc: IntuitiveFoundation,
-    title: "Intuitive Foundation",
-    tag: "Retreat",
-    linkTo: "/work/intuitive-foundation"
+    title: "Each Moment is a Memory",
+    tag: "Storytelling",
+    linkTo: "/shortfilms/each-moment-is-a-memory"
   },
   {
     videoSrc: EminentCollaborations,
-    title: "Eminent Collaborations",
-    tag: "NGO",
-    linkTo: "/work/eminent-collaborations"
+    title: "Embrace Your Journey",
+    tag: "Storytelling",
+    linkTo: "/shortfilms/embrace-your-journey"
   },
   {
     videoSrc: ColombiaAirbnb,
-    title: "El Silencio Glamping",
-    tag: "Hospitality",
-    linkTo: "/work/el-silencio-glamping"
+    title: "Never Let You Fall",
+    tag: "Cinematic",
+    linkTo: "/shortfilms/never-let-you-fall"
   }
 ];
 
