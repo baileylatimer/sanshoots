@@ -789,6 +789,14 @@ background-color: var(--color-contrast-higher);
 .hero-text { 
 font-family: 'Rayuela';
 }
+
+
+@media (max-width: 768px) {
+  .hero-text-container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
 .hero-text-container {
   display: flex;
   justify-content: center;
@@ -797,6 +805,8 @@ font-family: 'Rayuela';
   overflow: hidden;
   padding: 20px 0;
 }
+
+
 
 .hero-text {
   font-size: 40vw;
@@ -832,12 +842,12 @@ font-family: 'Rayuela';
 
 @media (max-width: 768px) {
   .hero-text {
-    font-size: 43vw;
+    font-size: 38vw;
   }
   
   .video-svg-wrapper {
     width: 12.2vw;
-    height: 35vw;
+    height: 32vw;
     margin: 0 0.5vw;
     margin-top: 0px;
     margin-top: 0px;

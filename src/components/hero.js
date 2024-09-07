@@ -2,8 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import ReelBlock from "./reel-block"
 import VideoSVGMask from "./video-svg-mask"
-import SanEye from "../videos/san-eye.mp4"
-import SanThrow from "../videos/san-throw.mp4"
+import SanEye from "../videos/sans-eye.mp4"
 
 import { gsap } from "gsap";
 
@@ -33,7 +32,7 @@ const Hero = props => {
         <ReelBlock />
       </div>
       </div>
-      <div className="mobile">
+      <div className="mobile px-d">
       <div className="flex justify-between hero-reel mt-24 ">
         <ReelBlock />
         <ReelBlock />
@@ -48,7 +47,7 @@ const Hero = props => {
       <div className="hero-text-container px-d">
         <span className="hero-text">SANSH</span>
         <VideoSVGMask videoSrc={SanEye} />
-        <VideoSVGMask videoSrc={SanThrow} />
+        <VideoSVGMask videoSrc={SanEye} />
         <span className="hero-text">TS</span>
       </div>
       <div className=" desktop bars bars-2">
@@ -67,7 +66,7 @@ const Hero = props => {
         <ReelBlock />
       </div>
       </div>
-      <div className="mobile bars-2">
+      <div className="mobile px-d bars-2">
       <div className="flex justify-between hero-reel bars bars-2 ">
         <ReelBlock />
         <ReelBlock />
