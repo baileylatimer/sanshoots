@@ -112,12 +112,7 @@ function Header({ siteTitle }) {
             Shortfilms
           </Link>
 
-          <Link
-            to={`/contact`}
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 "
-          >
-            Transitions
-          </Link>
+
 
           <Link
             to={`/about`}

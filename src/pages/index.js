@@ -83,7 +83,7 @@ const IndexPage = () => (
 
 
     <VideoSlider slides={slidesData} />
-    <Camera />
+
     <ServiceComponent services={services} />
   </Layout>
 )

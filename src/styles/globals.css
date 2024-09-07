@@ -799,14 +799,14 @@ font-family: 'Rayuela';
 }
 
 .hero-text {
-  font-size: 43vw;
+  font-size: 40vw;
   line-height: 1;
 }
 
 .video-svg-wrapper {
   position: relative;
   width: 17.5vw; /* Adjust if needed to match the width of the text "O" */
-  height: 35vw; /* This now matches the font size of the text */
+  height: 32vw;
   display: inline-block;
   margin: 0 0.5vw; /* Add a small gap between the Os */
   margin-top: 1.8vw;
@@ -847,6 +847,10 @@ font-family: 'Rayuela';
 
 .bars {
   padding-top: 2vw;
+}
+.bars-2 {
+  padding-top: 0;
+  margin-top: -4vw;
 }
 /* VIDEO MODAL
 ================== */

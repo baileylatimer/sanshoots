@@ -17,8 +17,8 @@ const Hero = props => {
 
   return (
     <div className="hero mb-0 lg:mb-16">
-      <div className=" desktop">
-      <div className="flex justify-between hero-reel lg:mx-24 lg:mt-36">
+      <div className=" desktop bars">
+      <div className="flex justify-between hero-reel px-d lg:mt-36">
         <ReelBlock />
         <ReelBlock />
         <ReelBlock />
@@ -45,11 +45,39 @@ const Hero = props => {
         <ReelBlock />
       </div>
       </div>
-      <div className="hero-text-container">
+      <div className="hero-text-container px-d">
         <span className="hero-text">SANSH</span>
         <VideoSVGMask videoSrc={SanEye} />
         <VideoSVGMask videoSrc={SanThrow} />
         <span className="hero-text">TS</span>
+      </div>
+      <div className=" desktop bars bars-2">
+      <div className="flex justify-between hero-reel px-d  hero-reel-2">
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+      </div>
+      </div>
+      <div className="mobile bars-2">
+      <div className="flex justify-between hero-reel bars bars-2 ">
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+        <ReelBlock />
+      </div>
       </div>
     </div>
   );
