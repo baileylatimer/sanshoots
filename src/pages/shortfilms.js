@@ -63,7 +63,7 @@ const slidesData = [
   },
   {
     videoSrc: Axe,
-    title: "Forever on my mind",
+    title: "Forever on My Mind",
     tag: "Travel",
     linkTo: "/shortfilms/forever-on-my-mind"
   },
