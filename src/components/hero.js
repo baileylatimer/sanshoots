@@ -16,7 +16,7 @@ const Hero = props => {
 
 
   return (
-    <div className="hero mb-16">
+    <div className="hero mb-0 lg:mb-16">
       <div className=" desktop">
       <div className="flex justify-between hero-reel lg:mx-24 lg:mt-36">
         <ReelBlock />

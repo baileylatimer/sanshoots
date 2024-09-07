@@ -832,15 +832,16 @@ font-family: 'Rayuela';
 
 @media (max-width: 768px) {
   .hero-text {
-    font-size: 30vw;
+    font-size: 43vw;
   }
   
   .video-svg-wrapper {
-    width: 9.2vw;
-    height: 25vw;
-    margin: 0 0.35vw;
+    width: 12.2vw;
+    height: 35vw;
+    margin: 0 0.5vw;
     margin-top: 0px;
-    margin-top: .8vw;
+    margin-top: 0px;
+    margin-top: 1vw;
   }
 }
 /* VIDEO MODAL
