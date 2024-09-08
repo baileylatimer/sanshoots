@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const VideoSVGMask = ({ videoSrc }) => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Attempt to play the video after a short delay
+      const playPromise = setTimeout(() => {
+        videoRef.current.play().catch(error => {
+          // Autoplay was prevented. You might want to show a play button here.
+          console.log("Autoplay prevented:", error);
+        });
+      }, 1000);
+
+      return () => clearTimeout(playPromise);
+    }
+  }, []);
+
   return (
     <div className="video-svg-wrapper">
       <svg className="svg-class" viewBox="0 0 193 473" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
@@ -10,7 +26,15 @@ const VideoSVGMask = ({ videoSrc }) => {
           </clipPath>
         </defs>
       </svg>
-      <video autoPlay loop muted className="video-class">
+      <video 
+        ref={videoRef}
+        autoPlay 
+        loop 
+        muted 
+        playsInline 
+        preload="auto"
+        className="video-class"
+      >
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
