@@ -1789,3 +1789,132 @@ max-width: 60vw !important;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2-2 1.5s linear infinite alternate-reverse;
 }
+
+
+
+.hero-text-container {
+  display: flex;
+
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-text {
+
+  line-height: 1;
+  color: #000000;
+  position: relative;
+  display: inline-block;
+}
+
+.old-movie-text {
+  animation: textFlicker 5s infinite, chromatic 3s infinite alternate, jitter 50ms infinite;
+}
+
+@keyframes textFlicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.9; }
+  94% { opacity: 1; }
+  96% { opacity: 0.9; }
+  98% { opacity: 1; }
+}
+
+@keyframes chromatic {
+  0% {
+    text-shadow: 
+      0.15vw 0.05vw 0 rgba(222, 85, 0, 0.2),
+      -0.15vw -0.05vw 0 rgba(197, 20, 8, 0.4);
+  }
+  100% {
+    text-shadow: 
+      0.2vw 0.1vw 0 rgba(197, 20, 8, 0.2),
+      -0.2vw -0.1vw 0 rgba(222, 85, 0, 0.1);
+  }
+}
+
+@keyframes jitter {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(0.5px, 0.5px); }
+  50% { transform: translate(-0.5px, -0.5px); }
+  75% { transform: translate(-0.5px, 0.5px); }
+  100% { transform: translate(0.5px, -0.5px); }
+}
+
+.hero-text-container::before {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  right: -150%;
+  bottom: -150%;
+  background: 
+    url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%" height="100%" filter="url(%23noiseFilter)"%3E%3C/rect%3E%3C/svg%3E'),
+    url('data:image/svg+xml,%3Csvg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="50" cy="50" r="1" fill="black"/%3E%3C/svg%3E');
+  background-size: 200px 200px, 100px 100px;
+  opacity: 0.05;
+  animation: grainShift 0.5s steps(1) infinite, specksMove 2s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes grainShift {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-1%, -1%); }
+  20% { transform: translate(1%, 1%); }
+  30% { transform: translate(-2%, 2%); }
+  40% { transform: translate(2%, -2%); }
+  50% { transform: translate(-1%, 2%); }
+  60% { transform: translate(2%, 1%); }
+  70% { transform: translate(1%, -1%); }
+  80% { transform: translate(-1%, 1%); }
+  90% { transform: translate(2%, -2%); }
+}
+
+@keyframes specksMove {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 200px 200px, 100px 100px; }
+}
+
+.hero-text-container::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 300%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%),
+    linear-gradient(90deg, rgba(255,165,0,0) 0%, rgba(255,165,0,0.2) 50%, rgba(255,165,0,0) 100%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation: filmBurn 8s infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes filmBurn {
+  0%, 100% { transform: translateX(-100%) rotate(-5deg); opacity: 0; }
+  10%, 90% { opacity: 0; }
+  50% { transform: translateX(0%) rotate(5deg); opacity: 0; -webkit-transform: translateX(0%) rotate(5deg); -moz-transform: translateX(0%) rotate(5deg); -ms-transform: translateX(0%) rotate(5deg); -o-transform: translateX(0%) rotate(5deg); }
+}
+
+.old-movie-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(255, 255, 255, 0.1);
+  filter: blur(5px);
+  animation: halation 5s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes halation {
+  0% { filter: blur(5px); }
+  50% { filter: blur(7px); }
+  100% { filter: blur(5px); }
+}
