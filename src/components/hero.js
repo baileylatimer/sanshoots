@@ -2,7 +2,8 @@
 import React, { useEffect, useRef } from "react";
 import ReelBlock from "./reel-block"
 import VideoSVGMask from "./video-svg-mask"
-import SanEye from "../videos/sans-eye.mp4"
+import EyeLeft from "../videos/eye-left-5.mp4"
+import EyeRight from "../videos/eye-right-6.mp4"
 
 import { gsap } from "gsap";
 
@@ -46,8 +47,8 @@ const Hero = props => {
       </div>
       <div className="hero-text-container px-d">
         <span className="hero-text">SANSH</span>
-        <VideoSVGMask videoSrc={SanEye} />
-        <VideoSVGMask videoSrc={SanEye} />
+        <VideoSVGMask videoSrc={EyeLeft} />
+        <VideoSVGMask videoSrc={EyeRight} />
         <span className="hero-text">TS</span>
       </div>
       <div className=" desktop bars bars-2">
