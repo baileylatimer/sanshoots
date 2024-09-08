@@ -46,10 +46,10 @@ const Hero = props => {
       </div>
       </div>
       <div className="hero-text-container px-d">
-        <span className="hero-text">SANSH</span>
+        <span data-text="SANSH" className="hero-text glitch-2">SANSH</span>
         <VideoSVGMask videoSrc={EyeLeft} />
         <VideoSVGMask videoSrc={EyeRight} />
-        <span className="hero-text">TS</span>
+        <span data-text="TS" className="hero-text glitch-2">TS</span>
       </div>
       <div className=" desktop bars bars-2">
       <div className="flex justify-between hero-reel px-d  hero-reel-2">
