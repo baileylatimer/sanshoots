@@ -1903,7 +1903,7 @@ max-width: 60vw !important;
 @keyframes filmBurn {
   0%, 100% { transform: translateX(-100%) rotate(-5deg); opacity: 0; }
   10%, 90% { opacity: 0; }
-  50% { transform: translateX(0%) rotate(5deg); opacity: 0; -webkit-transform: translateX(0%) rotate(5deg); -moz-transform: translateX(0%) rotate(5deg); -ms-transform: translateX(0%) rotate(5deg); -o-transform: translateX(0%) rotate(5deg); }
+  50% { transform: translateX(0%) rotate(5deg); opacity: .05; -webkit-transform: translateX(0%) rotate(5deg); -moz-transform: translateX(0%) rotate(5deg); -ms-transform: translateX(0%) rotate(5deg); -o-transform: translateX(0%) rotate(5deg); }
 }
 
 .old-movie-text::before {
