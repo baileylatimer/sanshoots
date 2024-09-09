@@ -2,8 +2,10 @@
 import React, { useEffect, useRef } from "react";
 import ReelBlock from "./reel-block"
 import VideoSVGMask from "./video-svg-mask"
-import EyeLeft from "../videos/eye-left-5.mp4"
-import EyeRight from "../videos/eye-right-6.mp4"
+import EyeLeftWebm from "../videos/eye-left-5.webm"
+import EyeRightWebm from "../videos/eye-right-6.webm"
+import EyeLeftMp4 from "../videos/eye-left-5.mp4"
+import EyeRightMp4 from "../videos/eye-right-6.mp4"
 
 import { gsap } from "gsap";
 
@@ -47,8 +49,8 @@ const Hero = props => {
       </div>
       <div className="hero-text-container px-d">
         <span data-text="SANSH" className="hero-text old-movie-text">SANSH</span>
-        <VideoSVGMask videoSrc={EyeLeft} />
-        <VideoSVGMask videoSrc={EyeRight} />
+        <VideoSVGMask webmSrc={EyeLeftWebm} mp4Src={EyeLeftMp4} />
+        <VideoSVGMask webmSrc={EyeRightWebm} mp4Src={EyeRightMp4} />
         <span data-text="TS" className="hero-text old-movie-text">TS</span>
       </div>
       <div className=" desktop bars bars-2">

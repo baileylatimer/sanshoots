@@ -1,19 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
-const VideoSVGMask = ({ videoSrc }) => {
+const VideoSVGMask = ({ webmSrc, mp4Src }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
     if (videoRef.current) {
-      // Attempt to play the video after a short delay
-      const playPromise = setTimeout(() => {
-        videoRef.current.play().catch(error => {
-          // Autoplay was prevented. You might want to show a play button here.
-          console.log("Autoplay prevented:", error);
-        });
-      }, 1000);
-
-      return () => clearTimeout(playPromise);
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
     }
   }, []);
 
@@ -26,18 +19,21 @@ const VideoSVGMask = ({ videoSrc }) => {
           </clipPath>
         </defs>
       </svg>
-      <video 
-        ref={videoRef}
-        autoPlay 
-        loop 
-        muted 
-        playsInline 
-        preload="auto"
-        className="video-class"
-      >
-        <source src={videoSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div className="video-container">
+        <video
+          ref={videoRef}
+          className="video-class"
+          autoPlay
+          loop
+          muted
+          playsInline
+          webkit-playsinline="true"
+        >
+          <source src={webmSrc} type="video/webm" />
+          <source src={mp4Src} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   );
 };
