@@ -4,19 +4,41 @@ const VideoSVGMask = ({ webmSrc, mp4Src, fallbackImageSrc }) => {
   const videoRef = useRef(null);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [hasVideoError, setHasVideoError] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
 
   useEffect(() => {
+    // Check if the device is running iOS
+    const ua = window.navigator.userAgent;
+    const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+    setIsIOS(iOS);
+
     if (videoRef.current) {
       videoRef.current.defaultMuted = true;
       videoRef.current.muted = true;
     }
+
+    const playVideoOnTouch = () => {
+      if (videoRef.current) {
+        videoRef.current.play().catch(error => {
+          console.error("Autoplay failed:", error);
+        });
+      }
+    };
+
+    document.addEventListener('touchstart', playVideoOnTouch);
+
+    return () => {
+      document.removeEventListener('touchstart', playVideoOnTouch);
+    };
   }, []);
 
   const handleVideoLoaded = () => {
+    console.log("Video loaded successfully");
     setIsVideoLoaded(true);
   };
 
-  const handleVideoError = () => {
+  const handleVideoError = (e) => {
+    console.error("Video loading error:", e);
     setHasVideoError(true);
   };
 
@@ -46,8 +68,17 @@ const VideoSVGMask = ({ webmSrc, mp4Src, fallbackImageSrc }) => {
           onLoadedData={handleVideoLoaded}
           onError={handleVideoError}
         >
-          <source src={webmSrc} type="video/webm" />
-          <source src={mp4Src} type="video/mp4" />
+          {isIOS ? (
+            <>
+              <source src={mp4Src} type="video/mp4" />
+              <source src={webmSrc} type="video/webm" />
+            </>
+          ) : (
+            <>
+              <source src={webmSrc} type="video/webm" />
+              <source src={mp4Src} type="video/mp4" />
+            </>
+          )}
           Your browser does not support the video tag.
         </video>
       </div>
