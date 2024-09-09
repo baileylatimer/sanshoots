@@ -856,7 +856,7 @@ font-family: 'Rayuela';
   pointer-events: none;
 }
 
-.video-container {
+.video-container-2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -865,7 +865,7 @@ font-family: 'Rayuela';
   clip-path: url(#clip-shape);
 }
 
-.video-class, .fallback-image {
+.video-class-2, .fallback-image {
   width: 100%;
   height: 100%;
   object-fit: cover;

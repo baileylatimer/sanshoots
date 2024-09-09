@@ -29,7 +29,7 @@ const VideoSVGMask = ({ webmSrc, mp4Src, fallbackImageSrc }) => {
           </clipPath>
         </defs>
       </svg>
-      <div className="video-container">
+      <div className="video-container-2">
         <img 
           src={fallbackImageSrc} 
           alt="Video fallback" 
@@ -37,7 +37,7 @@ const VideoSVGMask = ({ webmSrc, mp4Src, fallbackImageSrc }) => {
         />
         <video
           ref={videoRef}
-          className={`video-class ${isVideoLoaded && !hasVideoError ? '' : 'hidden'}`}
+          className={`video-class-2 ${isVideoLoaded && !hasVideoError ? '' : 'hidden'}`}
           autoPlay
           loop
           muted
