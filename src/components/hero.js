@@ -47,8 +47,8 @@ const Hero = props => {
       </div>
       <div className="hero-text-container px-d">
         <span data-text="SANSH" className="hero-text old-movie-text">SANSH</span>
-        <VideoSVGMask videoSrc={EyeLeft} />
-        <VideoSVGMask videoSrc={EyeRight} />
+        <VideoSVGMask vimeoUrl='https://vimeo.com/1007797026' />
+        <VideoSVGMask vimeoUrl='https://vimeo.com/1007797181' />
         <span data-text="TS" className="hero-text old-movie-text">TS</span>
       </div>
       <div className=" desktop bars bars-2">

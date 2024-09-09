@@ -836,7 +836,6 @@ font-family: 'Rayuela';
   font-size: 40vw;
   line-height: 1;
 }
-
 .video-svg-wrapper {
   position: relative;
   width: 17.5vw; /* Adjust if needed to match the width of the text "O" */
@@ -844,6 +843,7 @@ font-family: 'Rayuela';
   display: inline-block;
   margin: 0 0.5vw; /* Add a small gap between the Os */
   margin-top: 1.8vw;
+  overflow: hidden;
 }
 
 .svg-class {
@@ -852,16 +852,31 @@ font-family: 'Rayuela';
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.video-class {
+.video-container-2 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   clip-path: url(#clip-shape);
+}
+
+.video-container-2 > div {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.video-container-2 iframe {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }
 
 @media (max-width: 768px) {
@@ -873,8 +888,6 @@ font-family: 'Rayuela';
     width: 12.2vw;
     height: 32vw;
     margin: 0 0.5vw;
-    margin-top: 0px;
-    margin-top: 0px;
     margin-top: 1vw;
   }
 }
@@ -1917,6 +1930,7 @@ max-width: 60vw !important;
   filter: blur(5px);
   animation: halation 5s infinite alternate;
   z-index: -1;
+  -webkit-animation: halation 5s infinite alternate;
 }
 
 @keyframes halation {
