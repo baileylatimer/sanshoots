@@ -836,7 +836,6 @@ font-family: 'Rayuela';
   font-size: 40vw;
   line-height: 1;
 }
-
 .video-svg-wrapper {
   position: relative;
   width: 17.5vw; /* Adjust if needed to match the width of the text "O" */
@@ -844,6 +843,7 @@ font-family: 'Rayuela';
   display: inline-block;
   margin: 0 0.5vw; /* Add a small gap between the Os */
   margin-top: 1.8vw;
+  overflow: hidden;
 }
 
 .svg-class {
@@ -852,29 +852,34 @@ font-family: 'Rayuela';
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.video-class {
+.video-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   clip-path: url(#clip-shape);
 }
 
+.video-class, .fallback-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .hero-text {
-    font-size: 38vw;
-  }
-  
   .video-svg-wrapper {
     width: 12.2vw;
     height: 32vw;
     margin: 0 0.5vw;
-    margin-top: 0px;
-    margin-top: 0px;
     margin-top: 1vw;
   }
 }

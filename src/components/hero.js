@@ -6,6 +6,8 @@ import EyeLeftWebm from "../videos/eye-left-5.webm"
 import EyeRightWebm from "../videos/eye-right-6.webm"
 import EyeLeftMp4 from "../videos/eye-left-5.mp4"
 import EyeRightMp4 from "../videos/eye-right-6.mp4"
+import EyeLeftFallback from "../images/eye-left-fallback.jpg"
+import EyeRightFallback from "../images/eye-right-fallback.jpg"
 
 import { gsap } from "gsap";
 
@@ -49,8 +51,16 @@ const Hero = props => {
       </div>
       <div className="hero-text-container px-d">
         <span data-text="SANSH" className="hero-text old-movie-text">SANSH</span>
-        <VideoSVGMask webmSrc={EyeLeftWebm} mp4Src={EyeLeftMp4} />
-        <VideoSVGMask webmSrc={EyeRightWebm} mp4Src={EyeRightMp4} />
+        <VideoSVGMask 
+          webmSrc={EyeLeftWebm} 
+          mp4Src={EyeLeftMp4} 
+          fallbackImageSrc={EyeLeftFallback}
+        />
+        <VideoSVGMask 
+          webmSrc={EyeRightWebm} 
+          mp4Src={EyeRightMp4} 
+          fallbackImageSrc={EyeRightFallback}
+        />
         <span data-text="TS" className="hero-text old-movie-text">TS</span>
       </div>
       <div className=" desktop bars bars-2">

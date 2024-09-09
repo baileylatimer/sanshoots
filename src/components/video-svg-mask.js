@@ -1,7 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
-const VideoSVGMask = ({ webmSrc, mp4Src }) => {
+const VideoSVGMask = ({ webmSrc, mp4Src, fallbackImageSrc }) => {
   const videoRef = useRef(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [hasVideoError, setHasVideoError] = useState(false);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -9,6 +11,14 @@ const VideoSVGMask = ({ webmSrc, mp4Src }) => {
       videoRef.current.muted = true;
     }
   }, []);
+
+  const handleVideoLoaded = () => {
+    setIsVideoLoaded(true);
+  };
+
+  const handleVideoError = () => {
+    setHasVideoError(true);
+  };
 
   return (
     <div className="video-svg-wrapper">
@@ -20,14 +30,21 @@ const VideoSVGMask = ({ webmSrc, mp4Src }) => {
         </defs>
       </svg>
       <div className="video-container">
+        <img 
+          src={fallbackImageSrc} 
+          alt="Video fallback" 
+          className={`fallback-image ${isVideoLoaded && !hasVideoError ? 'hidden' : ''}`}
+        />
         <video
           ref={videoRef}
-          className="video-class"
+          className={`video-class ${isVideoLoaded && !hasVideoError ? '' : 'hidden'}`}
           autoPlay
           loop
           muted
           playsInline
           webkit-playsinline="true"
+          onLoadedData={handleVideoLoaded}
+          onError={handleVideoError}
         >
           <source src={webmSrc} type="video/webm" />
           <source src={mp4Src} type="video/mp4" />
