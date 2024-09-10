@@ -33,6 +33,33 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    
+      resolve: `gatsby-plugin-video-encode`,
+      options: {
+        src: "./src/videos/**/*.{mp4,webm}",
+        dest: "./static/videos",
+        formats: [
+          {
+            type: "mp4",
+            codec: "libx264",
+            options: [
+              "-crf 23",
+              "-preset medium",
+              "-vf scale='min(1920,iw)':min'(1080,ih)':force_original_aspect_ratio=decrease",
+            ],
+          },
+          {
+            type: "webm",
+            codec: "libvpx-vp9", 
+            options: [
+              "-crf 30",
+              "-b:v 0",
+              "-b:a 128k",
+              "-vf scale='min(1920,iw)':min'(1080,ih)':force_original_aspect_ratio=decrease",
+            ],
+          },
+        ],
+      },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

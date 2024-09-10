@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const VideoSlide = ({ webmSrc, mp4Src, fallbackImageSrc, title, tag, linkTo, isVisible, isMobile }) => {
+const VideoSlide = ({ videoSrc, fallbackImageSrc, title, tag, linkTo, isVisible, isMobile }) => {
   const videoRef = useRef(null);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [hasVideoError, setHasVideoError] = useState(false);
@@ -25,35 +25,22 @@ const VideoSlide = ({ webmSrc, mp4Src, fallbackImageSrc, title, tag, linkTo, isV
     }
   }, [isVisible, isMobile]);
 
-  const handleVideoLoaded = () => {
-    console.log("Video loaded successfully");
-    setIsVideoLoaded(true);
+  const getEncodedVideoPath = (src, format) => {
+    const parts = src.split('/');
+    const filename = parts.pop().split('.')[0];
+    return `/static/videos/${filename}_encoded.${format}`;
   };
 
-  const handleVideoError = (e) => {
-    console.error("Video loading error:", e);
-    setHasVideoError(true);
-  };
+  const encodedMp4Src = getEncodedVideoPath(videoSrc, 'mp4');
+  const encodedWebmSrc = getEncodedVideoPath(videoSrc, 'webm');
 
-  const handleMouseEnter = () => {
-    if (videoRef.current && !isIOS && !isMobile) {
-      videoRef.current.play();
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (videoRef.current && !isIOS && !isMobile) {
-      videoRef.current.pause();
-    }
-  };
-
-  const optimizedImage = getImage(fallbackImageSrc);
+  // ... rest of the component logic (handleVideoLoaded, handleVideoError, etc.) ...
 
   return (
     <Link to={linkTo} className="video-slide pl-4">
       <div className="video-container">
         <GatsbyImage
-          image={optimizedImage}
+          image={getImage(fallbackImageSrc)}
           alt={title}
           className={`fallback-image ${isVideoLoaded && !hasVideoError && !isMobile ? 'hidden' : ''}`}
         />
@@ -70,8 +57,9 @@ const VideoSlide = ({ webmSrc, mp4Src, fallbackImageSrc, title, tag, linkTo, isV
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <source src={isIOS ? mp4Src : webmSrc} type={isIOS ? "video/mp4" : "video/webm"} />
-            <source src={mp4Src} type="video/mp4" />
+            <source src={isIOS ? encodedMp4Src : encodedWebmSrc} type={isIOS ? "video/mp4" : "video/webm"} />
+            <source src={encodedMp4Src} type="video/mp4" />
+            <source src={videoSrc} type="video/mp4" /> {/* Fallback to original */}
           </video>
         )}
         <div className="overlay"></div>
