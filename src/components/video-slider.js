@@ -9,6 +9,7 @@ const VideoSlider = ({ slides }) => {
   const wrapperRef = useRef(null);
   const containerRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [visibleSlides, setVisibleSlides] = useState([]);
   const [progress, setProgress] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(1);
 
@@ -17,9 +18,7 @@ const VideoSlider = ({ slides }) => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    // Set initial value
     handleResize();
-
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -32,6 +31,21 @@ const VideoSlider = ({ slides }) => {
     const slidesPerView = isMobile ? 1 : 3;
     const totalSlides = slides.length;
     const totalSlidesToScroll = totalSlides - slidesPerView + 1;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSlides((prev) => [...new Set([...prev, Number(entry.target.dataset.index)])]);
+          }
+        });
+      },
+      { root: null, rootMargin: "0px", threshold: 0.1 }
+    );
+
+    container.querySelectorAll('.slide-item').forEach((slide) => {
+      observer.observe(slide);
+    });
 
     const animation = gsap.to(container, {
       x: () => -(container.scrollWidth - wrapper.offsetWidth),
@@ -59,6 +73,7 @@ const VideoSlider = ({ slides }) => {
 
     return () => {
       animation.scrollTrigger.kill();
+      observer.disconnect();
     };
   }, [slides.length, isMobile]);
 
@@ -75,8 +90,8 @@ const VideoSlider = ({ slides }) => {
       </div>
       <div className="video-slider-container" ref={containerRef}>
         {slides.map((slide, index) => (
-          <div key={index} className="slide-item">
-            <VideoSlide {...slide} />
+          <div key={index} className="slide-item" data-index={index}>
+            <VideoSlide {...slide} isVisible={visibleSlides.includes(index)} isMobile={isMobile} />
           </div>
         ))}
       </div>
