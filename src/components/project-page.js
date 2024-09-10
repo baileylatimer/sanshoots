@@ -212,7 +212,7 @@ const ProjectPage = ({
 
         <div className="next-project-section bg-inverse w-screen h-screen flex flex-col items-center justify-center">
           <p className=" color-bg uppercase ">Next Project</p>
-          <h2 data-text={nextProjectTitle} className="project-end color-bg glitch whitespace-normal lg:whitespace-nowrap my-12">{nextProjectTitle}</h2>
+          <h2 data-text={nextProjectTitle} className="project-end color-bg glitch whitespace-normal lg:whitespace-nowrap my-12 text-center">{nextProjectTitle}</h2>
           <Btn link={nextProjectUrl} text="View Now" type="btn--ghost" />
         </div>
       </div>
