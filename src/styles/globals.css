@@ -684,6 +684,12 @@ li {
   height: 60%;
 }
 
+@media (max-width: 768px) {
+  .video-player-container {
+    margin-bottom: 12em;
+  }
+}
+
 
 .layout-reel {
   width: 100%;
@@ -1533,7 +1539,7 @@ max-width: 60vw !important;
 
 .project-overview {
   position: absolute;
-  bottom: 20px;
+  bottom: 80px;
   left: 0px;
   color: white;
   font-size: 24px;
@@ -1541,7 +1547,7 @@ max-width: 60vw !important;
 
 @media(min-width:1623px) {
 .project-overview {
-  bottom: 80px;
+  bottom: 90px;
 }
 }
 
