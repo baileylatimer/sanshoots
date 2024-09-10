@@ -14,7 +14,7 @@ const projectDetails = [
     type: 'Title',
     content: {
       heading: [
-        'Alejandro Rosario\'s Active Lifestyle Fueled by Axe'
+        'A Heartfelt Tribute to Roots, Family, and Heritage'
       ],
     },
   },
@@ -28,7 +28,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Telling the story',
-      text: 'Axe, synonymous with youthful masculinity and confidence, partnered with Alejandro Rosario for a short commercial. The concept showcased Alejandro’s morning routine and active lifestyle, emphasizing how Axe body spray keeps him fresh while playing soccer.',
+      text: 'Glimpse of Home captures a deeply personal trip back to Palestine with my dad, grandma, and grandpa, visiting Turmus\'ayya. The video highlights the beauty of simple moments—picking olives, enjoying breakfast on the mountain, and tasting figs fresh from my grandma\'s garden.',
     },
   },
   {
@@ -46,7 +46,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Putting it together',
-      text: 'Using the Sony A7Siii with a 24-70mm f/2.8 G Master lens, we shot the entire project handheld, incorporating smooth transitions and dynamic camera movements. Despite a tight turnaround, we developed the concept, completed the shoot, and edited within eight hours.',
+      text: 'This project holds immense nostalgic value, as I’ve returned to my homeland every year since childhood. Being back home with my grandparents is an emotional experience, and this piece is a tribute to the strong connection I feel to my roots. My dream is to always remain connected to my homeland, where my heart belongs.',
     },
   },
   {
@@ -59,7 +59,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'In conclusion',
-      text: 'Collaborating with Alejandro and Axe was fantastic. The final video received excellent feedback, driving significant engagement and sales on TikTok and IG reels. This project showcases Sanshoots\' ability to create impactful content under tight deadlines.',
+      text: 'This project showcases Sanshoots\' ability to evoke powerful emotions through storytelling, capturing the essence of home and heritage in a way that resonates deeply with the audience. Glimpse of Home is a heartfelt journey back to where it all began.',
     },
   },
 ];

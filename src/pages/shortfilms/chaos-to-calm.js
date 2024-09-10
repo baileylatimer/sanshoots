@@ -14,7 +14,7 @@ const projectDetails = [
     type: 'Title',
     content: {
       heading: [
-        'Alejandro Rosario\'s Active Lifestyle Fueled by Axe'
+        'A Passage from Stress to Serenity'
       ],
     },
   },
@@ -28,7 +28,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Telling the story',
-      text: 'Axe, synonymous with youthful masculinity and confidence, partnered with Alejandro Rosario for a short commercial. The concept showcased Alejandro’s morning routine and active lifestyle, emphasizing how Axe body spray keeps him fresh while playing soccer.',
+      text: 'Calm to Chaos is a short film that contrasts a stressful working environment with a serene escape to a mountaintop, highlighting the journey from chaos to peace. Shot with Lydia, the project was spontaneously planned and executed in the same day, showcasing how quickly a meaningful concept can come to life.',
     },
   },
   {
@@ -46,7 +46,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Putting it together',
-      text: 'Using the Sony A7Siii with a 24-70mm f/2.8 G Master lens, we shot the entire project handheld, incorporating smooth transitions and dynamic camera movements. Despite a tight turnaround, we developed the concept, completed the shoot, and edited within eight hours.',
+      text: 'This project symbolizes how the energy you put into life reflects the outcomes you experience. Through the ups and downs, taking time to reflect, escape, and reconnect with faith is essential for growth. The piece carries deep meaning, emphasizing the importance of balancing chaos with calm.',
     },
   },
   {
@@ -59,7 +59,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'In conclusion',
-      text: 'Collaborating with Alejandro and Axe was fantastic. The final video received excellent feedback, driving significant engagement and sales on TikTok and IG reels. This project showcases Sanshoots\' ability to create impactful content under tight deadlines.',
+      text: 'Sanshoots captured the essence of this powerful message through visually striking contrasts and thoughtful storytelling. Calm to Chaos serves as a reminder to pause, reflect, and find peace amid life\'s challenges—a project that resonates deeply with its audience.',
     },
   },
 ];

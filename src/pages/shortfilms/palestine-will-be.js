@@ -14,7 +14,7 @@ const projectDetails = [
     type: 'Title',
     content: {
       heading: [
-        'Alejandro Rosario\'s Active Lifestyle Fueled by Axe'
+        'Battling the Sands of Time with Grit and Vision'
       ],
     },
   },
@@ -28,7 +28,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Telling the story',
-      text: 'Axe, synonymous with youthful masculinity and confidence, partnered with Alejandro Rosario for a short commercial. The concept showcased Alejandro’s morning routine and active lifestyle, emphasizing how Axe body spray keeps him fresh while playing soccer.',
+      text: 'Palestine Will Be was fully shot in the Imperial Sand Dunes, inspired by the visual style of the movie Dune while incorporating elements of Palestinian identity. The concept revolves around waking up to find my land being colonized, symbolizing resistance as an indigenous man defending his homeland.',
     },
   },
   {
@@ -46,7 +46,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Putting it together',
-      text: 'Using the Sony A7Siii with a 24-70mm f/2.8 G Master lens, we shot the entire project handheld, incorporating smooth transitions and dynamic camera movements. Despite a tight turnaround, we developed the concept, completed the shoot, and edited within eight hours.',
+      text: 'The shoot was an intense experience, with me and my friend Tanner facing 60+ mph sandstorms to create a chaotic atmosphere that perfectly mirrored the story. The warm, stylized color grade further amplified the cinematic vibe and depth of the video.',
     },
   },
   {
@@ -59,7 +59,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'In conclusion',
-      text: 'Collaborating with Alejandro and Axe was fantastic. The final video received excellent feedback, driving significant engagement and sales on TikTok and IG reels. This project showcases Sanshoots\' ability to create impactful content under tight deadlines.',
+      text: 'This project is one for the books—every time I watch it, it gives me chills. Palestine Will Be stands as a powerful representation of resistance and identity, highlighting Sanshoots\' ability to bring intense emotion and visual storytelling to life.',
     },
   },
 ];

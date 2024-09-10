@@ -14,7 +14,7 @@ const projectDetails = [
     type: 'Title',
     content: {
       heading: [
-        'Alejandro Rosario\'s Active Lifestyle Fueled by Axe'
+        'A Visual Reflection on Purpose and Self-Discovery'
       ],
     },
   },
@@ -28,7 +28,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Telling the story',
-      text: 'Axe, synonymous with youthful masculinity and confidence, partnered with Alejandro Rosario for a short commercial. The concept showcased Alejandro’s morning routine and active lifestyle, emphasizing how Axe body spray keeps him fresh while playing soccer.',
+      text: 'Embrace Your Journey was shot in San Diego, featuring scenic cliffs and waterfront locations. The video carries a powerful message about self-discovery, reflecting on how each person has a unique purpose on Earth. It encourages viewers to embrace their journey, passions, and creative paths, stepping away from the constraints of societal systems.',
     },
   },
   {
@@ -46,7 +46,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Putting it together',
-      text: 'Using the Sony A7Siii with a 24-70mm f/2.8 G Master lens, we shot the entire project handheld, incorporating smooth transitions and dynamic camera movements. Despite a tight turnaround, we developed the concept, completed the shoot, and edited within eight hours.',
+      text: 'Through visuals of natural beauty and a reflective tone, the video emphasizes the importance of tapping into your individuality and making an impact not only for yourself but for the world around you.',
     },
   },
   {
@@ -59,7 +59,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'In conclusion',
-      text: 'Collaborating with Alejandro and Axe was fantastic. The final video received excellent feedback, driving significant engagement and sales on TikTok and IG reels. This project showcases Sanshoots\' ability to create impactful content under tight deadlines.',
+      text: 'This project highlights Sanshoots\' ability to capture deeply motivational themes and blend them with stunning visuals. Embrace Your Journey serves as a reminder that personal growth and self-exploration are essential to changing the world.',
     },
   },
 ];

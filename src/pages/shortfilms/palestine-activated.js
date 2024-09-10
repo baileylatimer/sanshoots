@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import ProjectPage from '../../components/project-page';
-import Image1 from '../../images/axe/axe-sanshoots--3.jpg';
-import Image2 from '../../images/axe/axe-sanshoots--9.jpg';
-import Image3 from '../../images/axe/axe-sanshoots--10.jpg';
-import Image4 from '../../images/axe/axe-sanshoots--7.jpg';
-import Image5 from '../../images/axe/axe-sanshoots--5.jpg';
-import Image6 from '../../images/axe/axe-sanshoots--15.jpg';
+import Image1 from '../../images/palestine-activated/palestine-activated-sanshoots--1.jpg';
+import Image2 from '../../images/palestine-activated/palestine-activated-sanshoots--2.jpg';
+import Image3 from '../../images/palestine-activated/palestine-activated-sanshoots--3.jpg';
+import Image4 from '../../images/palestine-activated/palestine-activated-sanshoots--4.jpg';
+import Image5 from '../../images/palestine-activated/palestine-activated-sanshoots--5.jpg';
+import Image6 from '../../images/palestine-activated/palestine-activated-sanshoots--6.jpg';
 
 
 
@@ -14,7 +14,7 @@ const projectDetails = [
     type: 'Title',
     content: {
       heading: [
-        'Alejandro Rosario\'s Active Lifestyle Fueled by Axe'
+        'A Exploration of Identity and Resilience'
       ],
     },
   },
@@ -28,7 +28,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Telling the story',
-      text: 'Axe, synonymous with youthful masculinity and confidence, partnered with Alejandro Rosario for a short commercial. The concept showcased Alejandro’s morning routine and active lifestyle, emphasizing how Axe body spray keeps him fresh while playing soccer.',
+      text: 'The Palestine-Activated video is a cinematic journey that took place across diverse locations, from beachside San Diego to the Salton Sea, sand dunes, and downtown. This piece represents the constant connection to my Palestinian identity, a visual symbol of keeping that identity "activated."',
     },
   },
   {
@@ -46,7 +46,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Putting it together',
-      text: 'Using the Sony A7Siii with a 24-70mm f/2.8 G Master lens, we shot the entire project handheld, incorporating smooth transitions and dynamic camera movements. Despite a tight turnaround, we developed the concept, completed the shoot, and edited within eight hours.',
+      text: 'Shot in multiple dynamic environments, the video was paired with an upbeat EDM soundtrack that added a layer of hope and peace to the visuals. Using a range of cinematic techniques, the project evokes an electric feeling, representing both personal and cultural empowerment.',
     },
   },
   {
@@ -59,7 +59,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'In conclusion',
-      text: 'Collaborating with Alejandro and Axe was fantastic. The final video received excellent feedback, driving significant engagement and sales on TikTok and IG reels. This project showcases Sanshoots\' ability to create impactful content under tight deadlines.',
+      text: 'This project showcases Sanshoots\' ability to blend storytelling with powerful imagery, capturing the essence of identity and resilience. Dive into the world of Palestine-Activated—a visual experience that embodies strength, hope, and cultural pride.',
     },
   },
 ];

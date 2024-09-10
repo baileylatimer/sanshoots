@@ -14,7 +14,7 @@ const projectDetails = [
     type: 'Title',
     content: {
       heading: [
-        'Alejandro Rosario\'s Active Lifestyle Fueled by Axe'
+        'Capturing the Beauty in Everyday Moments.'
       ],
     },
   },
@@ -28,7 +28,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Telling the story',
-      text: 'Axe, synonymous with youthful masculinity and confidence, partnered with Alejandro Rosario for a short commercial. The concept showcased Alejandro’s morning routine and active lifestyle, emphasizing how Axe body spray keeps him fresh while playing soccer.',
+      text: 'The Life is Good shoot took place on the Los Peñasquitos Canyon Trail in November, capturing the vibrant fall colors and the beauty of simplicity. The video focused on the value of appreciating life\'s small moments, like going on a peaceful hike with a friend.',
     },
   },
   {
@@ -46,7 +46,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Putting it together',
-      text: 'Using the Sony A7Siii with a 24-70mm f/2.8 G Master lens, we shot the entire project handheld, incorporating smooth transitions and dynamic camera movements. Despite a tight turnaround, we developed the concept, completed the shoot, and edited within eight hours.',
+      text: 'Working with my friend Tanner, we wanted to showcase how these simple, serene moments add up to make life richer. Shot in a calm, reflective atmosphere, the piece resonates with the message that life is truly good when you take the time to appreciate the little things.',
     },
   },
   {
@@ -59,7 +59,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'In conclusion',
-      text: 'Collaborating with Alejandro and Axe was fantastic. The final video received excellent feedback, driving significant engagement and sales on TikTok and IG reels. This project showcases Sanshoots\' ability to create impactful content under tight deadlines.',
+      text: 'This project highlights Sanshoots\' ability to create visually calming and meaningful content, emphasizing the joy found in everyday experiences. Life is Good serves as a reminder to cherish life’s moments, both big and small.',
     },
   },
 ];

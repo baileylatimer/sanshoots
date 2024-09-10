@@ -14,7 +14,7 @@ const projectDetails = [
     type: 'Title',
     content: {
       heading: [
-        'Alejandro Rosario\'s Active Lifestyle Fueled by Axe'
+        'A Tribute to Life\'s Unforgettable Moments'
       ],
     },
   },
@@ -28,7 +28,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Telling the story',
-      text: 'Axe, synonymous with youthful masculinity and confidence, partnered with Alejandro Rosario for a short commercial. The concept showcased Alejandro’s morning routine and active lifestyle, emphasizing how Axe body spray keeps him fresh while playing soccer.',
+      text: 'Each Moment is a Memory was shot in the beautiful terrains of Malibu and La Jolla, California. This video, paired with a reflective voiceover, emphasizes that each captured moment—whether through photo or video—is a portal back in time, reminding us to stay grounded and grateful for life’s experiences.',
     },
   },
   {
@@ -46,7 +46,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Putting it together',
-      text: 'Using the Sony A7Siii with a 24-70mm f/2.8 G Master lens, we shot the entire project handheld, incorporating smooth transitions and dynamic camera movements. Despite a tight turnaround, we developed the concept, completed the shoot, and edited within eight hours.',
+      text: 'The visuals showcase sunsets, moments of reflection, and memories with friends, underscoring the idea that the people you surround yourself with play a key role in shaping who you are. The cinematic visuals perfectly align with the message of appreciating life\'s moments',
     },
   },
   {
@@ -59,7 +59,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'In conclusion',
-      text: 'Collaborating with Alejandro and Axe was fantastic. The final video received excellent feedback, driving significant engagement and sales on TikTok and IG reels. This project showcases Sanshoots\' ability to create impactful content under tight deadlines.',
+      text: 'This project highlights Sanshoots\' ability to blend visual storytelling with deep emotional themes, creating a piece that resonates with viewers on a personal level. Each Moment is a Memory invites viewers to reflect on their own captured moments and the people who make them special.',
     },
   },
 ];

@@ -14,7 +14,7 @@ const projectDetails = [
     type: 'Title',
     content: {
       heading: [
-        'Alejandro Rosario\'s Active Lifestyle Fueled by Axe'
+        'A High-Octane Trek Through Orange County\'s Exotic Car Scene'
       ],
     },
   },
@@ -28,7 +28,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Telling the story',
-      text: 'Axe, synonymous with youthful masculinity and confidence, partnered with Alejandro Rosario for a short commercial. The concept showcased Alejandro’s morning routine and active lifestyle, emphasizing how Axe body spray keeps him fresh while playing soccer.',
+      text: 'This spontaneous project took place in Orange County, where a group of exotic cars and enthusiasts gathered to show off their setups. After linking up with the Race Exotics crew in Birdrock, San Diego, we made our way to OC the same day, capturing the energy of the meet and some exhilarating highway pulls.',
     },
   },
   {
@@ -46,7 +46,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Putting it together',
-      text: 'Using the Sony A7Siii with a 24-70mm f/2.8 G Master lens, we shot the entire project handheld, incorporating smooth transitions and dynamic camera movements. Despite a tight turnaround, we developed the concept, completed the shoot, and edited within eight hours.',
+      text: 'Shooting with the Race Exotics team was an incredible experience, and the vibe was nothing short of electric. The video highlights the luxury cars and high-energy atmosphere of the event, all pulled together with little planning but a lot of creativity.',
     },
   },
   {
@@ -59,7 +59,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'In conclusion',
-      text: 'Collaborating with Alejandro and Axe was fantastic. The final video received excellent feedback, driving significant engagement and sales on TikTok and IG reels. This project showcases Sanshoots\' ability to create impactful content under tight deadlines.',
+      text: 'This project demonstrates Sanshoots\' ability to capture dynamic, high-energy moments on the fly, showcasing the thrill and excitement of the Race Exotics OC meet. Dive into the action and experience the energy of the event through this cinematic piece.',
     },
   },
 ];
