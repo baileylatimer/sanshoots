@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import ProjectPage from '../../components/project-page';
-import Image1 from '../../images/axe/axe-sanshoots--3.jpg';
-import Image2 from '../../images/axe/axe-sanshoots--9.jpg';
-import Image3 from '../../images/axe/axe-sanshoots--10.jpg';
-import Image4 from '../../images/axe/axe-sanshoots--7.jpg';
-import Image5 from '../../images/axe/axe-sanshoots--5.jpg';
-import Image6 from '../../images/axe/axe-sanshoots--15.jpg';
+import Image1 from '../../images/each-moment-is-a-memory/each-moment-is-a-memory-sanshoots--1.jpg';
+import Image2 from '../../images/each-moment-is-a-memory/each-moment-is-a-memory-sanshoots--2.jpg';
+import Image3 from '../../images/each-moment-is-a-memory/each-moment-is-a-memory-sanshoots--3.jpg';
+import Image4 from '../../images/each-moment-is-a-memory/each-moment-is-a-memory-sanshoots--4.jpg';
+import Image5 from '../../images/each-moment-is-a-memory/each-moment-is-a-memory-sanshoots--5.jpg';
+import Image6 from '../../images/each-moment-is-a-memory/each-moment-is-a-memory-sanshoots--6.jpg';
 
 
 
