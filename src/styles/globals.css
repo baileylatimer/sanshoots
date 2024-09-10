@@ -1545,6 +1545,12 @@ max-width: 60vw !important;
   font-size: 24px;
 }
 
+@media(min-width:1024px) {
+  .project-overview {
+    bottom: 40px;
+  }
+  }
+
 @media(min-width:1623px) {
 .project-overview {
   bottom: 90px;
