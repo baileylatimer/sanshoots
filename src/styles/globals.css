@@ -1046,56 +1046,53 @@ iframe {
 /* SERVICES 
 ============== */
 
-
 .service-component {
   overflow: hidden;
-  }
-.service-text {
-  /* Your base style for text */
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-@media(min-width:1023px) {
+.service-text {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 91px;
+  font-family: "Rayuela";
+  white-space: nowrap;
+}
+
+@media (min-width: 1023px) {
   .service-text {
-    height: 220px
+    height: 220px;
+    font-size: 184px;
   }
 }
 
 .service-text.active {
-  /* Style for active state */
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
 }
 
-.service-video-element {
-  /* Styles for your video */
-  width: 100%; /* Adjust as needed */
-  height: auto; /* Adjust for your aspect ratio */
-}
-
-
 .service-video-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-.service-video {
 
+.service-video {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-@media(min-width:1023px) {
-.service-video {
-  clip-path:  polygon(88.00% 0.00%,100% 6%,99% 100%,0% 100%,0% 0%);
-}
+@media (min-width: 1023px) {
+  .service-video {
+    clip-path: polygon(88.00% 0.00%, 100% 6%, 99% 100%, 0% 100%, 0% 0%);
+  }
 }
 
-@media(max-width:1023px) {
+@media (max-width: 1023px) {
   .service-video-wrapper {
     position: absolute;
     bottom: 0px;
@@ -1104,60 +1101,45 @@ iframe {
   }
 }
 
-/* Base styles for larger screens */
 .service-video video {
-  width: 100%; /* This will make the video full width on all devices */
-  height: auto; /* This maintains aspect ratio initially */
-  object-fit: cover; /* This will cover the area, potentially cropping the video */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   max-height: 860px;
 }
 
-/* Media query for mobile devices */
 @media (max-width: 767px) {
   .service-video video {
-    /* height: 448px; */
-    object-fit: cover; /* Ensures video covers the entire element's area */
-    /* width: 90%; */
-    /* -webkit-clip-path:polygon(88% 0, 100% 12%, 99% 100%, 0% 100%, 0% 0);
-    clip-path: polygon(88% 0, 100% 12%, 99% 100%, 0% 100%, 0% 0); */
+    object-fit: cover;
   }
 }
 
-/* 
-.service-video::after {
-  content: "";
-  border: 1px solid #fff;
+.video-overlay {
   position: absolute;
-  display: block;
-  left: 10px;
-  top: 10px;
-  right: 10px; 
-  bottom: 10px;
-  -webkit-clip-path: polygon(88% 0, 100% 12%, 99% 100%, 18% 100%, 18% 0);
-  clip-path: polygon(88% 0, 100% 12%, 99% 100%, 18% 100%, 18% 0);
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-} */
-
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  z-index: 1;
+}
 
 .service-texts {
   z-index: 10;
   position: relative;
 }
 
-.service-text {
-  font-size: 91px;
-  font-family: "Rayuela" ;
-  white-space: nowrap;
+/* New styles for video interaction */
+.service-video-element {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
-
-@media(min-width:1023px) {
-  .service-text {
-    font-size: 184px;
-  }
-}
-
 .content {
   /* height: 1200px; */
   width: 100%;
