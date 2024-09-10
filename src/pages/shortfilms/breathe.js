@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import ProjectPage from '../../components/project-page';
-import Image1 from '../../images/axe/axe-sanshoots--3.jpg';
-import Image2 from '../../images/axe/axe-sanshoots--9.jpg';
-import Image3 from '../../images/axe/axe-sanshoots--10.jpg';
-import Image4 from '../../images/axe/axe-sanshoots--7.jpg';
-import Image5 from '../../images/axe/axe-sanshoots--5.jpg';
-import Image6 from '../../images/axe/axe-sanshoots--15.jpg';
+import Image1 from '../../images/breathe/breathe-sanshoots--1.jpg';
+import Image2 from '../../images/breathe/breathe-sanshoots--2.jpg';
+import Image3 from '../../images/breathe/breathe-sanshoots--3.jpg';
+import Image4 from '../../images/breathe/breathe-sanshoots--4.jpg';
+import Image5 from '../../images/breathe/breathe-sanshoots--5.jpg';
+import Image6 from '../../images/breathe/breathe-sanshoots--6.jpg';
 
 
 
@@ -28,7 +28,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'Telling the story',
-      text: 'Breathe was shot in Palisades Park, Pacific Beach, San Diego, capturing moments of meditation and relaxation. Initially planned as a personal shoot, the footage transformed into a project that encourages taking a moment to breathe amidst life’s busyness.',
+      text: 'Breathe was shot in Palisades Park, Pacific Beach, San Diego, capturing moments of meditation and relbreathetion. Initially planned as a personal shoot, the footage transformed into a project that encourages taking a moment to breathe amidst life’s busyness.',
     },
   },
   {
@@ -59,7 +59,7 @@ const projectDetails = [
     type: 'Paragraph',
     content: {
       heading: 'In conclusion',
-      text: 'Collaborating with Alejandro and Axe was fantastic. The final video received excellent feedback, driving significant engagement and sales on TikTok and IG reels. This project showcases Sanshoots\' ability to create impactful content under tight deadlines.',
+      text: 'Collaborating with Alejandro and breathe was fantastic. The final video received excellent feedback, driving significant engagement and sales on TikTok and IG reels. This project showcases Sanshoots\' ability to create impactful content under tight deadlines.',
     },
   },
 ];
