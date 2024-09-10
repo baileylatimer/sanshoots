@@ -91,7 +91,11 @@ const VideoSlider = ({ slides }) => {
       <div className="video-slider-container" ref={containerRef}>
         {slides.map((slide, index) => (
           <div key={index} className="slide-item" data-index={index}>
-            <VideoSlide {...slide} isVisible={visibleSlides.includes(index)} isMobile={isMobile} />
+            <VideoSlide 
+              {...slide} 
+              isVisible={visibleSlides.includes(index)} 
+              isMobile={isMobile} 
+            />
           </div>
         ))}
       </div>

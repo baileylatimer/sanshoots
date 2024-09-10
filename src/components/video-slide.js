@@ -10,7 +10,7 @@ const VideoSlide = ({ webmSrc, mp4Src, fallbackImageSrc, title, tag, linkTo, isV
 
   useEffect(() => {
     const ua = window.navigator.userAgent;
-    const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+    const iOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     setIsIOS(iOS);
 
     if (videoRef.current) {
@@ -37,7 +37,7 @@ const VideoSlide = ({ webmSrc, mp4Src, fallbackImageSrc, title, tag, linkTo, isV
 
   const handleMouseEnter = () => {
     if (videoRef.current && !isIOS && !isMobile) {
-      videoRef.current.play();
+      videoRef.current.play().catch(error => console.error("Autoplay failed:", error));
     }
   };
 
@@ -52,11 +52,13 @@ const VideoSlide = ({ webmSrc, mp4Src, fallbackImageSrc, title, tag, linkTo, isV
   return (
     <Link to={linkTo} className="video-slide pl-4">
       <div className="video-container">
-        <GatsbyImage
-          image={optimizedImage}
-          alt={title}
-          className={`fallback-image ${isVideoLoaded && !hasVideoError && !isMobile ? 'hidden' : ''}`}
-        />
+        {optimizedImage && (
+          <GatsbyImage
+            image={optimizedImage}
+            alt={title}
+            className={`fallback-image ${(!isVisible || isMobile || !isVideoLoaded || hasVideoError) ? '' : 'hidden'}`}
+          />
+        )}
         {!isMobile && isVisible && (
           <video
             ref={videoRef}
