@@ -839,13 +839,13 @@ font-family: 'Rayuela';
 
 
 .hero-text {
-  font-size: 40vw;
+  font-size: 36vw;
   line-height: 1;
 }
 .video-svg-wrapper {
   position: relative;
-  width: 17.5vw; /* Adjust if needed to match the width of the text "O" */
-  height: 32vw;
+  width: 12.5vw; /* Adjust if needed to match the width of the text "O" */
+  height: 29vw;
   display: inline-block;
   margin: 0 0.5vw; /* Add a small gap between the Os */
   margin-top: 1.8vw;
@@ -884,9 +884,12 @@ font-family: 'Rayuela';
 @media (max-width: 768px) {
   .video-svg-wrapper {
     width: 12.2vw;
-    height: 32vw;
+    height: 30vw;
     margin: 0 0.5vw;
     margin-top: 1vw;
+  }
+  .hero-text {
+    font-size: 36vw;
   }
 }
 
