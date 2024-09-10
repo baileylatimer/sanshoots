@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import ProjectPage from '../../components/project-page';
-import Image1 from '../../images/axe/axe-sanshoots--3.jpg';
-import Image2 from '../../images/axe/axe-sanshoots--9.jpg';
-import Image3 from '../../images/axe/axe-sanshoots--10.jpg';
-import Image4 from '../../images/axe/axe-sanshoots--7.jpg';
-import Image5 from '../../images/axe/axe-sanshoots--5.jpg';
-import Image6 from '../../images/axe/axe-sanshoots--15.jpg';
+import Image1 from '../../images/tesla-cybertruck/tesla-cybertruck-sanshoots--1.jpg';
+import Image2 from '../../images/tesla-cybertruck/tesla-cybertruck-sanshoots--2.jpg';
+import Image3 from '../../images/tesla-cybertruck/tesla-cybertruck-sanshoots--3.jpg';
+import Image4 from '../../images/tesla-cybertruck/tesla-cybertruck-sanshoots--4.jpg';
+import Image5 from '../../images/tesla-cybertruck/tesla-cybertruck-sanshoots--5.jpg';
+import Image6 from '../../images/tesla-cybertruck/tesla-cybertruck-sanshoots--6.jpg';
 
 
 
@@ -68,7 +68,7 @@ const videoUrl = 'https://vimeo.com/990314754';
 const projectTitle = 'Tesla Cybertruck';
 const pageTitle = 'Tesla Cybertruck';
 const projectInfo = [
-  'Pacfic Beach, CA, USA',
+  'Pacific Beach, CA, USA',
   '32.8025° N, 117.2356° W'
 ];
 const projectTag = 'Auto';
