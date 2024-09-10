@@ -18,10 +18,18 @@ import Elyanna3 from "../images/elyanna.jpg";
 import YungBans from "../videos/yung-bans.mp4";
 import YungBans2 from "../videos/yung-bans.webm";
 import YungBans3 from "../images/yung-bans.jpg";
-import NourArdakani from "../videos/nour-ardakani.mp4";
-import FrancisMercier from "../videos/francis-mercier.mp4";
 import Paliroots from "../videos/paliroots.mp4";
-import Bluemoon from "../videos/bluemoon.mp4";
+import Paliroots2 from "../videos/paliroots.webm";
+import Paliroots3 from "../images/paliroots.jpg";
+import PalestineWillBe from "../videos/palestine-will-be.mp4";
+import PalestineWillBe2 from "../videos/palestine-will-be.webm";
+import PalestineWillBe3 from "../images/palestine-will-be.jpg";
+import ChaosToCalm from "../videos/chaos-to-calm.mp4";
+import ChaosToCalm2 from "../videos/chaos-to-calm.webm";
+import ChaosToCalm3 from "../images/chaos-to-calm.jpg";
+import Cybertruck from "../videos/tesla-cybertruck.mp4";
+import Cybertruck2 from "../videos/tesla-cybertruck.webm";
+import Cybertruck3 from "../images/tesla-cybertruck.jpg";
 
 
 
@@ -44,30 +52,37 @@ const slidesData = [
     linkTo: "/showreel/yung-bans"
   },
   {
-    videoSrc: FrancisMercier,
-    title: "Francis Mercier",
-    tag: "Event",
-    linkTo: "/showreel/francis-mercier"
-  },
-
-  {
-    videoSrc: NourArdakani,
-    title: "Nour Ardakani",
-    tag: "Music Video",
-    linkTo: "/showreel/nour-ardakani"
-  },
-  {
-    videoSrc: Paliroots,
+    mp4Src: Paliroots,
+    webmSrc: Paliroots2,
+    fallbackImageSrc: Paliroots3,
     title: "Paliroots",
     tag: "Apparel",
     linkTo: "/showreel/paliroots"
   },
   {
-    videoSrc: Bluemoon,
-    title: "Bluemoon",
-    tag: "Jewelry",
-    linkTo: "/showreel/bluemoon"
-  }
+    mp4Src: PalestineWillBe,
+    webmSrc: PalestineWillBe2,
+    fallbackImageSrc: PalestineWillBe3,
+    title: "Palestine Will Be",
+    tag: "Cinematic",
+    linkTo: "/shortfilms/palestine-will-be"
+  },
+  {
+    mp4Src: ChaosToCalm,
+    webmSrc: ChaosToCalm2,
+    fallbackImageSrc: ChaosToCalm3,
+    title: "Chaos To Calm",
+    tag: "Shortfilm",
+    linkTo: "/shortfilms/chaos-to-calm"
+  },
+  {
+    mp4Src: Cybertruck,
+    webmSrc: Cybertruck2,
+    fallbackImageSrc: Cybertruck3,
+    title: "Tesla Cybertruck",
+    tag: "Auto",
+    linkTo: "/shortfilms/tesla-cybertruck"
+  },
 ];
 
 const services = [
