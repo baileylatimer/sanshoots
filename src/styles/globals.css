@@ -321,6 +321,13 @@ padding: 0;
 margin: 0;
   white-space: nowrap;
 }
+@media(max-width:1023px) {
+.nav-menu-mobile a {
+  font-family: 'Rayuela' ;
+  font-size: 78px;
+  line-height: 95%;
+}
+}
 
 .hamburger-button {
   transition: all 0.3s ease-in-out;
@@ -330,6 +337,10 @@ margin: 0;
 .hamburger-bottom {
   transition: all 0.3s ease-in-out;
   transform-origin: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 .hamburger-button.open .hamburger-top {

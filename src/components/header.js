@@ -93,18 +93,19 @@ function Header({ siteTitle }) {
       <div
         className={`${
           isExpanded ? `block` : `hidden`
-        } w-full nav-open block lg:flex lg:items-center lg:w-auto mt-4 pt-4 lg:mt-0 lg:pt-0  `}
+        } w-full nav-open block lg:flex lg:items-center lg:w-auto mt-4 pt-4 lg:mt-0 lg:pt-0 relative  `}
       >
+        <div className="flex flex-col items-center h-full relative nav-menu-mobile">
         <div className="text-sm">
           <Link
             to={`/showreel`}
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 "
+            className="block mt-4 mr-4 lg:inline-block lg:mt-0 text-center"
           >
             Showreel
           </Link>
           <Link
             to={`/shortfilms`}
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 "
+            className="block mt-4 mr-4 lg:inline-block lg:mt-0 text-center"
           >
             Shortfilms
           </Link>
@@ -113,15 +114,16 @@ function Header({ siteTitle }) {
 
           <Link
             to={`/about`}
-            className="block mt-4 mr-4 lg:inline-block lg:mt-0 "
+            className="block mt-4 mr-4 lg:inline-block lg:mt-0 text-center"
           >
             About
           </Link>
 
        
         </div>
+        </div>
 
-        <div className="flex flex-col mobile pt-64">
+        <div className="flex flex-col mobile pt-16">
           <Btn link="/contact" text="Get in touch" type=" btn--ghost mobile"/>
           <p className="color-bg my-8">SANSHOOTS® is an award-winning videography studio founded by Hassan Musa based in Los Angeles, CA.</p>
           <p className="color-bg">©2024</p>
