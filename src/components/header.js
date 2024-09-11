@@ -80,18 +80,15 @@ function Header({ siteTitle }) {
 
       </div>
       <div className="block lg:hidden ">
-        <button
-          onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center py-2 "
-        >
-<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1" y="9" width="25" height="2" fill="var(--color-bg)"/>
-<rect x="1" y="17" width="25" height="2" fill="var(--color-bg)"/>
-</svg>
-
-
-
-        </button>
+      <button
+        onClick={() => toggleExpansion(!isExpanded)}
+        className={`flex items-center py-2 hamburger-button ${isExpanded ? 'open' : ''}`}
+      >
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect className="hamburger-top" x="1" y="9" width="25" height="2" fill="var(--color-bg)"/>
+          <rect className="hamburger-bottom" x="1" y="17" width="25" height="2" fill="var(--color-bg)"/>
+        </svg>
+      </button>
       </div>
       <div
         className={`${

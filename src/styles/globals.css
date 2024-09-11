@@ -322,6 +322,29 @@ margin: 0;
   white-space: nowrap;
 }
 
+.hamburger-button {
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-top,
+.hamburger-bottom {
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.hamburger-button.open .hamburger-top {
+  transform: translateY(3px) rotate(45deg);
+  -webkit-transform: translateY(3px) rotate(45deg);
+  -moz-transform: translateY(3px) rotate(45deg);
+  -ms-transform: translateY(3px) rotate(45deg);
+  -o-transform: translateY(3px) rotate(45deg);
+}
+
+.hamburger-button.open .hamburger-bottom {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+
 .btn--ghost a {
   color: var(--color-contrast-higher);
 }
@@ -876,6 +899,7 @@ font-family: 'Rayuela';
   height: 100%;
   object-fit: cover;
 }
+
 
 
 .hidden {

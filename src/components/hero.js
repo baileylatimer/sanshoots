@@ -50,7 +50,7 @@ const Hero = props => {
       </div>
       </div>
       <div className="hero-text-container px-d">
-        <span data-text="SANSH" className="hero-text old-movie-text">SANSH</span>
+        <span data-text="SANSH" className="hero-text ">SANSH</span>
         <VideoSVGMask 
           webmSrc={EyeLeftWebm} 
           mp4Src={EyeLeftMp4} 
