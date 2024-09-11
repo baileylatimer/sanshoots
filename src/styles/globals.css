@@ -881,7 +881,7 @@ font-family: 'Rayuela';
 .hidden {
   display: none;
 }
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
 .fallback-image {
   display: none !important;
 }
