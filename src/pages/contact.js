@@ -29,6 +29,7 @@ const TypeformEmbed = () => {
         alignItems: 'center',
         width: '100vw',
         height: '60vh',
+        marginTop: '5vh',
         backgroundColor: '#f8f8f8',
         position: 'relative',
       }}>
