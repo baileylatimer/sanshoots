@@ -329,6 +329,26 @@ margin: 0;
 }
 }
 
+.grid-icon {
+  transform: scale(.8);
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -ms-transform: scale(.8);
+  -o-transform: scale(.8);
+}
+
+.lh-0 {
+  line-height: 60px;
+  margin-top: 40px;
+}
+
+@media(max-width:1023px) {
+  .lh-0 {
+    line-height: 60px;
+    margin-top: 35px;
+  }
+}
+
 .hamburger-button {
   transition: all 0.3s ease-in-out;
 }

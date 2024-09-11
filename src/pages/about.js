@@ -13,12 +13,17 @@ import PostProduction from "../videos/post-production.mp4"
 import Target from "../components/target"
 import TargetImg from "../images/target-desktop.png"
 import TargetMobileImg from "../images/target-mobile.png"
+import GridIcon from "../components/grid-icon"
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
     <PageHeader title="About"/>
-    <div className="px-d ">
+    <div className="px-d flex flex-col items-start justify-start">
+      <h5 className="mb-0 lh-0">Watch the film</h5>
+      <GridIcon/>
+    </div>
+    <div className="px-d mt-4">
       <AboutCard cover={PostProduction} video={PostProduction}/>
     <h5 className="mt-12">About Sanshoots</h5>
     <h3 className="text-justify">One part left brain, one part right brain. One whole creative video agency.</h3></div>
