@@ -1,3 +1,8 @@
+
+
+
+// src/components/video-slider.js
+
 import React, { useEffect, useRef, useState } from "react";
 import VideoSlide from './video-slide';
 import { gsap } from "gsap";
@@ -26,6 +31,7 @@ const VideoSlider = ({ slides }) => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+    
     const wrapper = wrapperRef.current;
     const container = containerRef.current;
     const slidesPerView = isMobile ? 1 : 3;
@@ -77,6 +83,9 @@ const VideoSlider = ({ slides }) => {
     };
   }, [slides.length, isMobile]);
 
+  console.log("VideoSlider rendered. Slides:", slides);
+  console.log("Is Mobile:", isMobile);
+
   return (
     <div className="video-slider-wrapper" ref={wrapperRef}>
       <div className="px-d">
@@ -92,6 +101,7 @@ const VideoSlider = ({ slides }) => {
         {slides.map((slide, index) => (
           <div key={index} className="slide-item" data-index={index}>
             <VideoSlide 
+              key={`slide-${index}-${isMobile}`}
               {...slide} 
               isVisible={visibleSlides.includes(index)} 
               isMobile={isMobile} 

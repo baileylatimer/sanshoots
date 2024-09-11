@@ -1,3 +1,5 @@
+// src/components/video-slide.js
+
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -12,12 +14,14 @@ const VideoSlide = ({ webmSrc, mp4Src, fallbackImageSrc, title, tag, linkTo, isV
     const ua = window.navigator.userAgent;
     const iOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     setIsIOS(iOS);
-
+    console.log("Is iOS:", iOS);
+    console.log("Is Mobile:", isMobile);
+    
     if (videoRef.current) {
       videoRef.current.defaultMuted = true;
       videoRef.current.muted = true;
     }
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     if (isVisible && videoRef.current && !isMobile) {
@@ -35,44 +39,39 @@ const VideoSlide = ({ webmSrc, mp4Src, fallbackImageSrc, title, tag, linkTo, isV
     setHasVideoError(true);
   };
 
-  const handleMouseEnter = () => {
-    if (videoRef.current && !isIOS && !isMobile) {
-      videoRef.current.play().catch(error => console.error("Autoplay failed:", error));
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (videoRef.current && !isIOS && !isMobile) {
-      videoRef.current.pause();
-    }
-  };
+  console.log("Component rendered. Props:", { webmSrc, mp4Src, fallbackImageSrc, title, tag, linkTo, isVisible, isMobile });
 
   const optimizedImage = getImage(fallbackImageSrc);
+  console.log("Optimized Image:", optimizedImage);
 
   return (
     <Link to={linkTo} className="video-slide pl-4">
       <div className="video-container">
-        {optimizedImage && (
+        {(isMobile || !isVisible || hasVideoError || !optimizedImage) ? (
+          <img 
+            src={fallbackImageSrc}
+            alt={title}
+            className="fallback-image"
+          />
+        ) : (
           <GatsbyImage
             image={optimizedImage}
             alt={title}
-            className={`fallback-image ${(!isVisible || isMobile || !isVideoLoaded || hasVideoError) ? '' : 'hidden'}`}
+            className={`fallback-image ${isVideoLoaded ? 'hidden' : ''}`}
           />
         )}
-        {!isMobile && isVisible && (
+        {!isMobile && isVisible && !hasVideoError && (
           <video
             ref={videoRef}
-            className={`video-element ${isVideoLoaded && !hasVideoError ? '' : 'hidden'}`}
+            className={`video-element ${isVideoLoaded ? '' : 'hidden'}`}
             loop
             muted
             playsInline
             webkit-playsinline="true"
             onLoadedData={handleVideoLoaded}
             onError={handleVideoError}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
           >
-            <source src={isIOS ? mp4Src : webmSrc} type={isIOS ? "video/mp4" : "video/webm"} />
+            <source src={webmSrc} type="video/webm" />
             <source src={mp4Src} type="video/mp4" />
           </video>
         )}

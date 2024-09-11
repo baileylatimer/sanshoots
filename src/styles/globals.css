@@ -1195,6 +1195,7 @@ iframe {
 .video-slider-container {
   display: flex;
   width: fit-content;
+  background-color: black;
 }
 
 .slide-item {

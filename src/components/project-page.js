@@ -190,7 +190,7 @@ const ProjectPage = ({
                 }}
               />
             </div>
-            <div className="video-overlay">
+            <div className="video-overlay-2">
               <div className='project-overview flex flex-col lg:flex-row justify-between w-full pl-6 lg:pl-0'>
                 <div className="project-title">{projectTitle}</div>
                 <div className="project-info">
