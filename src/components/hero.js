@@ -61,7 +61,7 @@ const Hero = props => {
           mp4Src={EyeRightMp4} 
           fallbackImageSrc={EyeRightFallback}
         />
-        <span data-text="TS" className="hero-text old-movie-text">TS</span>
+        <span data-text="TS" className="hero-text ">TS</span>
       </div>
       <div className=" desktop bars bars-2">
       <div className="flex justify-between hero-reel px-d  hero-reel-2">
