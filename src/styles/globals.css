@@ -877,8 +877,14 @@ font-family: 'Rayuela';
   object-fit: cover;
 }
 
+
 .hidden {
   display: none;
+}
+@media (max-width: 1024px) {
+.fallback-image {
+  display: none !important;
+}
 }
 
 @media (max-width: 768px) {
